@@ -16,6 +16,8 @@ jobs:
           java-version: '17'
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools platforms;android-35 build-tools;35.0.0'
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
@@ -28,11 +30,11 @@ jobs:
         with:
           name: abomega-0.1-android-debug
           path: android/app/build/outputs/apk/debug/*.apk
-      - name: Attach APK to release (if tag workflow later)
+      - name: Attach APK to release
         if: github.ref == 'refs/heads/abomega-0.1'
         continue-on-error: true
         run: |
           APK=$(ls android/app/build/outputs/apk/debug/*.apk | head -1)
-          gh release upload abomega-0.1 "$APK" --repo RIZALEON/RIZALBOT --clobber || true
+          gh release upload abomega-0.1 "$APK" --repo "${{ github.repository }}" --clobber || true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
