@@ -55,6 +55,7 @@ enum TeachStore {
             try? line.data(using: .utf8)?.write(to: path)
         }
         GhostChainLedger.append(op: "evolve", bio: "decider", source: "teach", extra: ["kind": kind, "traceId": traceId])
+        MindTranscript.append(role: "system", kind: "teach", body: "[\(kind)] \(cleaned)", party: "Decider")
         return traceId
     }
 

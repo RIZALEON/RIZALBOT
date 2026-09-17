@@ -56,6 +56,7 @@ enum CompanionRouter {
             18 ghost / ghost status — Я GHOST CHAIN jsonl tape
             19 teach / lock / remember — Decider teachings into Heart context
             20 teachings — list seated teachings status
+            21 transcript / mind tape — seated MIND-TRANSCRIPT.txt (prompts+replies+code notes)
             Online is optional bonus. Network sandbox stays Decider-controlled.
             """
         }
@@ -165,6 +166,10 @@ enum CompanionRouter {
             return "ЯBOT clay seat — offline companion mouth for PROJECT Я. Answer-first like CoS. Decider owns fate."
         }
 
+
+        if lower == "transcript" || lower == "mind tape" || lower == "mind transcript" || lower == "tape" {
+            return MindTranscript.status() + "\n\n--- tail ---\n" + MindTranscript.tail()
+        }
 
         if lower == "teachings" || lower == "teach status" {
             return TeachStore.status() + "\n" + TeachStore.heartContextBlock()

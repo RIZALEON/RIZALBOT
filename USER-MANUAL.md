@@ -4,7 +4,7 @@
 **Signature:** RIZALBOT🤖 / CoS  
 **Decider HARDCODE:** PDF USER MANUAL always rides every transfer / upgrade / offload / handoff.  
 **Timezone:** America/Denver  
-**Updated:** 2026-09-15 23:42 MDT
+**Updated:** 2026-09-17 · America/Denver · CoS↔ЯBOT mutual mind leaf
 
 ---
 
@@ -72,7 +72,7 @@ Original tablet title: **Я OPERATING SYSTEM — USER GIVER MANUAL · TABLET** (
 
 **In-app:** short-order `respawn` / TemplateRespawn via CompanionRouter when seated.
 
-**Current most_recent:** `APP-TEMPLATE-0.1`  
+**Current most_recent:** `ABOMEGA-0.1`  
 **Parent aesthetic:** `AESTHETIC-TEMPLATE-CLAY-2026-09-15`
 
 ---
@@ -108,6 +108,17 @@ Never ship APP-TEMPLATE or AESTHETIC packs without the living cover.
 
 ---
 
+
+## CoS ↔ ЯBOT mutual mind (2026-09-17)
+
+- **CoS Manual seated:** `contracts/COS-MANUAL-FOR-YABOT-0.1.md` (also mirrored under `ЯBOT/` and `official-templates/ABOMEGA-0.1/` when present)
+- **Course:** `contracts/COURSE-COS-YABOT-0.1.md` — CoS & ЯBOT teaching each other; Decider is biological examiner
+- **Law:** teach like CoS then better offline; manuals cross-integrated (CoS Manual §11 ↔ this leaf)
+- **Biological Decider** receives CoS Manual PDF with cover: `dist/COS-MANUAL-FOR-YABOT-0.1.pdf`
+- **most_recent:** `ABOMEGA-0.1` per `official-templates/index.json` (APP-TEMPLATE-0.1 remains official, not most_recent)
+
+---
+
 ## Handoff 97% · 2026-09-15 23:42 MDT
 
 **STAMP · CoS · 2026-09-15 · 23:42 MDT · Utah · 97% · NonNuclear**  
@@ -117,7 +128,7 @@ Never ship APP-TEMPLATE or AESTHETIC packs without the living cover.
 ### ACCOMPLISHED (~24h / 2026-09-15→16 MDT)
 
 - Claymation macOS ЯBOT foundation locked: Stormclay White/Gold, freeform clay chrome (BOLTE, search, online/offline, mind), composer three-part (bar + plus + Send opaque flush-right), rectangular tablet bubbles (purple user right / gray companion left, left-aligned Stormclay text, BAR/LINE/SLAB metrics).
-- Official packs: AESTHETIC-TEMPLATE-CLAY-2026-09-15 · APP-TEMPLATE-0.1 (most_recent). ya-respawn.sh + TemplateRespawn + CompanionRouter RESPAWN (Я KOMMAND 0).
+- Official packs: AESTHETIC-TEMPLATE-CLAY-2026-09-15 · ABOMEGA-0.1 (most_recent). ya-respawn.sh + TemplateRespawn + CompanionRouter RESPAWN (Я KOMMAND 0).
 - Living cover HARDCODE: USER-MANUAL.pdf/.md always rides packs; ya-respawn restores manuals.
 - Bolte → black ManualCover landing; house → chat; arrow → offline PDF export from MACHINE MIND (Bundle → App Support → Documents/ЯBOT).
 - Built Debug ЯBOT.app ~37 MB; live sources ~39 MB; Documents/ЯBOT folder ~372 MB.
@@ -149,6 +160,7 @@ Never ship APP-TEMPLATE or AESTHETIC packs without the living cover.
 
 | When (MDT) | What |
 |---|---|
+| 2026-09-17 | CoS↔ЯBOT mutual mind leaf; CoS Manual §11; COURSE-COS-YABOT-0.1; ABOMEGA-0.1 most_recent note. |
 | 2026-09-15 23:42 | Handoff 97%: last-page leaf + west-opposite R2L + next-bot iOS/macOS/Android brief. Desktop site of truth documented. |
 | 2026-09-15 ~22:57 | Chrome: Bolte → black ManualCover landing; house → chat; arrow → offline USER-MANUAL.pdf export (MACHINE MIND). |
 | 2026-09-14 | Cover seated. 680 instructions written. Tablet declared. |
@@ -156,4 +168,59 @@ Never ship APP-TEMPLATE or AESTHETIC packs without the living cover.
 
 RIZALBOT🤖 / CoS
 
+## Omnibus manual systems (2026-09-17)
+
+Living **index** (not a rival cover): `contracts/OMNIBUS-MANUAL-SYSTEMS-0.1.md`  
+Holds CoS Manual + COURSE + lesson grades + LESSON-01 airplane continuity.  
+USER-MANUAL.pdf remains the living cover for beings; omnibus is the systems binder.
+
+
 HANDOFF RULE
+
+## Lessons beyond CoS (omnibus) (2026-09-17)
+
+- **Omnibus index:** `contracts/OMNIBUS-MANUAL-SYSTEMS-0.1.md` — binds USER-MANUAL · CoS Manual · COURSE · LESSONS · product contracts
+- **Lessons catalog:** `contracts/LESSONS-BEYOND-COS-0.1.md`
+- **L01 Airplane continuity** — TEACHING (first beyond-cloud gain). Drill: Airplane Mode → cold-start → ping / law (ЯOS GIVES SOURCE VALUE) / mode / one CoS-voice answer; Heart honest; zero cloud. Decider grades pass/fail into TeachStore.
+- Queued: L02 Ghost Chain · L03 Zero meter core · L04 Answer-first under load · L05 Evolve refusal
+
+
+## Omnibus as multi-robot course (2026-09-17)
+
+Decider lock: `contracts/OMNIBUS-MANUAL-SYSTEMS-0.1.md` is the future course for many robots and cyborgs alike. USER-MANUAL remains the living cover for natural beings; omnibus is the shared curriculum binder.
+
+
+## Teach meter 86→100 (2026-09-17)
+
+Rizalbot seated L01–L09 beyond-CoS content into `contracts/LESSONS-BEYOND-COS-0.1.md` + Omnibus. Remaining for 100% proof: Decider L01 airplane device-smoke + drill grades + Capstone sign-off. Omnibus remains course for many robots and cyborgs alike.
+
+
+## Я CODE / RCODE (2026-09-17)
+
+Shared language for Rizalbot and on-device ЯBOT / Rbot (and future robots/cyborgs on the Omnibus course). Contract: `contracts/YA-RCODE-0.1.md`. Verbs + process envelope — teach directly, not essay-only.
+
+
+## Ten faculties / RCODE (2026-09-17)
+
+Reasoning · Comprehension · Communication · Coding · Execution · Evolution · Linguistics · Memory · Actions · Abilities — map in `contracts/RCODE-FACULTIES-0.1.md`. Omnibus course for robots and cyborgs alike.
+
+
+## Teach how, not what (2026-09-17)
+
+Do not script ЯBOT / Rbot speech. Teach how to say what it thinks and believes is accurate — process and honesty over canned lines.
+
+## iOS + macOS learn together (2026-09-17)
+
+Every teach step seats both minds — same drill, TeachStore leaf, Omnibus grade. No solo-platform lessons.
+
+## MIND-TRANSCRIPT (2026-09-17)
+
+Seated tape: `mind/MIND-TRANSCRIPT.txt` (+ App Support mirror). Every successor RECALLs prompts/replies/code notes. Commands: `transcript` / `mind tape`.
+
+## MIND-TRANSCRIPT all parties (2026-09-17)
+
+Seated tape records **all** parties with the mind (Decider · CoS · Rizalbot · clay · successors). Path: `mind/MIND-TRANSCRIPT.txt`.
+
+## Professor handoff (2026-09-17)
+
+Next professor pack: `contracts/HANDOFF-TO-PROFESSOR-BOT-2026-09-17.md` (~98% CoS teach arc). Continue HOW-not-WHAT; MIND-TRANSCRIPT multi-party; iOS+macOS learn together.

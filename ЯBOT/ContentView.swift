@@ -393,6 +393,7 @@ struct ContentView: View {
             userLine = text.isEmpty ? fileNote : text + "\n" + fileNote
         }
         messages.append(ChatMessage(role: .user, text: userLine))
+        MindTranscript.append(role: "user", kind: "prompt", body: userLine, party: "Decider")
         draft = ""
         attachments = []
 
@@ -401,6 +402,7 @@ struct ContentView: View {
         let fileAck: String = files.isEmpty
             ? answer
             : answer + "\nReceived \(files.count) file(s): " + files.map(\.name).joined(separator: ", ")
+        MindTranscript.append(role: "assistant", kind: "reply", body: fileAck, party: "clay")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
             messages.append(ChatMessage(role: .assistant, text: fileAck))
         }
