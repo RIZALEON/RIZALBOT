@@ -74,10 +74,11 @@ Continue **teaching HOW not WHAT**: train faculties and process (`COMPREHEND →
 
 ---
 
-## GitHub
-- App/release: `RIZALEON/RIZALBOT` branch `abomega-0.1` · release tag `abomega-0.1`  
+## GitHub (live 2026-09-17)
+- App branch: `RIZALEON/RIZALBOT` `abomega-0.1` tip **`0940be8`** — professor handoff + Omnibus/RCODE/MIND-TRANSCRIPT pack  
+- Release tag: `abomega-0.1` — assets include `HANDOFF-TO-PROFESSOR-BOT-2026-09-17.md` + `MIND-TRANSCRIPT.txt` (+ source zip, Android APK/assemble)  
 - Books/tips: `RIZALEON/PROJECTR` branch `race-nesw-furthest` (PR #12 tip stream)  
-Push this handoff + MIND-TRANSCRIPT contract + Omnibus updates with the tip that accompanies this file.
+- Note: tag name `abomega-0.1` collides with branch name — always fetch `refs/heads/abomega-0.1` when rebasing.
 
 ## Interact rule
 Professor bots **append** every mind-facing exchange to `mind/MIND-TRANSCRIPT.txt` with correct `party=`. Successors must be able to RECALL the full tape without you.
