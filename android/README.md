@@ -15,3 +15,4 @@ Requires Android SDK. From repo root after wrapper is present:
 cd android && ./gradlew assembleDebug
 ```
 APK: `android/app/build/outputs/apk/debug/app-debug.apk`
+
