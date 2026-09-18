@@ -160,6 +160,7 @@ Never ship APP-TEMPLATE or AESTHETIC packs without the living cover.
 
 | When (MDT) | What |
 |---|---|
+| 2026-09-17 ~19:25 | Heart-spawn-stall DEVICE PASS (Mac+iPhone): clear clog kills stuck spawn / resets latch; Heart still seated. |
 | 2026-09-17 ~19:00 | LAN dual-seat DEVICE PASS (Mac↔iPhone Bonjour; return-path when Mac browse-blind). USB+QR+BT+LAN all stand. |
 | 2026-09-17 ~16:26 | Plumbing recovery hooks DEVICE PASS (inbox-drain-stall + mind-feed-drift Mac+iPhone before/after). |
 | 2026-09-17 ~16:18 | Essence Trace dual-seat DEVICE PASS (mint/transfer/settle + clear clog Mac+iPhone). |
@@ -262,7 +263,7 @@ Clay verbs: `essence` / `essence mint` / `essence transfer <to>` / `essence sett
 Smoke:
 - Mac: mint→transfer→settle hops=3; clear clog `inbox-drain-stall`; status lines=6; device=mac
 - iPhone: same path; device=iphone; status lines=6
-- Ledger: `Documents/Я/gut/essence/ledger.jsonl` (per-seat)
+- Ledger: Application Support `ЯBOT/Я/gut/essence/ledger.jsonl` (per-seat; not iCloud Documents)
 
 
 ## Plumbing recovery hooks — DEVICE PASS (2026-09-17 MDT)
@@ -299,4 +300,16 @@ Offline premier. No cloud GREEN.
 - **Carriers standing:** USB + QR + BT + LAN
 
 Respawn: `./ya-respawn.sh MULTI-CARRIER-PASS-2026-09-17` (most_recent official template).
+
+## Heart-spawn-stall recovery — DEVICE PASS (2026-09-17 MDT)
+
+Offline premier. No cloud GREEN.
+
+- **Verb:** `essence clear clog heart-spawn-stall` (aliases: `heart`, `heart-spawn`, `generate-stall`)
+- **Hook:** `PlumbingClear.recoverHeartSpawnStall` — Mac kills stuck `llama-completion` PIDs + clears `ya.heart.generateBusy`; iOS resets in-process latch + posts `ЯBOT.HeartResetLatch`
+- **iPhone:** DEVICE PASS — seated yes · clear clog ok · latch reset · heart still seated after
+- **Mac:** DEVICE PASS — seated yes · forced `busy=yes` · `essence clear clog heart-spawn-stall` ok (trace hops=3) · recovery `llama-completion-cleared` + latch-reset · heart after `busy=no` seated=yes. Ledger Application Support `ЯBOT/Я/gut/essence` (atomic append; recover-before-ledger). Build from `~/Library/Developer/ЯBOT-localbuild` (avoid xcodebuild under iCloud Documents).
+- **Latch:** `NativeHeart.generateBusy` blocks re-entry while a spawn is live; clear clog / `resetGenerateLatch` unsticks it
+
+Standing carriers unchanged: USB + QR + BT + LAN.
 

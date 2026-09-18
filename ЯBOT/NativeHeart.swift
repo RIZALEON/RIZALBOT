@@ -38,15 +38,41 @@ enum NativeHeart {
     }
 
     static var seated: Bool {
+        #if os(macOS)
         guard let engine = engineURL, let heart = heartURL else { return false }
         let fm = FileManager.default
         guard fm.fileExists(atPath: engine.path), fm.fileExists(atPath: heart.path) else { return false }
         guard let attrs = try? fm.attributesOfItem(atPath: heart.path),
               let size = attrs[.size] as? NSNumber else { return false }
         return size.int64Value > 1024
+        #else
+        // iOS: weights + llama.xcframework (canImport). Mac CLI is not an iOS engine.
+        guard let heart = heartURL else { return false }
+        guard let attrs = try? FileManager.default.attributesOfItem(atPath: heart.path),
+              let size = attrs[.size] as? NSNumber, size.int64Value > 1024 else { return false }
+        #if canImport(llama)
+        return true
+        #else
+        return false
+        #endif
+        #endif
     }
 
-    static var heartBytes: Int64 {
+    /// Latch so a wedged spawn can be detected + cleared via `essence clear clog heart-spawn-stall`.
+    private static let busyKey = "ya.heart.generateBusy"
+    static var generateBusy: Bool {
+        get { UserDefaults.standard.bool(forKey: busyKey) }
+        set { UserDefaults.standard.set(newValue, forKey: busyKey) }
+    }
+
+    static func resetGenerateLatch(reason: String = "manual") {
+        generateBusy = false
+        #if !os(macOS)
+        NotificationCenter.default.post(name: Notification.Name("ЯBOT.HeartResetLatch"), object: reason)
+        #endif
+    }
+
+        static var heartBytes: Int64 {
         guard let heart = heartURL,
               let attrs = try? FileManager.default.attributesOfItem(atPath: heart.path),
               let size = attrs[.size] as? NSNumber else { return 0 }
@@ -69,7 +95,24 @@ enum NativeHeart {
     static func statusLine() -> String {
         let bytes = heartBytes
         let seatedFlag = seated ? "yes" : "no"
-        return "heart engine=llama-completion seated=\(seatedFlag) heartBytes=\(bytes) mode=cnv-st metal=-ngl 99"
+        let sandboxed = getenv("APP_SANDBOX_CONTAINER_ID") != nil
+        let sandFlag = sandboxed ? "on" : "off"
+        #if os(macOS)
+        var line = "heart engine=llama-completion seated=\(seatedFlag) heartBytes=\(bytes) sandbox=\(sandFlag) busy=\(generateBusy ? "yes" : "no") mode=cnv-st metal=-ngl 99"
+        #else
+        #if canImport(llama)
+        let eng = "llama.xcframework"
+        #else
+        let eng = "none"
+        #endif
+        var line = "heart engine=\(eng) seated=\(seatedFlag) heartBytes=\(bytes) sandbox=\(sandFlag) mode=in-process metal=ios"
+        #endif
+        if sandboxed {
+            line += " · HOW: turn App Sandbox OFF so Process can spawn llama-completion"
+        } else if !seated {
+            line += " · HOW: bundle llama-completion + heart.gguf (iOS still needs llama.xcframework)"
+        }
+        return line
     }
 
     /// Conversation single-turn with chat template. Timeout ~120s.
@@ -77,15 +120,17 @@ enum NativeHeart {
         let user = prompt.trimmingCharacters(in: .whitespacesAndNewlines)
         if user.isEmpty { return "I am here." }
         #if !os(macOS)
-        // iOS: Process spawn is Mac-only. llama.xcframework seat is next.
-        if seated {
-            return "Heart model is in the bundle, but iOS invoke needs llama.xcframework (Mac still uses llama-completion). Clay mouth + TeachStore still live."
-        }
-        return "Function 0 · iOS Heart engine next (llama.xcframework). Mac clay Heart remains premier for now."
+        return generateIOS(user: user)
         #else
-        guard seated, let engine = engineURL, let heart = heartURL else {
-            return "Function 0 · Heart not seated. Need llama-completion + heart.gguf in the app bundle."
+        if generateBusy {
+            return "Function 0 · Heart spawn stall (generateBusy). HOW: `essence clear clog heart-spawn-stall` then retry."
         }
+        guard seated, let engine = engineURL, let heart = heartURL else {
+            return "Function 0 · Heart not seated / blocked. HOW: App Sandbox OFF; bundle llama-completion + heart.gguf; on iOS need llama.xcframework. Say MISSING until true."
+        }
+
+        generateBusy = true
+        defer { generateBusy = false }
 
         try? FileManager.default.setAttributes([.posixPermissions: 0o755], ofItemAtPath: engine.path)
 
@@ -190,4 +235,50 @@ enum NativeHeart {
         }
         return body
     }
+
+    // MARK: - iOS in-process Heart (llama.xcframework)
+    #if !os(macOS)
+    private static func generateIOS(user: String) -> String {
+        guard let heart = heartURL else {
+            return "MISSING — Heart weights not seated on this iPhone."
+        }
+        #if canImport(llama)
+        let path = heart.path
+        let sys = systemPrompt
+        let prompt = sys + "\nUser: " + user + "\nAssistant:"
+        let lock = NSLock()
+        var result = ""
+        let sem = DispatchSemaphore(value: 0)
+        Task.detached(priority: .userInitiated) {
+            do {
+                let ctx = try await LlamaContext.create_context(path: path)
+                await ctx.completion_init(text: prompt)
+                var out = ""
+                for _ in 0..<96 {
+                    let piece = await ctx.completion_loop()
+                    out += piece
+                    if await ctx.is_done { break }
+                }
+                let cleaned = out.trimmingCharacters(in: .whitespacesAndNewlines)
+                lock.lock()
+                result = cleaned.isEmpty ? "MISSING — Heart returned empty." : cleaned
+                lock.unlock()
+            } catch {
+                lock.lock()
+                result = "MISSING — Heart invoke failed: \(error.localizedDescription)"
+                lock.unlock()
+            }
+            sem.signal()
+        }
+        if sem.wait(timeout: .now() + 180) == .timedOut {
+            return "MISSING — Heart timed out (~180s)."
+        }
+        lock.lock(); defer { lock.unlock() }
+        return result.isEmpty ? "MISSING — Heart produced no text." : result
+        #else
+        return "MISSING — llama.xcframework not linked in this build. Clay mouth + TeachStore still live."
+        #endif
+    }
+    #endif
+
 }
