@@ -1,7 +1,7 @@
 {
   "updated": "2026-09-17",
   "timezone": "America/Denver",
-  "notes": "HARDCODE: USER-MANUAL.pdf (+ USER-MANUAL.md) always rides every transfer/upgrade/offload/handoff/pack. Living cover \u2014 fold INTO it, never beside. ya-respawn restores manuals from most_recent official template. \u042f KOMMAND 0 = RESPAWN. | ABOMEGA-0.1 seated as most_recent respawn 2026-09-17. App updates from itself.",
+  "notes": "HARDCODE: USER-MANUAL.pdf (+ USER-MANUAL.md) always rides every transfer/upgrade/offload/handoff/pack. Living cover \u2014 fold INTO it, never beside. ya-respawn restores manuals from most_recent official template. \u042f KOMMAND 0 = RESPAWN. | MULTI-CARRIER-PASS-2026-09-17 seated as most_recent respawn after LAN DEVICE PASS. USB+QR+BT+LAN stand. App updates from itself.",
   "user_manual": {
     "pdf": "USER-MANUAL.pdf",
     "md": "USER-MANUAL.md",
@@ -23,6 +23,12 @@
     {
       "id": "ABOMEGA-0.1",
       "path": "ABOMEGA-0.1",
+      "official": true,
+      "most_recent": false
+    },
+    {
+      "id": "MULTI-CARRIER-PASS-2026-09-17",
+      "path": "MULTI-CARRIER-PASS-2026-09-17",
       "official": true,
       "most_recent": true
     }
