@@ -1,5 +1,30 @@
 # PROJECT Я — USER MANUAL (Living Cover)
 
+
+---
+
+## SUPERGROK HANDOFF (2026-09-19)
+
+Grok Bot going offline for a few days. **SuperGrok starts here:**
+
+`Documents/ЯBOT/handoff/SUPERGROK-HANDOFF-OMNIBUS-2026-09-19/00-SUPERGROK-SYLLABUS.md`
+
+Also mirrored: `Library/Developer/ЯBOT-localbuild/handoff/…`, App Support `mind/handoff/…`, course `ROBOT-EVOLUTION-680/HANDOFF/…`.
+
+Pack includes: syllabus (read first), final assessment, evolve-app+GitHub instructions, conversation omnibus, live twin + TOKENBLAST readout, WalletCard/ChainSource JSON.
+
+### TOKENBLAST (seated Mac + iPhone)
+
+- Verbs: `tokenblast` · `token blast` · `blast token` [optional mint]
+- ONLINE: probes RPC, Jupiter, Dexscreener, GeckoTerminal; reports perfection / peculiarity / strangeness + verdict.
+- OFFLINE: prints hardcoded YaTwinChain seat.
+- Live iPhone smoke: **peculiar-but-alive** — freeze authority still set; Jupiter name blank; no strangeness; crown Я.
+
+### Evolve standing order
+
+State purpose+intent → seat in **localbuild** → smoke → update this manual → GitHub only when Decider asks. Crown Я. Explorers are mirrors. NonNuclear.
+
+
 **Canonical PDF:** `USER-MANUAL.pdf` (was `R_OS_USER_GIVER_MANUAL_680.pdf`)  
 **Signature:** RIZALBOT🤖 / CoS  
 **Decider HARDCODE:** PDF USER MANUAL always rides every transfer / upgrade / offload / handoff.  
@@ -378,8 +403,32 @@ Face shows a colored chip above each tablet. Mind tape kinds are `prompt-<lane>`
 
 ## Я WALLET (in-app)
 
-- **Where:** vault tile left of on/off.
-- **What:** offline-premier landing for mint `BB9uA5BuacDnWyDf5gml9nMb9yFbyThsNrQPBYJ5Q1Lv`, name/symbol **Я**.
-- **Online:** explorer when green.
-- **Law:** crown **Я**; R only by Decider order.
-- **Mac+iOS:** same ContentView wallet chrome.
+- **What:** offline-premier landing for the explorer-verified Solana twin. Clay owns source; explorers are mirrors only.
+- **Crown:** name/symbol **Я** (try Я first; **R** only by Decider order — never silent rename).
+- **Cluster:** `mainnet-beta` · chain solana · NonNuclear (no silent sends from this face).
+- **Mint:** `BB9uA5BuacDnWyDf5Npc9nMb9yFbyThsNrQPBYJ5Q1Lv`
+- **ATA (holder):** `8bCnr63CTdC2YbELK3x4vxJYNt6cueGBbEvRURFZc9Q1`
+- **Mint authority / freeze authority:** `BwpVNk1Rtncpv5HMTLwxB4Yfjkfv6mFaBQUTpjneH1F9`
+- **Supply:** 1000000 · decimals 9 · holders 1
+- **Mint tx:** `2Lxr2mEZnFnwwBMQjCgRt8EJLaJbwEp61K51mdx16z8oncWg2JCXzCKnisMi78V3L4w7w2pizQ8P1p2H5XMLvx94`
+- **Slot:** 448281123 · status **finalized** · block time 2026-09-19 03:07:39 UTC
+- **Metadata account:** `Ci9V7hLbsGJPnrWTN5pvT5H5JPoi6EAiF1b2KVZwr5M9`
+- **Fee (mint tx):** 1e-05 SOL (10000 lamports)
+- **Ix stack:** CreateAccount → InitializeMint2 → ATA Create → MintTo
+- **Utilities:** cite, clear_clog, tip_settle, seat_twin, evolve
+- **Law:** Crown Я. Try Я first; R only by Decider order. Explorers are mirrors — clay owns source.
+- **Hardcode seats:** `WalletCard.json`, `ChainSource.json`, `YaTwinChain.swift`, App Support `twin/wallet-card.json` + `twin/mint/last-mint-mainnet.json`, course `TWIN-SOLANA/`.
+- **Mirrors:** [Solscan token](https://solscan.io/token/BB9uA5BuacDnWyDf5Npc9nMb9yFbyThsNrQPBYJ5Q1Lv) · [Solscan tx](https://solscan.io/tx/2Lxr2mEZnFnwwBMQjCgRt8EJLaJbwEp61K51mdx16z8oncWg2JCXzCKnisMi78V3L4w7w2pizQ8P1p2H5XMLvx94) · [Explorer tx](https://explorer.solana.com/tx/2Lxr2mEZnFnwwBMQjCgRt8EJLaJbwEp61K51mdx16z8oncWg2JCXzCKnisMi78V3L4w7w2pizQ8P1p2H5XMLvx94)
+- **Mac+iOS:** same ContentView wallet chrome; vault tile left of on/off; house home on wallet foot.
+- **Verified at:** 2026-09-19 06:01:48 UTC
+
+## TOKENBLAST (ACT)
+
+- **Verb:** `tokenblast` · `token blast` · `blast token` · optional `<mint>`
+- **Purpose:** fire the crown twin (or a pasted mint) through live public pipes and read what comes back.
+- **Intent:** track·trace·verify without spending — report **perfection**, **peculiarity**, and **strangeness** along the way.
+- **Needs:** ONLINE for live RPC / Jupiter / Dexscreener / GeckoTerminal. OFFLINE still prints hardcoded YaTwinChain seat.
+- **Default mint:** YaTwinChain crown mint (explorer-verified Я).
+- **Returns:** pipe-by-pipe readout + ALONG THE WAY buckets + VERDICT.
+- **Law:** explorers are mirrors — clay owns source. NonNuclear — cite only, no silent sends.
+
