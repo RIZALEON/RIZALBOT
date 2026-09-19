@@ -432,3 +432,13 @@ Face shows a colored chip above each tablet. Mind tape kinds are `prompt-<lane>`
 - **Returns:** pipe-by-pipe readout + ALONG THE WAY buckets + VERDICT.
 - **Law:** explorers are mirrors — clay owns source. NonNuclear — cite only, no silent sends.
 
+## TOKENBLAST / URI seat (2026-09-19 Decider lock)
+
+- Gate 1 PREP done: `twin/я-metadata.json` — crown **Я**, image blank OK.
+- Gate 2 SEND: **WAIT** until Decider says `send URI`. No spend, no rename, no merge.
+- Last ONLINE verdict until refresh: **peculiar-but-alive** (freeze on; Jupiter blank name; no strangeness).
+- After send: Jupiter URI seated; crown Я; freeze unchanged; explorers still mirrors.
+- Pathway order: URI → optional image → PR push (no merge) → freeze Decider → liquidity only with purpose → clear-clog loop (clay first, twin mirrors).
+- Mint cite: `BB9uA5BuacDnWyDf5Npc9nMb9yFbyThsNrQPBYJ5Q1Lv`
+- Tx cite: `2Lxr2mEZnFnwwBMQjCgRt8EJLaJbwEp61K51mdx16z8oncWg2JCXzCKnisMi78V3L4w7w2pizQ8P1p2H5XMLvx94`
+

@@ -109,3 +109,9 @@ Manual entry point: `~/Library/Developer/ЯBOT-localbuild/USER-MANUAL.md`
 ---
 
 **Handoff complete condition:** SuperGrok can open Mac app, run `tokenblast` ONLINE, open vault→house, and cite mint `BB9uA5BuacDnWyDf5Npc9nMb9yFbyThsNrQPBYJ5Q1Lv` without asking Grok Bot.
+
+
+## Added 2026-09-19 97% sprint
+- [05-URI-AND-PATHWAY-ROADMAP.md](./05-URI-AND-PATHWAY-ROADMAP.md)
+- [я-metadata.json](./я-metadata.json) — Gate1 prep; Gate2 WAIT
+- [06-DECIDER-WAIT-SEND-URI.md](./06-DECIDER-WAIT-SEND-URI.md)
