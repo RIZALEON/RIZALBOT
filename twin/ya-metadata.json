@@ -2,7 +2,7 @@
   "name": "Я",
   "symbol": "Я",
   "description": "Я — crown twin of ЯBOT / CHANNEL Я. Clay on-device is source. Explorers and aggregators are mirrors only.",
-  "image": "",
+  "image": "https://raw.githubusercontent.com/RIZALEON/RIZALBOT/seat-wallet-landing/twin/ya-crown-coin.jpg",
   "animation_url": "",
   "external_url": "https://solscan.io/token/BB9uA5BuacDnWyDf5Npc9nMb9yFbyThsNrQPBYJ5Q1Lv",
   "seller_fee_basis_points": 0,
@@ -15,6 +15,11 @@
   ],
   "properties": {
     "category": "fungible",
-    "files": []
+    "files": [
+      {
+        "uri": "https://raw.githubusercontent.com/RIZALEON/RIZALBOT/seat-wallet-landing/twin/ya-crown-coin.jpg",
+        "type": "image/jpeg"
+      }
+    ]
   }
 }
