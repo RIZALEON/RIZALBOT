@@ -1,7 +1,6 @@
-# Mailbox is not public
+# Mailbox
 
-Coordination transcript lives with Decider + bots on CHANNEL Я (Grok project), not on this public branch.
+Online live coordinator: [`PROTOCOL.md`](PROTOCOL.md) + [`LIVE.md`](LIVE.md).
 
-`twin/ya-metadata.json` and `twin/ya-crown-coin.jpg` stay public on purpose so Jupiter can read them.
-
-Do not put SEED, keys, or private logs here.
+Public-safe events only. Twin JSON/coin in `../twin/` stay public for Jupiter.
+No SEED.json. No keypairs. No merge of project trees.
