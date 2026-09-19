@@ -2,18 +2,26 @@ import Foundation
 
 /// Decider-gated self-repair: clay authors Swift (or shell recipes), never silent-applies.
 enum SelfFix {
-    static var labRoot: URL {
+    private static var homeURL: URL {
+        #if os(macOS)
         FileManager.default.homeDirectoryForCurrentUser
+        #else
+        FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        #endif
+    }
+
+    static var labRoot: URL {
+        homeURL
             .appendingPathComponent("Documents/ЯBOT/courses/ROBOT-EVOLUTION-680/CODE-LAB/SELF-FIX", isDirectory: true)
     }
 
     static var localbuildRoot: URL {
-        FileManager.default.homeDirectoryForCurrentUser
+        homeURL
             .appendingPathComponent("Library/Developer/ЯBOT-localbuild/ЯBOT", isDirectory: true)
     }
 
     static var documentsSourceRoot: URL {
-        FileManager.default.homeDirectoryForCurrentUser
+        homeURL
             .appendingPathComponent("Documents/ЯBOT/ЯBOT", isDirectory: true)
     }
 
@@ -143,6 +151,7 @@ enum SelfFix {
     }
 
     /// Run a proposed shell script under lab only (Decider-gated). No arbitrary paths.
+    #if os(macOS)
     static func runShell(name: String) -> String {
         ensureLab()
         let safe = name.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -173,6 +182,9 @@ enum SelfFix {
         \(o)\(e.isEmpty ? "" : "\nERR:\n\(e)")
         """
     }
+    #else
+    static func runShell(name: String) -> String { "SelfFix shell is Mac-only." }
+    #endif
 
     // MARK: - helpers
 
