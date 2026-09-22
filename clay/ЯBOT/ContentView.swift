@@ -14,6 +14,7 @@ struct ContentView: View {
     @State private var mindPulse: Bool = false
     @State private var showClayLanding: Bool = false
     @State private var showWalletLanding: Bool = false
+    @State private var showLabScout: Bool = false
     @State private var clayLandingTitle: String = ""
     @State private var attachments: [ClayAttachment] = []
     @State private var showFilePicker: Bool = false
@@ -28,8 +29,8 @@ struct ContentView: View {
 
             // Slate: full height to the very top, on chalkboard, under chat + chrome.
             ClaySlatePlate()
-                .opacity(showClayLanding ? 0 : 1)
-                .allowsHitTesting(!showClayLanding)
+                .opacity((showClayLanding || showLabScout) ? 0 : 1)
+                .allowsHitTesting(!(showClayLanding || showLabScout))
 
             // Chat lives on/within the slate column (centered, width ≤ slate).
             openClaySeat
@@ -37,12 +38,12 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity)
                 .padding(.top, 56) // clear top chrome; slate itself still runs to the top
                 .padding(.bottom, 12)
-                .opacity(showClayLanding ? 0 : 1)
-                .allowsHitTesting(!showClayLanding)
+                .opacity((showClayLanding || showLabScout) ? 0 : 1)
+                .allowsHitTesting(!(showClayLanding || showLabScout))
 
             chromeOverlays
-                .opacity(showClayLanding ? 0 : 1)
-                .allowsHitTesting(!showClayLanding)
+                .opacity((showClayLanding || showLabScout) ? 0 : 1)
+                .allowsHitTesting(!(showClayLanding || showLabScout))
 
             if showClayLanding {
                 ClayLandingView(isPresented: $showClayLanding, title: clayLandingTitle)
@@ -53,6 +54,11 @@ struct ContentView: View {
                 WalletLandingView(isPresented: $showWalletLanding, isOnline: isOnline)
                     .transition(.opacity)
                     .zIndex(60)
+            }
+            if showLabScout {
+                LabScoutView(isPresented: $showLabScout, isOnline: isOnline)
+                    .transition(.opacity)
+                    .zIndex(65)
             }
         }
         #if os(macOS)
@@ -83,6 +89,7 @@ struct ContentView: View {
         }
         .animation(.easeInOut(duration: 0.18), value: showClayLanding)
         .animation(.easeInOut(duration: 0.18), value: showWalletLanding)
+        .animation(.easeInOut(duration: 0.18), value: showLabScout)
         .onAppear {
             // Off main thread — ledger I/O must never block UI restore / inbox timers.
             DispatchQueue.global(qos: .utility).async {
@@ -370,17 +377,7 @@ struct ContentView: View {
             HStack(alignment: .center, spacing: 10) {
                 // Top-left: BOLTE + search glass; clay search well appears beside the glass.
                 HStack(alignment: .center, spacing: 8) {
-                    // Lab — Function 11 (Gnome port pending). Leftmost; do not break Bolte/Manual.
-                    ClayButton(
-                        asset: "LabIcon",
-                        systemFallback: "flask.fill",
-                        width: 32,
-                        height: 32,
-                        help: "Lab — Function 11"
-                    ) {
-                        remember(ChatMessage(role: .system, text: "Lab — Function 11"))
-                    }
-
+                    // Order LIVE: Bolte → LabIcon → BtnSearch
                     ClayButton(
                         asset: "Bolte",
                         systemFallback: "bolt.heart.fill",
@@ -391,6 +388,18 @@ struct ContentView: View {
                         withAnimation(.easeInOut(duration: 0.18)) {
                             clayLandingTitle = "USER MANUAL"
                             showClayLanding = true
+                        }
+                    }
+
+                    ClayButton(
+                        asset: "LabIcon",
+                        systemFallback: "flask.fill",
+                        width: 32,
+                        height: 32,
+                        help: "Lab Scout — Mission 1"
+                    ) {
+                        withAnimation(.easeInOut(duration: 0.18)) {
+                            showLabScout = true
                         }
                     }
 
