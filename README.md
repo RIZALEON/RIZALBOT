@@ -34,3 +34,13 @@ That signs the stormling on this Mac. Keep it in the Dock. Do not open an unsign
 6 new OS, mobile or fixed, v0 is the seed.
 
 Gain first. PolygamyTech. NonNuclear. Utah clock. ISOLATED. AirDrop the mind, not the install. You stay Decider.
+
+## Clay app (Mac + iOS)
+
+Full clay sources live in [`clay/`](clay/) (`ЯBOT` + Xcode project).
+
+### Я WALLET
+- Vault tile left of on/off → in-app landing (works offline).
+- Public twin mint on Solana mainnet; crown name **Я**.
+- Build Mac: open `clay/ЯBOT.xcodeproj` → scheme ЯBOT → My Mac.
+- Build iOS: same project → iPhone destination → Run.
