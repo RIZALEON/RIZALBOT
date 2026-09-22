@@ -370,6 +370,17 @@ struct ContentView: View {
             HStack(alignment: .center, spacing: 10) {
                 // Top-left: BOLTE + search glass; clay search well appears beside the glass.
                 HStack(alignment: .center, spacing: 8) {
+                    // Lab — Function 11 (Gnome port pending). Leftmost; do not break Bolte/Manual.
+                    ClayButton(
+                        asset: "LabIcon",
+                        systemFallback: "flask.fill",
+                        width: 32,
+                        height: 32,
+                        help: "Lab — Function 11"
+                    ) {
+                        remember(ChatMessage(role: .system, text: "Lab — Function 11"))
+                    }
+
                     ClayButton(
                         asset: "Bolte",
                         systemFallback: "bolt.heart.fill",

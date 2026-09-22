@@ -217,7 +217,40 @@ enum ClayBubbleMetrics {
 }
 
 enum ClayImage {
+    /// Documents override for live art without rebuild: ~/Documents/ЯBOT/hot-assets/<name>.png (+ @2x/@3x).
+    static var hotAssetsDirectory: URL {
+        FileManager.default.homeDirectoryForCurrentUser
+            .appendingPathComponent("Documents/ЯBOT/hot-assets", isDirectory: true)
+    }
+
+    static func hotAssetURL(named name: String) -> URL? {
+        let dir = hotAssetsDirectory
+        let scale: CGFloat = {
+            #if canImport(AppKit)
+            return NSScreen.main?.backingScaleFactor ?? 2
+            #elseif canImport(UIKit)
+            return UIScreen.main.scale
+            #else
+            return 2
+            #endif
+        }()
+        let candidates: [String]
+        if scale >= 2.5 {
+            candidates = ["\(name)@3x.png", "\(name)@2x.png", "\(name).png"]
+        } else if scale >= 1.5 {
+            candidates = ["\(name)@2x.png", "\(name)@3x.png", "\(name).png"]
+        } else {
+            candidates = ["\(name).png", "\(name)@2x.png", "\(name)@3x.png"]
+        }
+        for c in candidates {
+            let u = dir.appendingPathComponent(c)
+            if FileManager.default.fileExists(atPath: u.path) { return u }
+        }
+        return nil
+    }
+
     static func exists(_ name: String) -> Bool {
+        if hotAssetURL(named: name) != nil { return true }
         #if canImport(AppKit)
         return NSImage(named: name) != nil
         #elseif canImport(UIKit)
@@ -226,6 +259,24 @@ enum ClayImage {
         return false
         #endif
     }
+
+    #if canImport(AppKit)
+    static func nsImage(named name: String) -> NSImage? {
+        if let url = hotAssetURL(named: name), let img = NSImage(contentsOf: url) {
+            return img
+        }
+        return NSImage(named: name)
+    }
+    #endif
+
+    #if canImport(UIKit)
+    static func uiImage(named name: String) -> UIImage? {
+        if let url = hotAssetURL(named: name), let img = UIImage(contentsOfFile: url.path) {
+            return img
+        }
+        return UIImage(named: name)
+    }
+    #endif
 }
 
 struct ClayBackground: View {

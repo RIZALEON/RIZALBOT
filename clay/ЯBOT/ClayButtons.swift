@@ -46,8 +46,9 @@ struct ClayButton: View {
 
     @ViewBuilder
     private var art: some View {
-        if ClayImage.exists(asset) {
-            Image(asset)
+        #if canImport(AppKit)
+        if let ns = ClayImage.nsImage(named: asset) {
+            Image(nsImage: ns)
                 .renderingMode(.original)
                 .resizable()
                 .interpolation(.high)
@@ -60,6 +61,28 @@ struct ClayButton: View {
                 .foregroundStyle(ClayTheme.offWhite)
                 .padding(6)
         }
+        #elseif canImport(UIKit)
+        if let ui = ClayImage.uiImage(named: asset) {
+            Image(uiImage: ui)
+                .renderingMode(.original)
+                .resizable()
+                .interpolation(.high)
+                .aspectRatio(contentMode: .fit)
+                .frame(width: width, height: h, alignment: .center)
+        } else {
+            Image(systemName: systemFallback)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .foregroundStyle(ClayTheme.offWhite)
+                .padding(6)
+        }
+        #else
+        Image(systemName: systemFallback)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .foregroundStyle(ClayTheme.offWhite)
+            .padding(6)
+        #endif
     }
 }
 
