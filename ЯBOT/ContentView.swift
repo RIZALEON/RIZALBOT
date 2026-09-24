@@ -1,7 +1,13 @@
 import SwiftUI
 import UniformTypeIdentifiers
+#if canImport(AppKit)
+import AppKit
+#elseif canImport(UIKit)
+import UIKit
+#endif
 
 struct ContentView: View {
+    @Environment(\.scenePhase) private var scenePhase
     @State private var messages: [ChatMessage] = []
     @State private var draft: String = ""
     @ObservedObject private var mode = ModeStore.shared
@@ -12,7 +18,15 @@ struct ContentView: View {
     @State private var searchText: String = ""
     @State private var mindPulse: Bool = false
     @State private var showClayLanding: Bool = false
+    @State private var showWalletLanding: Bool = false
+    @State private var labOpenHelix: Bool = false
+    @State private var showLabChamber: Bool = false
+    @State private var showLabScout: Bool = false
+    @State private var labScoutRevealCompare: Bool = false
     @State private var clayLandingTitle: String = ""
+    @State private var showGrokReview: Bool = false
+    @State private var grokReviewPacket: GrokYabotLink.Packet? = nil
+    @State private var showGrokStatus: Bool = false
     @State private var attachments: [ClayAttachment] = []
     @State private var showFilePicker: Bool = false
     @FocusState private var composerFocused: Bool
@@ -26,38 +40,115 @@ struct ContentView: View {
 
             // Slate: full height to the very top, on chalkboard, under chat + chrome.
             ClaySlatePlate()
-                .opacity(showClayLanding ? 0 : 1)
-                .allowsHitTesting(!showClayLanding)
+                .opacity((showClayLanding || showLabScout || showLabChamber) ? 0 : 1)
+                .allowsHitTesting(!(showClayLanding || showLabScout || showLabChamber))
 
             // Chat lives on/within the slate column (centered, width ≤ slate).
             openClaySeat
                 .frame(maxWidth: ClayTheme.slateInnerWidth)
                 .frame(maxWidth: .infinity)
-                .padding(.top, 56) // clear top chrome; slate itself still runs to the top
+                .padding(.top, RedwoodYabarMetrics.contentTopClearance) // MAGNET UNDER BAR — chat clears sticky ЯBAR
                 .padding(.bottom, 12)
-                .opacity(showClayLanding ? 0 : 1)
-                .allowsHitTesting(!showClayLanding)
+                .opacity((showClayLanding || showLabScout || showLabChamber) ? 0 : 1)
+                .allowsHitTesting(!(showClayLanding || showLabScout || showLabChamber))
 
-            chromeOverlays
-                .opacity(showClayLanding ? 0 : 1)
-                .allowsHitTesting(!showClayLanding)
-
+            // Mind / landings open UNDER the sticky bar (z below chrome). Never inside chrome.
             if showClayLanding {
                 ClayLandingView(isPresented: $showClayLanding, title: clayLandingTitle)
                     .transition(.opacity)
                     .zIndex(50)
             }
+            if showWalletLanding {
+                WalletLandingView(isPresented: $showWalletLanding, isOnline: isOnline)
+                    .transition(.opacity)
+                    .zIndex(60)
+            }
+            if showLabChamber {
+                LabChamberView(
+                    isPresented: $showLabChamber,
+                    onOpenScout: {
+                        showLabChamber = false
+                        showLabScout = true
+                    },
+                    onOpenHelix: {
+                        showLabChamber = false
+                        showLabScout = true
+                        labOpenHelix = true
+                    }
+                )
+                .transition(.opacity)
+                .zIndex(60)
+            }
+            if showLabScout {
+                LabScoutView(isPresented: $showLabScout, isOnline: isOnline, revealCompareOnAppear: labScoutRevealCompare, openHelixOnAppear: $labOpenHelix)
+                    .transition(.opacity)
+                    .zIndex(65)
+            }
+
+            if showGrokReview, let pkt = grokReviewPacket {
+                GrokReviewLandingView(
+                    isPresented: $showGrokReview,
+                    packet: pkt,
+                    onSendToChat: { t in injectSend(t) }
+                )
+                .transition(.opacity)
+                .zIndex(70)
+            }
+            if showGrokStatus {
+                GrokStatusLandingView(isPresented: $showGrokStatus)
+                    .transition(.opacity)
+                    .zIndex(71)
+            }
+
+            // Toolbar stays on every page — FIXED size strip at top; Mind must NOT stretch it.
+            chromeOverlays
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                .transaction { $0.animation = nil } // never animate bar size with landing open/close
+                .zIndex(200)
         }
         #if os(macOS)
         .frame(minWidth: 640, minHeight: 480)
         #endif
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .preferredColorScheme(.dark)
-        .animation(.easeInOut(duration: 0.18), value: showClayLanding)
         .onAppear {
-            _ = YaToken.ensureGenesisMinted()
-            if let src = ManualPDFLocator.resolveSeatedPDF() {
-                ManualPDFLocator.seedMachineMind(from: src)
+            ClayCommandInbox.start()
+            // TOTAL RECALL — full conversation history back on the face, forever.
+            recallToFace()
+        }
+        .onChange(of: scenePhase) { phase in
+            if phase == .active {
+                recallToFace()
+            }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: Notification.Name("ЯBOT.MindReseatDidFinish"))) { _ in
+            recallToFace()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: ClayCommandInbox.notificationName)) { note in
+            guard let t = note.userInfo?["text"] as? String else { return }
+            // Global dedupe so N open windows cannot N-fire one inbox verb (window-spawn storm).
+            ClayCommandInbox.consumeIfFirst(t) { injectSend(t) }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: Notification.Name("ЯBOT.OpenLabChamber"))) { _ in
+            showClayLanding = false
+            showWalletLanding = false
+            showLabScout = false
+            showLabChamber = true
+        }
+        .onOpenURL { url in
+            handleOpenURL(url)
+        }
+        .animation(.easeInOut(duration: 0.18), value: showClayLanding)
+        .animation(.easeInOut(duration: 0.18), value: showWalletLanding)
+        .animation(.easeInOut(duration: 0.18), value: showLabScout)
+        .animation(.easeInOut(duration: 0.18), value: showLabChamber)
+        .onAppear {
+            // Off main thread — ledger I/O must never block UI restore / inbox timers.
+            DispatchQueue.global(qos: .utility).async {
+                _ = YaToken.ensureGenesisMinted()
+                if let src = ManualPDFLocator.resolveSeatedPDF() {
+                    ManualPDFLocator.seedMachineMind(from: src)
+                }
             }
         }
         .fileImporter(
@@ -67,21 +158,32 @@ struct ContentView: View {
         ) { result in
             switch result {
             case .success(let urls):
+                var attached: [URL] = []
+                var reseated: [String] = []
                 for url in urls {
+                    if MindReseat.looksLikeMindFile(url) {
+                        let report = MindReseat.reseat(from: url)
+                        reseated.append(report)
+                        // Put full restored thread on the face immediately.
+                        recallToFace()
+                        remember(ChatMessage(role: .system, text: report))
+                        continue
+                    }
                     let accessed = url.startAccessingSecurityScopedResource()
                     defer { if accessed { url.stopAccessingSecurityScopedResource() } }
                     if !attachments.contains(where: { $0.url == url }) {
                         attachments.append(ClayAttachment(name: url.lastPathComponent, url: url))
+                        attached.append(url)
                     }
                 }
-                if !urls.isEmpty {
-                    messages.append(ChatMessage(
+                if !attached.isEmpty {
+                    remember(ChatMessage(
                         role: .system,
-                        text: "Added \(urls.count) file(s): " + urls.map(\.lastPathComponent).joined(separator: ", ")
+                        text: "Added \(attached.count) file(s): " + attached.map(\.lastPathComponent).joined(separator: ", ")
                     ))
                 }
             case .failure(let error):
-                messages.append(ChatMessage(role: .system, text: "Could not add files: \(error.localizedDescription)"))
+                remember(ChatMessage(role: .system, text: "Could not add files: \(error.localizedDescription)"))
             }
         }
     }
@@ -182,6 +284,16 @@ struct ContentView: View {
         return messages.filter { $0.text.localizedCaseInsensitiveContains(q) }
     }
 
+
+    private static func copyToClipboard(_ string: String) {
+        #if canImport(AppKit)
+        NSPasteboard.general.clearContents()
+        NSPasteboard.general.setString(string, forType: .string)
+        #elseif canImport(UIKit)
+        UIPasteboard.general.string = string
+        #endif
+    }
+
     private func bubble(for message: ChatMessage, index: Int = 0) -> some View {
         let isUser = message.role == .user
         let isSystem = message.role == .system
@@ -209,6 +321,7 @@ struct ContentView: View {
         let fontSize = ClayBubbleMetrics.fontSize(kind: kind, isSystem: isSystem)
 
         // Stamped clay type — highlight top-left + shade bottom-right (ref aesthetic).
+        // textSelection MUST sit on Text itself; no compositingGroup on this stack (flattens → blocks select/copy).
         let stamped = Text(message.text.uppercased())
             .font(isSystem ? ClayTheme.clayGoldFont(size: fontSize) : ClayTheme.clayFont(size: fontSize))
             .tracking(ClayBubbleMetrics.tracking)
@@ -222,6 +335,7 @@ struct ContentView: View {
             .shadow(color: Color.white.opacity(0.20), radius: 0, x: -0.5, y: -0.5)
             .shadow(color: Color.black.opacity(0.55), radius: 1.6, x: 1.8, y: 2.4)
             .shadow(color: Color.black.opacity(0.35), radius: 0.4, x: 0.8, y: 1.0)
+            .textSelection(.enabled)
 
         let tablet = stamped
             .padding(.horizontal, ClayBubbleMetrics.insetX(kind))
@@ -241,6 +355,8 @@ struct ContentView: View {
                             .clipShape(RoundedRectangle(cornerRadius: ClayTheme.bubbleRadius, style: .continuous))
                     }
                 }
+                .compositingGroup()
+                .allowsHitTesting(false)
             }
             // Soft inner rim so type sits in a molded well
             .overlay {
@@ -250,27 +366,60 @@ struct ContentView: View {
                     .allowsHitTesting(false)
             }
             .clipShape(RoundedRectangle(cornerRadius: ClayTheme.bubbleRadius, style: .continuous))
-            .compositingGroup()
             .shadow(color: Color.black.opacity(0.55), radius: 8, x: 0, y: 5)
+            .contextMenu {
+                Button("Copy") {
+                    Self.copyToClipboard(message.text)
+                }
+            }
 
+        let chip = laneChip(message.lane, isUser: isUser)
+        let stack = VStack(alignment: isUser ? .trailing : .leading, spacing: 4) {
+            chip
+            tablet
+        }
         // Grok Bot layout: your tablets trailing (right), companion leading (left).
-        // Text inside every tablet is left-aligned. Never overlap — clear air gap.
+        // Lane chip marks CMD / FN / ACT / TALK so work ≠ talk.
         return Group {
             if isUser {
                 HStack(alignment: .top, spacing: 0) {
                     Spacer(minLength: 12)
-                    tablet
+                    stack
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)
             } else {
                 HStack(alignment: .top, spacing: 0) {
-                    tablet
+                    stack
                     Spacer(minLength: 12)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
         }
         .padding(.bottom, ClayTheme.bubbleShadowReserve)
+    }
+
+    @ViewBuilder
+    private func laneChip(_ lane: ChatLane, isUser: Bool) -> some View {
+        let color: Color = {
+            switch lane {
+            case .command: return Color(red: 0.95, green: 0.75, blue: 0.20)
+            case .function: return Color(red: 0.35, green: 0.85, blue: 0.95)
+            case .action: return Color(red: 0.40, green: 0.90, blue: 0.45)
+            case .conversation: return Color(red: 0.75, green: 0.55, blue: 0.95)
+            }
+        }()
+        Text(lane.chip)
+            .font(ClayTheme.clayFont(size: 10, weight: .bold))
+            .tracking(1.2)
+            .foregroundStyle(color)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 3)
+            .background(
+                Capsule(style: .continuous)
+                    .fill(Color.black.opacity(0.55))
+                    .overlay(Capsule(style: .continuous).strokeBorder(color.opacity(0.65), lineWidth: 1))
+            )
+            .accessibilityLabel("Lane \(lane.rawValue)")
     }
     private var searchBar: some View {
         ClaySearchBar(text: $searchText, focused: $searchFocused) {
@@ -293,91 +442,207 @@ struct ContentView: View {
 
     // MARK: - Clay chrome (visual contract: wall mock)
 
+    // MARK: - Clay chrome (visual contract: Redwood ЯBAR MUST-EXIST)
+    // Order ON lumber: Bolte · Lab · Search · Home/ghost-heart (CENTER) · Vault · Online/Offline · Mind
+
     private var chromeOverlays: some View {
-        VStack(spacing: 0) {
-            HStack(alignment: .center, spacing: 10) {
-                // Top-left: BOLTE + search glass; clay search well appears beside the glass.
-                HStack(alignment: .center, spacing: 8) {
-                    ClayButton(
-                        asset: "Bolte",
-                        systemFallback: "bolt.heart.fill",
-                        width: 32,
-                        height: 32,
-                        help: "Clay landing — USER MANUAL"
-                    ) {
-                        withAnimation(.easeInOut(duration: 0.18)) {
-                            clayLandingTitle = "USER MANUAL"
-                            showClayLanding = true
-                        }
-                    }
-
-                    ClayButton(
-                        asset: "BtnSearch",
-                        systemFallback: "magnifyingglass",
-                        width: 32,
-                        height: 32,
-                        help: "Search chat"
-                    ) {
-                        withAnimation(.spring(response: 0.28, dampingFraction: 0.85)) {
-                            showSearch.toggle()
-                        }
-                        if showSearch {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-                                searchFocused = true
-                            }
-                        } else {
-                            searchText = ""
-                            searchFocused = false
-                        }
-                    }
-
-                    if showSearch {
-                        searchBar
-                            .transition(.asymmetric(
-                                insertion: .move(edge: .leading).combined(with: .opacity),
-                                removal: .opacity
-                            ))
-                    }
+        YaResizableToolbar(
+            isOnline: $mode.isOnline,
+            showSearch: showSearch,
+            onBolte: {
+                withAnimation(.easeInOut(duration: 0.18)) {
+                    clayLandingTitle = "YAMANUAL"
+                    showClayLanding = true
                 }
-                .frame(minHeight: 36)
-
-                Spacer(minLength: 12)
-
-                // Mode + mind — same size, center-aligned pair (far upper right).
-                HStack(alignment: .center, spacing: 8) {
-                    ClayModeButton(isOnline: $mode.isOnline, width: 32, height: 32) {
-                        messages.append(
-                            ChatMessage(
-                                role: .system,
-                                text: CompanionRouter.reply(to: "mode", isOnline: isOnline)
-                            )
-                        )
-                    }
-
-                    ClayButton(
-                        asset: "BtnMind",
-                        systemFallback: "brain.head.profile",
-                        width: 32,
-                        height: 32,
-                        help: "Clay landing — MACHINE MIND"
-                    ) {
-                        mindPulse.toggle()
-                        withAnimation(.easeInOut(duration: 0.18)) {
-                            clayLandingTitle = "MACHINE MIND"
-                            showClayLanding = true
-                        }
-                    }
+            },
+            onLab: {
+                withAnimation(.easeInOut(duration: 0.18)) {
+                    showLabScout = true
                 }
-                .frame(height: 32)
-            }
-            .frame(minHeight: 52)
-            .padding(.horizontal, 14)
-            .padding(.top, 12)
-            Spacer(minLength: 0)
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            },
+            onSearch: {
+                withAnimation(.spring(response: 0.28, dampingFraction: 0.85)) {
+                    showSearch.toggle()
+                }
+                if showSearch {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                        searchFocused = true
+                    }
+                } else {
+                    searchText = ""
+                    searchFocused = false
+                }
+            },
+            onHome: {
+                withAnimation(.easeInOut(duration: 0.18)) {
+                    showClayLanding = false
+                    showWalletLanding = false
+                    showLabScout = false
+                    showLabChamber = false
+                    showSearch = false
+                }
+            },
+            onVault: {
+                withAnimation(.easeInOut(duration: 0.18)) {
+                    showWalletLanding = true
+                }
+            },
+            onModeToggle: {
+                remember(
+                    ChatMessage(
+                        role: .system,
+                        text: CompanionRouter.reply(to: "mode", isOnline: isOnline)
+                    )
+                )
+            },
+            onMind: {
+                mindPulse.toggle()
+                // Close search so magnetized field cannot shove icons off-window when Mind opens.
+                showSearch = false
+                searchText = ""
+                searchFocused = false
+                withAnimation(.easeInOut(duration: 0.18)) {
+                    clayLandingTitle = "MACHINE MIND"
+                    showClayLanding = true
+                }
+            },
+            searchAccessory: showSearch ? AnyView(searchBar) : nil
+        )
     }
 
+
+    private func handleOpenURL(_ url: URL) {
+        // Accept yabot:// (primary) and yaaim:// (alias). Never crash on bad packets.
+        guard GrokYabotLink.acceptsScheme(url.scheme) else { return }
+
+        // Same-phone Grok / chat / mind / status first (online bonus).
+        switch GrokYabotLink.parse(url) {
+        case .review(let packet):
+            showClayLanding = false
+            showWalletLanding = false
+            showLabScout = false
+            showLabChamber = false
+            grokReviewPacket = packet
+            showGrokReview = true
+            GrokYabotLink.acknowledge(packet, state: "review_open", note: "Review landing")
+            return
+        case .work(let packet):
+            showClayLanding = false
+            showWalletLanding = false
+            showLabScout = false
+            showLabChamber = false
+            showGrokReview = false
+            let t = packet.text.isEmpty ? packet.payload : packet.text
+            GrokYabotLink.acknowledge(packet, state: "work_queued", note: "inject chat")
+            if !t.isEmpty { injectSend(t) }
+            return
+        case .status(let packet):
+            GrokYabotLink.acknowledge(packet, state: "status_open", note: "status sheet")
+            showGrokStatus = true
+            return
+        case .ping(let packet):
+            GrokYabotLink.acknowledge(packet, state: "pong", note: "seat alive")
+            showGrokStatus = true
+            return
+        case .mind:
+            showWalletLanding = false
+            showLabScout = false
+            showLabChamber = false
+            showGrokReview = false
+            clayLandingTitle = "MACHINE MIND"
+            showClayLanding = true
+            return
+        case .chat(let t):
+            showClayLanding = false
+            showWalletLanding = false
+            showLabScout = false
+            showLabChamber = false
+            showGrokReview = false
+            injectSend(t)
+            return
+        case .ignored:
+            break
+        }
+
+        // Lab launch bay — yabot://lab · yabot://lab/scout · yabot://lab/scout/compare
+        // Also accept path-form yabot:///lab/scout (empty host).
+        let host = (url.host ?? "").lowercased()
+        let rawPath = url.path.trimmingCharacters(in: CharacterSet(charactersIn: "/")).lowercased()
+        let route: String = {
+            if host == "lab" {
+                return rawPath.isEmpty ? "lab" : "lab/" + rawPath
+            }
+            if rawPath == "lab" || rawPath.hasPrefix("lab/") {
+                return rawPath
+            }
+            return ""
+        }()
+        if route == "lab/manual" {
+            showClayLanding = false
+            showWalletLanding = false
+            showLabChamber = true
+            _ = LabManualDesk.openPDF()
+            return
+        }
+        if route == "lab/chamber" || route == "lab/room" || route == "lab/void" || route == "lab/rbits" || route == "lab/creations" {
+            showClayLanding = false
+            showWalletLanding = false
+            showLabChamber = true
+            return
+        }
+        if route == "lab" {
+            // Homepage Lab icon landing = chamber (Lab of Creations)
+            showClayLanding = false
+            showWalletLanding = false
+            showLabChamber = true
+            return
+        }
+        if route == "lab/scout" || route.hasPrefix("lab/scout/") || route == "lab/helix" {
+            showClayLanding = false
+            showWalletLanding = false
+            labScoutRevealCompare = route.contains("compare")
+            labOpenHelix = (route == "lab/helix")
+            showLabScout = true
+            return
+        }
+
+        if let comps = URLComponents(url: url, resolvingAgainstBaseURL: false),
+           let item = comps.queryItems?.first(where: { $0.name == "text" }),
+           let t = item.value, !t.isEmpty {
+            injectSend(t)
+            return
+        }
+        let pathText = url.path.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
+        if !pathText.isEmpty {
+            injectSend(pathText.removingPercentEncoding ?? pathText)
+        }
+    }
+
+    private func injectSend(_ text: String) {
+        let cleaned = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !cleaned.isEmpty else { return }
+        draft = cleaned
+        send()
+    }
+
+    /// Append to UI + permanent disk. Never deletes prior lines.
+    private func recallToFace() {
+        _ = MindTreeRoot.ensureSeated()
+        var loaded = ChatThreadStore.loadAll()
+        // TOTAL RECALL harden: if hunt came up empty, mergeIncoming reseats mirrors then reload.
+        if loaded.isEmpty {
+            _ = ChatThreadStore.mergeIncoming([])
+            loaded = ChatThreadStore.loadAll()
+        }
+        if !loaded.isEmpty {
+            messages = loaded
+        }
+    }
+
+    private func remember(_ message: ChatMessage) {
+        messages.append(message)
+        ChatThreadStore.append(message)
+    }
 
     // MARK: - Send
 
@@ -392,19 +657,26 @@ struct ContentView: View {
             let fileNote = "Files: " + names
             userLine = text.isEmpty ? fileNote : text + "\n" + fileNote
         }
-        messages.append(ChatMessage(role: .user, text: userLine))
-        MindTranscript.append(role: "user", kind: "prompt", body: userLine, party: "Decider")
+        let routeInput = text.isEmpty ? "files: " + files.map(\.name).joined(separator: ", ") : text
+        // Show user turn immediately; Heart dial-in generate runs off-main (Android airplane parity).
+        let pendingLane = ChatLane.conversation
+        remember(ChatMessage(role: .user, text: userLine, lane: pendingLane))
+        MindTranscript.append(role: "user", kind: "prompt-\(pendingLane.rawValue)", body: userLine, party: "Decider")
         draft = ""
         attachments = []
+        let online = isOnline
+        let fileCount = files.count
+        let fileNames = files.map(\.name)
 
-        let routeInput = text.isEmpty ? "files: " + files.map(\.name).joined(separator: ", ") : text
-        let answer = CompanionRouter.reply(to: routeInput, isOnline: isOnline)
-        let fileAck: String = files.isEmpty
-            ? answer
-            : answer + "\nReceived \(files.count) file(s): " + files.map(\.name).joined(separator: ", ")
-        MindTranscript.append(role: "assistant", kind: "reply", body: fileAck, party: "clay")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-            messages.append(ChatMessage(role: .assistant, text: fileAck))
+        DispatchQueue.global(qos: .userInitiated).async {
+            let turn = CompanionRouter.handle(to: routeInput, isOnline: online)
+            let fileAck: String = fileCount == 0
+                ? turn.reply
+                : turn.reply + "\nReceived \(fileCount) file(s): " + fileNames.joined(separator: ", ")
+            MindTranscript.append(role: "assistant", kind: "reply-\(turn.lane.rawValue)", body: fileAck, party: "clay")
+            DispatchQueue.main.async {
+                remember(ChatMessage(role: .assistant, text: fileAck, lane: turn.lane))
+            }
         }
     }
 

@@ -8,14 +8,14 @@ import UIKit
 #endif
 
 /// Claymation landings.
-/// Bolte / USER MANUAL: Manual cover → download PDF; EXIT → home.
-/// Mind / MACHINE MIND: scene + size counter (MB/GB/TB) + ↑ feed + ↓ offload + EXIT.
+/// Bolte / YAMANUAL: sole manual cover → open/export YAMANUAL PDF; Home on sticky ЯBAR leaves landing.
+/// Mind / MACHINE MIND: scene + size counter (MB/GB/TB) + ↑ feed + ↓ offload.
+/// BOTTOM-CHROME-STRIP: no EXIT / house / brain / wallet bottom nav (ЯBAR owns leave).
 struct ClayLandingView: View {
     @Binding var isPresented: Bool
     var title: String = ""
 
     @State private var exportNote: String? = nil
-    @State private var pressedExit = false
     @State private var showFeedPicker = false
     @State private var sizeUnit: MachineMindVault.Unit = .mb
     @State private var sizeNumber: String = "0"
@@ -34,27 +34,8 @@ struct ClayLandingView: View {
     }
 
     var body: some View {
+        // Landing fills seat BELOW sticky ЯBAR — must NOT stretch chrome (size locked there).
         ZStack {
-            ZStack {
-                Color.black
-                if ClayImage.exists(backdropAsset) {
-                    Image(backdropAsset)
-                        .resizable()
-                        .interpolation(.high)
-                        .aspectRatio(contentMode: .fill)
-                        .scaleEffect(showsManualCover ? 1.0 : 1.08)
-                } else if ClayImage.exists("ClayLandingBackdrop") {
-                    Image("ClayLandingBackdrop")
-                        .resizable()
-                        .interpolation(.high)
-                        .scaledToFill()
-                }
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .clipped()
-            .ignoresSafeArea()
-            .allowsHitTesting(false)
-
             VStack(spacing: 0) {
                 if showsManualCover {
                     Spacer(minLength: 24)
@@ -70,7 +51,7 @@ struct ClayLandingView: View {
                             systemFallback: "book.closed.fill",
                             width: maxW,
                             height: maxH,
-                            help: "Download USER MANUAL"
+                            help: "Open YAMANUAL"
                         ) {
                             downloadManual()
                         }
@@ -80,12 +61,31 @@ struct ClayLandingView: View {
                 } else {
                     mindControls
                 }
-
-                exitControl
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        // Paint backdrop via background{} so ignoresSafeArea does NOT expand parent / ЯBAR GeometryReader.
+        .background {
+            ZStack {
+                Color.black
+                if ClayImage.exists(backdropAsset) {
+                    Image(backdropAsset)
+                        .resizable()
+                        .interpolation(.high)
+                        .aspectRatio(contentMode: .fill)
+                        .scaleEffect(showsManualCover ? 1.0 : 1.08)
+                } else if ClayImage.exists("ClayLandingBackdrop") {
+                    Image("ClayLandingBackdrop")
+                        .resizable()
+                        .interpolation(.high)
+                        .scaledToFill()
+                }
+            }
+            .clipped()
+            .ignoresSafeArea()
+            .allowsHitTesting(false)
+        }
         .overlay(alignment: .bottom) {
             if let exportNote {
                 Text(exportNote)
@@ -94,12 +94,17 @@ struct ClayLandingView: View {
                     .padding(.horizontal, 16)
                     .padding(.vertical, 10)
                     .background(Capsule().fill(ClayTheme.charcoalDeep.opacity(0.94)))
-                    .padding(.bottom, 72)
+                    .padding(.bottom, 24)
                     .transition(.opacity)
                     .allowsHitTesting(false)
             }
         }
-        .onAppear { refreshSize() }
+        .onAppear {
+            refreshSize()
+            if !showsManualCover {
+                flash(MachineMindVault.breakdownLabel())
+            }
+        }
         .fileImporter(
             isPresented: $showFeedPicker,
             allowedContentTypes: [.item, .data, .image, .pdf, .text, .audio, .movie, .directory],
@@ -111,6 +116,12 @@ struct ClayLandingView: View {
                 for u in urls {
                     let ok = u.startAccessingSecurityScopedResource()
                     defer { if ok { u.stopAccessingSecurityScopedResource() } }
+                    // Last resort TOTAL RECALL: Mind .txt / CHAT-THREAD via ↑ feed reseats the face thread.
+                    if MindReseat.looksLikeMindFile(u) {
+                        last = MindReseat.reseat(from: u)
+                        NotificationCenter.default.post(name: Notification.Name("ЯBOT.MindReseatDidFinish"), object: nil)
+                        continue
+                    }
                     do {
                         last = try MachineMindVault.feed(from: u)
                     } catch {
@@ -172,46 +183,29 @@ struct ClayLandingView: View {
 
     private var sizeCounterHeight: CGFloat {
         #if os(iOS)
-        40
+        28
         #else
         48
         #endif
     }
 
     private var sizeCounterTopPad: CGFloat {
-        #if os(iOS)
-        10
-        #else
-        18
-        #endif
+        // MAGNET UNDER BAR — Mind tablet counter clears sticky ЯBAR (OS-smart)
+        RedwoodYabarMetrics.contentTopClearance
     }
 
-    private var exitFontSize: CGFloat {
-        #if os(iOS)
-        22
-        #else
-        26
-        #endif
-    }
 
-    private var exitBottomPad: CGFloat {
-        #if os(iOS)
-        20
-        #else
-        28
-        #endif
-    }
 
     private var mindControls: some View {
         VStack(spacing: 10) {
-            // Size counter — tap cycles MB → GB → TB (and back)
+            // Size counter BELOW sticky ЯBAR (contentTopClearance) — never inside / stretching chrome.
             sizeCounter
                 .padding(.top, sizeCounterTopPad)
                 .zIndex(2)
 
             // Brain/mascot scene breathes in the middle; ↑↓ flank mid-height
             ZStack {
-                Spacer().frame(maxWidth: .infinity, maxHeight: .infinity)
+                Color.clear
                 HStack(alignment: .center, spacing: mindArrowSpacing) {
                     ClayButton(
                         asset: "MindArrowUp",
@@ -243,6 +237,7 @@ struct ClayLandingView: View {
     }
 
     private var sizeCounter: some View {
+        // Chrome bar ABOVE the clay face — never float glyphs on the gargoyle head.
         MindClayCounterView(
             number: sizeNumber,
             unit: sizeUnitLetters,
@@ -253,39 +248,17 @@ struct ClayLandingView: View {
             refreshSize()
             flash("Size unit · \(sizeUnit.rawValue)")
         }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 6)
+        .background(
+            Capsule(style: .continuous)
+                .fill(Color.black.opacity(0.55))
+                .overlay(
+                    Capsule(style: .continuous)
+                        .strokeBorder(Color.white.opacity(0.18), lineWidth: 1)
+                )
+        )
         .padding(.horizontal, 20)
-        .padding(.vertical, 8)
-    }
-
-    private var exitControl: some View {
-        Text("EXIT")
-            .font(ClayTheme.clayFont(size: exitFontSize, weight: .bold))
-            .tracking(4)
-            .foregroundStyle(ClayTheme.offWhite)
-            .shadow(color: Color.white.opacity(0.35), radius: 0, x: -1, y: -1)
-            .shadow(color: Color.black.opacity(0.55), radius: 1.6, x: 1.5, y: 2)
-            .scaleEffect(pressedExit ? 0.96 : 1.0)
-            .padding(.vertical, 10)
-            .padding(.horizontal, 20)
-            .contentShape(Rectangle())
-            .highPriorityGesture(
-                DragGesture(minimumDistance: 0)
-                    .onChanged { _ in pressedExit = true }
-                    .onEnded { value in
-                        pressedExit = false
-                        let dx = abs(value.translation.width)
-                        let dy = abs(value.translation.height)
-                        if dx < 24 && dy < 24 {
-                            withAnimation(.easeInOut(duration: 0.18)) {
-                                isPresented = false
-                            }
-                        }
-                    }
-            )
-            .help("Return home")
-            .accessibilityAddTraits(.isButton)
-            .accessibilityLabel("EXIT")
-            .padding(.bottom, exitBottomPad)
     }
 
     // MARK: - Actions
@@ -313,16 +286,21 @@ struct ClayLandingView: View {
     }
 
     private func downloadManual() {
-        flash("Starting download…")
         guard let src = ManualPDFLocator.resolveSeatedPDF() else {
-            flash("USER-MANUAL.pdf not seated")
+            flash("YAMANUAL.pdf not seated")
             return
         }
         ManualPDFLocator.seedMachineMind(from: src)
 
         #if canImport(AppKit)
+        // Prefer open/view for the sole fixed manual.
+        if NSWorkspace.shared.open(src) {
+            flash("Opened YAMANUAL")
+            return
+        }
+        flash("Starting download…")
         if let downloads = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first {
-            let dest = downloads.appendingPathComponent("USER-MANUAL.pdf")
+            let dest = downloads.appendingPathComponent("YAMANUAL.pdf")
             do {
                 if FileManager.default.fileExists(atPath: dest.path) {
                     try FileManager.default.removeItem(at: dest)
@@ -338,10 +316,10 @@ struct ClayLandingView: View {
 
         let panel = NSSavePanel()
         panel.canCreateDirectories = true
-        panel.nameFieldStringValue = "USER-MANUAL.pdf"
+        panel.nameFieldStringValue = "YAMANUAL.pdf"
         panel.allowedContentTypes = [.pdf]
-        panel.title = "Download USER MANUAL"
-        panel.message = "Works offline from seated MACHINE MIND / ЯBOT"
+        panel.title = "Download YAMANUAL"
+        panel.message = "Sole manual YAMANUAL · offline from MACHINE MIND / ЯBOT"
         if let downloads = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first {
             panel.directoryURL = downloads
         }
@@ -368,7 +346,7 @@ struct ClayLandingView: View {
             // Prefer app Documents so Save to Files / share has a stable file
             let destDir = fm.urls(for: .documentDirectory, in: .userDomainMask).first
                 ?? fm.temporaryDirectory
-            let dest = destDir.appendingPathComponent("USER-MANUAL.pdf")
+            let dest = destDir.appendingPathComponent("YAMANUAL.pdf")
             if fm.fileExists(atPath: dest.path) {
                 try fm.removeItem(at: dest)
             }

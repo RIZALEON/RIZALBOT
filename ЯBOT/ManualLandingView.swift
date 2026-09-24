@@ -7,8 +7,8 @@ import AppKit
 import UIKit
 #endif
 
-/// All-black tableta landing: USER GIVEЯ MANUAL cover.
-/// Top mascot (house) → dismiss to chat. Bottom mascot (arrow) → offline PDF export.
+/// All-black tableta landing: ЯMANUAL cover (SOLE fixed manual HARDCODE 0.1).
+/// Top mascot (house) → dismiss to chat. Bottom mascot (arrow) → open/export YAMANUAL PDF.
 struct ManualLandingView: View {
     @Binding var isPresented: Bool
     @State private var exportNote: String? = nil
@@ -54,8 +54,8 @@ struct ManualLandingView: View {
                             .frame(height: size.height * 0.25)
                             .frame(maxWidth: size.width * 0.50)
                             .onTapGesture { exportManual() }
-                            .help("Download USER MANUAL")
-                            .accessibilityLabel("Download USER MANUAL")
+                            .help("Open YAMANUAL")
+                            .accessibilityLabel("Open YAMANUAL")
                         Color.clear
                             .frame(height: size.height * 0.05)
                     }
@@ -93,16 +93,22 @@ struct ManualLandingView: View {
 
     private func exportManual() {
         guard let src = ManualPDFLocator.resolveSeatedPDF() else {
-            exportNote = "USER-MANUAL.pdf not seated in MACHINE MIND"
+            exportNote = "YAMANUAL.pdf not seated in MACHINE MIND"
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.4) { exportNote = nil }
             return
         }
         ManualPDFLocator.seedMachineMind(from: src)
 
         #if canImport(AppKit)
+        // Prefer open/view (sole manual face); reveal in Finder still available via save path below.
+        if NSWorkspace.shared.open(src) {
+            exportNote = "Opened YAMANUAL"
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { exportNote = nil }
+            return
+        }
         let downloads = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first
         if let downloads {
-            let dest = downloads.appendingPathComponent("USER-MANUAL.pdf")
+            let dest = downloads.appendingPathComponent("YAMANUAL.pdf")
             do {
                 if FileManager.default.fileExists(atPath: dest.path) {
                     try FileManager.default.removeItem(at: dest)
@@ -119,10 +125,10 @@ struct ManualLandingView: View {
 
         let panel = NSSavePanel()
         panel.canCreateDirectories = true
-        panel.nameFieldStringValue = "USER-MANUAL.pdf"
+        panel.nameFieldStringValue = "YAMANUAL.pdf"
         panel.allowedContentTypes = [.pdf]
-        panel.title = "Export USER MANUAL"
-        panel.message = "Offline export from MACHINE MIND"
+        panel.title = "Export YAMANUAL"
+        panel.message = "Offline export · sole manual YAMANUAL"
         if let downloads {
             panel.directoryURL = downloads
         }
@@ -147,7 +153,7 @@ struct ManualLandingView: View {
             let fm = FileManager.default
             let destDir = fm.urls(for: .documentDirectory, in: .userDomainMask).first
                 ?? fm.temporaryDirectory
-            let dest = destDir.appendingPathComponent("USER-MANUAL.pdf")
+            let dest = destDir.appendingPathComponent("YAMANUAL.pdf")
             if fm.fileExists(atPath: dest.path) {
                 try fm.removeItem(at: dest)
             }
@@ -177,10 +183,13 @@ private struct FocusEffectOff: ViewModifier {
     }
 }
 
-/// Offline PDF seats: Bundle → Application Support MACHINE MIND → Documents/ЯBOT sibling.
+/// Offline PDF seats for SOLE manual YAMANUAL: Bundle → MACHINE MIND → Documents/ЯBOT living/SoT.
+/// Leaves (USER-MANUAL, LAB-MANUAL, …) stay on disk; they are NOT the primary opener.
 enum ManualPDFLocator {
-    static let fileName = "USER-MANUAL.pdf"
+    static let fileName = "YAMANUAL.pdf"
     static let mindFolderName = "MACHINE MIND"
+    /// Edit sources (MD/DOCX) live beside the PDF; PDF is the open/view face.
+    static let editMDName = "YAMANUAL.md"
 
     static func machineMindDirectory() -> URL? {
         guard let support = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first else {
@@ -194,7 +203,8 @@ enum ManualPDFLocator {
     static func resolveSeatedPDF() -> URL? {
         let fm = FileManager.default
 
-        if let bundleURL = Bundle.main.url(forResource: "USER-MANUAL", withExtension: "pdf"),
+        // Bundle resource (folder-synced ЯBOT/)
+        if let bundleURL = Bundle.main.url(forResource: "YAMANUAL", withExtension: "pdf"),
            fm.fileExists(atPath: bundleURL.path) {
             return bundleURL
         }
@@ -206,14 +216,33 @@ enum ManualPDFLocator {
             }
         }
 
+        // Living + SoT + teach shelf (YAMANUAL only — sole fixed manual)
+        let home = URL(fileURLWithPath: NSHomeDirectory())
         let seatCandidates: [URL] = [
-            URL(fileURLWithPath: "/Users/rizal/Documents/ЯBOT/USER-MANUAL.pdf"),
-            URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent("Documents/ЯBOT/USER-MANUAL.pdf")
+            URL(fileURLWithPath: "/Users/rizal/Documents/ЯBOT/YAMANUAL.pdf"),
+            home.appendingPathComponent("Documents/ЯBOT/YAMANUAL.pdf"),
+            URL(fileURLWithPath: "/Users/rizal/Documents/ЯBOT/contracts/YAMANUAL-0.1.pdf"),
+            home.appendingPathComponent("Documents/ЯBOT/contracts/YAMANUAL-0.1.pdf"),
+            URL(fileURLWithPath: "/Users/rizal/Documents/ЯBOT/mind/books/YAMANUAL-0.1.pdf"),
+            home.appendingPathComponent("Documents/ЯBOT/mind/books/YAMANUAL-0.1.pdf")
         ]
         for url in seatCandidates where fm.fileExists(atPath: url.path) {
+            MindTreeRoot.markDocumentsAccessGranted()
             return url
         }
         return nil
+    }
+
+    /// Open PDF for view (preferred face). Returns true if opened.
+    @discardableResult
+    static func openSeatedPDF() -> Bool {
+        guard let src = resolveSeatedPDF() else { return false }
+        _ = seedMachineMind(from: src)
+        #if canImport(AppKit)
+        return NSWorkspace.shared.open(src)
+        #else
+        return false
+        #endif
     }
 
     @discardableResult
