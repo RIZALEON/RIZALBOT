@@ -1,0 +1,6 @@
+
+*.gguf
+*.keystore
+wllama/wasm/
+wllama/compat/
+__pycache__/
