@@ -1,0 +1,49 @@
+{
+  "bots" : {
+    "яbot" : "ЯBOT",
+    "яmax" : "ЯMAX"
+  },
+  "claySeatLabel" : "Я",
+  "nextCreatedSerial" : 3,
+  "roster" : [
+    {
+      "aliases" : [
+        "yabot",
+        "ябот",
+        "rbot",
+        "я bot"
+      ],
+      "createdAt" : "2026-09-24T23:20:00Z",
+      "face" : "BotFaceYaBot",
+      "formerNames" : [
+        "Scout"
+      ],
+      "housed" : true,
+      "id" : "yabot",
+      "look" : "blue clay face · red horns · black bat wings",
+      "name" : "ЯBOT",
+      "serial" : 1,
+      "shelf" : "left"
+    },
+    {
+      "aliases" : [
+        "yamax",
+        "ямакс",
+        "rmax",
+        "я max"
+      ],
+      "createdAt" : "2026-09-24T23:20:00Z",
+      "face" : "BotFaceYaMax",
+      "formerNames" : [],
+      "housed" : true,
+      "id" : "yamax",
+      "look" : "white Baymax-style clay face · shelf companion",
+      "name" : "ЯMAX",
+      "serial" : 2,
+      "shelf" : "right"
+    }
+  ],
+  "rosterSeeded" : true,
+  "schema" : "BotLabels.v3",
+  "updatedAt" : "2026-09-24T23:21:00Z"
+}

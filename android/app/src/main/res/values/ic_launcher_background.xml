@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Deep purple matching pan_os_tile clay interior (transparent corners show this) -->
+    <color name="ic_launcher_background">#39294B</color>
+</resources>

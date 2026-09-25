@@ -1,0 +1,53 @@
+# ---- Xcode / Swift ----
+DerivedData/
+DerivedData*/
+build/
+.build/
+*.xcuserstate
+xcuserdata/
+*.xcarchive
+*.app/
+*.ipa
+*.dSYM/
+Pods/
+.swiftpm/
+dist/test-src/
+
+# ---- Gradle / Android ----
+.gradle/
+.cxx/
+.externalNativeBuild/
+local.properties
+*.apk
+*.aab
+captures/
+.idea/
+*.iml
+
+# ---- Heart GGUF (too large — keep local; see engine/HEART-SEAT.txt) ----
+*.gguf
+hearts-archive/
+
+# ---- Local scratch ----
+/tmp/
+_aside/
+_shots/
+_bak/
+node_modules/
+.DS_Store
+
+# ---- Secrets: never commit ----
+.env
+.env.*
+*.keystore
+*.jks
+*.p12
+*.p8
+*.pem
+*.key
+*.mobileprovision
+*.provisionprofile
+*keypair*.json
+id_rsa*
+id_ed25519*
+google-services.json

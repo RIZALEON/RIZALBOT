@@ -1,0 +1,33 @@
+ANDROID ICON WHITE HALO FIX — 2026-09-23 ~5:22 PM MT (America/Denver)
+
+SUCCESS: Moto drawer ЯBOT icon fills squircle with clay art only — no white pad.
+Proof: Desktop/PAN-OS-TILE-drawer-no-white.png (ЯBOT bottom-left fills mask;
+        neighboring Я AI™ still shows white pad for contrast).
+Pixel check inside ЯBOT footprint: corners dark clay RGB~(29,24,37), mid-edges
+clay/gold, white%≈0.8 from squircle AA against page only.
+
+CAUSE (two layers)
+1) ASSET: pan_os_tile.png was fully opaque with WHITE corner pads outside the
+   rounded gold clay frame (~26px diagonal / ~5955 px). Baked white in the PNG.
+2) PLATFORM: Manifest pointed android:icon/roundIcon at @drawable/pan_os_tile with
+   NO mipmap-anydpi-v26 adaptive icon. On API 26+ the system places a legacy icon
+   onto a WHITE adaptive plate → clay tile inset in a white squircle on Moto drawer.
+
+NOT the leftover purple vector (ic_launcher_foreground.xml) — unused by manifest;
+retired to android/_retired/.
+
+FIX
+- Flood-filled white corner pads with dark clay #160812 (fully opaque; 0 near-white left).
+  Original backed up: android/_retired/pan_os_tile.OPAQUE-WHITE-CORNERS.bak.png
+- Adaptive icons:
+  res/mipmap-anydpi-v26/ic_launcher.xml (+ _round)
+    background = @color/ic_launcher_background (#1E0108 opaque dark clay)
+    foreground = @drawable/ic_launcher_fg_bleed (pan_os_tile inset -30%)
+  Density mipmaps regenerated from opaque dark-corner tile.
+- Manifest: icon/roundIcon → @mipmap/ic_launcher(_round)
+
+DEPLOY
+- assembleDebug OK; adb install -r ZN3223FVDH Success
+- heart.gguf preserved: 2104932768 bytes unchanged
+- Desktop APK: /Users/rizal/Desktop/ЯBOT-android-debug.apk
+- Documents twin synced: /Users/rizal/Documents/ЯBOT/android/

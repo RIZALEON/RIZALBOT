@@ -1,0 +1,32 @@
+ANDROID-SCROLL-BOTTOM-0.1 — seated 2026-09-23 (America/Denver)
+
+GOAL: Android clay chat scroll-to-bottom FAB matching Mac/iOS.
+
+MIRRORED FROM:
+  Mac/iOS ContentView.swift messageList
+  - showJumpToLatest + jumpToken
+  - onScrollGeometryChange distanceFromBottom <= 56 → hide
+  - ClayButton asset ArrowDown (fallback BtnArrowDown), 52×52
+  - bottomTrailing padding trailing 8 / bottom 10
+  - tap → scrollTo("bottom-anchor")
+
+ANDROID SoT: /Users/rizal/Library/Developer/ЯBOT-localbuild/android/
+  layout: activity_main.xml → btn_jump_latest (middle FrameLayout, gravity bottom|end)
+  asset: drawable-nodpi/arrowdown.png (from ArrowDown.imageset)
+  logic: MainActivity.kt wireJumpToLatest / updateJumpFab / scrollToBottom
+  twin synced: Documents/ЯBOT/android/ (same paths)
+
+BEHAVIOR:
+  show when user scrolled up (distanceFromBottom > 56dp) AND messageCount > 1
+  hide at bottom / on new append (auto-scroll) / while offline landing overlays chat
+  tap → smoothScrollTo latest
+
+STANDING: offline core untouched; no Mac/iOS Swift churn; one clay face.
+
+VERIFY 2026-09-23 ~16:45 MT (America/Denver):
+- APK: app-debug.apk installed -r on ZN3223FVDH (moto g 5G - 2024)
+- pkg: io.github.rizaleon.abomega.debug
+- heart.gguf preserved: 2104932768 bytes @ filesDir (install -r)
+- UI dump: btn_jump_latest visible after scroll-up, bounds [597,1307][688,1398]
+  content-desc="Jump to latest"; magnetized bottom|end of middle above composer
+- Screenshot: status/ANDROID-SCROLL-BOTTOM-0.1.png (+ localbuild/android twin)

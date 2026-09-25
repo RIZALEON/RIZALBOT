@@ -1,0 +1,5 @@
+WALLET · OFFLINE PREMIER
+Local wallet chamber stub.
+Mint (WalletCard): BB9uA5BuacDnWyDf5Npc9nMb9yFbyThsNrQPBYJ5Q1Lv
+Explorer: https://solscan.io/token/BB9uA5BuacDnWyDf5Npc9nMb9yFbyThsNrQPBYJ5Q1Lv
+Keys stay on device. The app and the game never sign. Online is bonus label only.

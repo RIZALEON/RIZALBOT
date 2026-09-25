@@ -1,0 +1,3 @@
+MACHINE MIND · OFFLINE PREMIER
+Local cognition seat. Heart loads from filesDir/heart.gguf.
+No cloud. NonNuclear.

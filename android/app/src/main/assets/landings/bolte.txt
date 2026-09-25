@@ -1,0 +1,5 @@
+BOLTE · ЯMANUAL sole manual face
+HARDCODE: ЯMANUAL is the ONE AND ONLY fixed editable / openable / organizable manual.
+Tap Bolte (or say `manual`) → opens ЯMANUAL in-app (assets/mind/books/YAMANUAL.md) + GAMEWRITE-FUNDAMENTALS.
+Leaves (USER-MANUAL, LAB-MANUAL, courses) stay on shelf as sources — not primary opener.
+Ghostchain claim: yamanual.sole.manual · see YAMANUAL-SOLE-MANUAL-HARDCODE-0.1.md

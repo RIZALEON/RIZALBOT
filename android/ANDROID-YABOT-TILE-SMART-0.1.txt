@@ -1,0 +1,46 @@
+ANDROID-YABOT-TILE-SMART-0.1
+Written: 2026-09-23 17:28:37 MDT (America/Denver)
+Machine: 55d92eb0-0ce0-4959-b297-440d80e59e38 (Neo)
+Device: ZN3223FVDH moto g 5G - 2024
+
+SUCCESS CRITERIA
+[x] Moto drawer label exact ЯBOT (not ЯBOT ABOMEGA)
+[x] Icon matches clay refs — gold frame fills squircle; no white halo
+[x] pan_os_tile seated as smart-object drawable (+ contract sheet)
+[x] assembleDebug + adb install -r
+[x] heart.gguf preserved: 2104932768 bytes (expect 2104932768)
+[x] Desktop APK + Documents twin synced
+[x] Drawer screenshot proof
+
+A) LABEL
+- strings.xml app_name → ЯBOT (SoT + Documents twin)
+- Manifest android:label="@string/app_name"
+- aapt application-label:'ЯBOT'
+- UI dump text/content-desc="ЯBOT" prediction row bounds=[533,222][706,467]
+
+B) ICON
+- Ref: _staging/PAN-OS-TILE-ref.png (+ ref-yabot.jpg)
+- pan_os_tile.png white corners → FULL TRANSPARENCY (corners alpha 0)
+- Adaptive bg #39294B deep purple; fg bleed inset -32%
+- Legacy mipmaps composited on #39294B
+- Proof white% inside icon footprint = 0.00
+- Desktop/PAN-OS-TILE-drawer-YABOT-label.png + PAN-OS-TILE-icon-tight.png
+
+C) SMART OBJECT
+- Mac/iOS: tile = AppIcon.appiconset only (no PanOS SmartObject). No Swift churn.
+- Android: drawable-nodpi/pan_os_tile.png reusable claymation smart asset
+- Contract: contracts/PAN-OS-TILE-SMART-OBJECT-0.1.md
+- In-app: ЯBAR magnet-full; reuse R.drawable.pan_os_tile for future ImageView magnets
+
+D) BUILD / INSTALL
+- assembleDebug OK → app-debug.apk
+- adb -s ZN3223FVDH install -r Success (pkg io.github.rizaleon.abomega.debug)
+- heart.gguf 2104932768 preserved (+ /data/local/tmp/heart.gguf.preserve-yabot-tile)
+
+E) ARTIFACTS
+- /Users/rizal/Desktop/ЯBOT-android-debug.apk
+- /Users/rizal/Desktop/PAN-OS-TILE-drawer-YABOT-label.png
+- SoT: /Users/rizal/Library/Developer/ЯBOT-localbuild/android/ANDROID-YABOT-TILE-SMART-0.1.txt
+- Staging twin: /Users/rizal/Documents/ЯBOT/_staging/ANDROID-YABOT-TILE-SMART-0.1.txt
+
+LAWS: one clay face · magnetism · offline core untouched · no Mac/iOS Swift churn

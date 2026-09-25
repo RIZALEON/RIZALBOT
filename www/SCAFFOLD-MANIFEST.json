@@ -1,0 +1,67 @@
+{
+  "name": "Lab foundational scaffolds",
+  "build": "GRCh37",
+  "kit": "AncestryDNA_V1_20260909",
+  "array": "AncestryDNA V1.0",
+  "micro": {
+    "id": "LAB_SCAFFOLD_MICRO_680",
+    "count": 680,
+    "file": "gnome-pins.json",
+    "role": "MICRO phenotype / feature pins (app www)",
+    "no_Y": true,
+    "pole1": "rs870124",
+    "pin43_Duffy": "rs12075",
+    "pin680": "rs7350355 X"
+  },
+  "macro": {
+    "id": "LAB_SCAFFOLD_MACRO_673703",
+    "count": 673703,
+    "file": "KIT_MACRO_673703.bed",
+    "compact": "macro-scaffold.tsv.gz",
+    "role": "MACRO living relatedness grid (autosomes called both alleles)",
+    "layer": "GRID"
+  },
+  "sex_chrom": {
+    "X": {
+      "count": 17365,
+      "file": "KIT_X_17365.bed",
+      "source_chrom": "23"
+    },
+    "Y": {
+      "count": 860,
+      "file": "KIT_Y_860.bed",
+      "source_chrom": "24"
+    },
+    "PAR_dropped": {
+      "source_chrom": "25",
+      "count": 440
+    }
+  },
+  "base_union": {
+    "id": "LAB_SCAFFOLD_BASE_UNION_691931",
+    "count": 691931,
+    "file": "KIT_BASE_SCAFFOLD_691931.bed",
+    "compact": "base-scaffold.tsv.gz",
+    "formula": "673703+17365+860+3 PIN_ONLY = 691931",
+    "layers": [
+      "GRID",
+      "PIN+GRID",
+      "X",
+      "PIN+X",
+      "Y",
+      "PIN_ONLY"
+    ],
+    "rule": "unique by chrom:pos; pin rsid wins on overlap"
+  },
+  "ghost_chain_markers": [
+    "LAB_SCAFFOLD_MICRO_680",
+    "LAB_SCAFFOLD_MACRO_673703",
+    "LAB_SCAFFOLD_BASE_UNION_691931"
+  ],
+  "scores_rule": "micro 680 and macro 673703 are TWO scores; NEVER averaged",
+  "do_not": [
+    "invent genotypes",
+    "fill Kennewick",
+    "lift to GRCh38"
+  ]
+}

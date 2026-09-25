@@ -1,0 +1,59 @@
+{
+  "name": "Я",
+  "symbol": "Я",
+  "description": "Я — crown twin of ЯBOT / CHANNEL Я. Clay on-device is source. Explorers and aggregators are mirrors only.",
+  "image": "",
+  "animation_url": "",
+  "external_url": "https://www.youtube.com/channel/UCv6jiq9mDApCVL7r6BWvMcg",
+  "channel": {
+    "name": "CHANNEL R",
+    "handle": "@ЯВОТК",
+    "platform": "YouTube",
+    "id": "UCv6jiq9mDApCVL7r6BWvMcg",
+    "url": "https://www.youtube.com/channel/UCv6jiq9mDApCVL7r6BWvMcg",
+    "association": "Decider-provided; ownership not independently verified",
+    "publication": "local draft; not published on-chain"
+  },
+  "seller_fee_basis_points": 0,
+  "attributes": [
+    {
+      "trait_type": "mint",
+      "value": "BB9uA5BuacDnWyDf5Npc9nMb9yFbyThsNrQPBYJ5Q1Lv"
+    },
+    {
+      "trait_type": "mint_tx",
+      "value": "2Lxr2mEZnFnwwBMQjCgRt8EJLaJbwEp61K51mdx16z8oncWg2JCXzCKnisMi78V3L4w7w2pizQ8P1p2H5XMLvx94"
+    },
+    {
+      "trait_type": "supply",
+      "value": "1000000"
+    },
+    {
+      "trait_type": "decimals",
+      "value": "9"
+    },
+    {
+      "trait_type": "cluster",
+      "value": "mainnet-beta"
+    },
+    {
+      "trait_type": "status",
+      "value": "finalized"
+    }
+  ],
+  "properties": {
+    "category": "fungible",
+    "files": [
+      {
+        "uri": "",
+        "type": "image/jpeg"
+      }
+    ]
+  },
+  "_clay": {
+    "gate": "2-send-BLOCKED-need-host-and-keypair-tools",
+    "image_local": "/Users/rizal/Library/Developer/ЯBOT-localbuild/twin/assets/ya-crown-coin.jpg",
+    "image_note": "Crown coin seated locally. Public HTTPS/Arweave/IPFS URI required before on-chain update. Do not invent a host.",
+    "law": "Crown Я. No paste of private keys into chat. Keypair stays on Mac seat only."
+  }
+}

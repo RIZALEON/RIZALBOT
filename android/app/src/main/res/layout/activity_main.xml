@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- iPhone clay twin: ClayWall full-bleed + ЯBAR + slate log + magnet ClayComposerBar -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false">
+
+    <!-- FULL-SCREEN ClayWall background -->
+    <ImageView
+        android:id="@+id/claywall"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/claywall"
+        android:scaleType="centerCrop"
+        android:contentDescription="Clay wall" />
+
+    <!-- Foreground vertical stack -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        android:paddingBottom="10dp">
+
+        <!-- TOP sticky redwood ЯBAR edge-to-edge under status -->
+        <include
+            android:id="@+id/yabar_include"
+            layout="@layout/yabar_magnetic_mock"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp" />
+
+        <!-- MIDDLE: optional ClaySlate under chat log / offline landings -->
+        <FrameLayout
+            android:id="@+id/middle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="4dp">
+
+            <ImageView
+                android:id="@+id/clayslate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/clayslate"
+                android:scaleType="fitXY"
+                android:alpha="0.55"
+                android:contentDescription="Clay slate" />
+
+            <ScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:overScrollMode="never">
+
+                <TextView
+                    android:id="@+id/log"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcome"
+                    android:textColor="@color/clay_text"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="4dp"
+                    android:fontFamily="sans-serif-medium" />
+            </ScrollView>
+
+            <!-- Mac/iOS twin: ClayButton ArrowDown jump-to-latest (ContentView messageList) -->
+            <ImageButton
+                android:id="@+id/btn_jump_latest"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/arrowdown"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/jump_to_latest"
+                android:visibility="gone"
+                android:elevation="8dp"
+                android:padding="0dp" />
+        </FrameLayout>
+
+        <!-- BOTTOM: ONE long clay composer — ZStack / FrameLayout magnetism -->
+        <FrameLayout
+            android:id="@+id/composer_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <!-- Opaque purple underlay (BtnComposer has alpha corners) -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/composer_purple_underlay" />
+
+            <!-- Charcoal inner well -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/composer_charcoal_well" />
+
+            <!-- BtnComposer stretched full bar width -->
+            <ImageView
+                android:id="@+id/composer_face"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/btncomposer"
+                android:scaleType="fitXY"
+                android:contentDescription="Composer clay" />
+
+            <!-- LEFT Plus + CENTER EditText only — Send NOT in this HStack -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="80dp">
+
+                <ImageButton
+                    android:id="@+id/btn_plus"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/btnplus"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Add files"
+                    android:padding="0dp" />
+
+                <EditText
+                    android:id="@+id/input"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:hint="@string/hint"
+                    android:textColor="@color/clay_text"
+                    android:textColorHint="#88F5F0E8"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:maxLines="2"
+                    android:gravity="center_vertical"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:importantForAutofill="no" />
+            </LinearLayout>
+
+            <!-- MAGNET Send — fixed trailing overlay (aspect 320/247 ≈ 72×56) -->
+            <ImageButton
+                android:id="@+id/send"
+                android:layout_width="72dp"
+                android:layout_height="56dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="2dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/btnsend"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/send"
+                android:padding="0dp"
+                android:alpha="1.0"
+                android:enabled="true"
+                android:elevation="4dp" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

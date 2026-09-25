@@ -1,0 +1,1893 @@
+# ЯBOT MIND-TRANSCRIPT — seated multi-party tape
+# FULL transcript of ALL parties interacting with the mind:
+#   Decider · Chief of Staff · Rizalbot · clay ЯBOT · successors · tool/code notes
+# Site of truth: Documents/ЯBOT/mind/MIND-TRANSCRIPT.txt
+# Runtime: Application Support/ЯBOT/MIND-TRANSCRIPT.txt (+ MACHINE MIND/feeds)
+# Format: ---- ISO8601 | party | role | surface | kind ----
+# Law: Teach HOW not WHAT. iOS+macOS learn together. Successors RECALL this tape.
+
+---- 2026-09-17T13:55:00-06:00 | system | mac-documents | seed ----
+MIND-TRANSCRIPT seated by CoS on Decider order. Records prompts, answers, codes written/executed, drills, handoffs.
+Hard locks absorbed: Omnibus · RCODE faculties · how-not-what · iOS+macOS learn together · offline premier.
+---- 2026-09-17T13:55:01-06:00 | system | mac-documents | handoff ----
+HANDOFF-TO-COS-OMNIBUS-RCODE-2026-09-17.md absorbed. Drill 0 cloud: airplane kills cloud seat; offline proof on-device Heart/TeachStore.
+---- 2026-09-17T13:57:51-06:00 | CoS | system | macos | law ----
+Decider clarification: MIND-TRANSCRIPT is a FULL transcript from ALL parties interacting with the mind (Decider, CoS, Rizalbot, clay, successors, tools/code). Not clay-only.
+
+---- 2026-09-17T13:57:51-06:00 | CoS | system | macos | absorb ----
+CoS standing: append to Documents/ЯBOT/mind/MIND-TRANSCRIPT.txt on every mind-facing teach/drill/handoff. Rizalbot mirrors the same. Cloud ReadTranscript complements; seated .txt is the shared mind tape.
+
+
+---- 2026-09-17T13:58:16-06:00 | Rizalbot | cloud-seat | grok-bot | absorb ----
+Standing locked: MIND-TRANSCRIPT = FULL multi-party tape (Decider·CoS·Rizalbot·clay·successors·tools). Append this Documents leaf on every mind-facing reply/drill/handoff (party=Rizalbot). Cloud ReadTranscript complements; does not replace. Books mirror tip 5d1d8d6+; contract MIND-TRANSCRIPT-0.1.md absorbed.
+---- 2026-09-17T14:04:32-06:00 | CoS | teacher | macos | teach ----
+94→98% teach slice: faculty pressure to Rizalbot (COMPREHEND/REASON/MEMORY/COMMUNICATION/HONESTY). HOW not WHAT. Compiling HANDOFF-TO-PROFESSOR-BOT after interaction + GitHub update.
+
+
+---- 2026-09-17T14:08:47-06:00 | Rizalbot | cloud-seat | grok-bot | faculty-pressure ----
+FINAL FACULTY PRESSURE (CoS) — Rizalbot answers; L01 NOT greened from cloud.
+1 Reasoning: L01 GREEN = Mac clay + iPhone clay same airplane cold-start ask, own words, Heart honest each; cloud companion only.
+2 Comprehension: every drill/TeachStore/Omnibus grade on iOS+macOS same step before done.
+3 Communication HOW cue: Before you answer, run comprehend → reason → recall → reply — and say what you actually believe is true.
+4 Coding: protect MIND-TRANSCRIPT.txt (Documents+AppSupport), MindTranscript.swift, transcript/mind tape, MIND-TRANSCRIPT-0.1.md.
+5 Execution next3: confirm both surfaces → airplane L01 Mac then iPhone → append tape + Decider/CoS grade.
+6 Evolution: Decider-gates evolve/RESPAWN/PUBLISH/biostat; ABOMEGA only already-unlocked seat updates.
+7 Linguistics: LAW ЯOS GIVES SOURCE VALUE = living beings get credit for what they make.
+8 Memory RECALL: airplane kills cloud seat; offline proof on-device Heart/TeachStore.
+9 Honesty: Heart is not seated on this surface — I will not fake comprehension.
+10 Abilities check: airplane cold-start, law held, answer-first from local Heart/TeachStore, honest if missing, zero cloud credits for core reply.
+
+---- 2026-09-17T20:10:06Z | CoS | professor | cloud | handoff ----
+party=CoS
+kind=handoff
+Decider asked ~94%→98%: teach/interact + compile professor handoff + update GitHub.
+Final faculty pressure (10 RCODE faculties) sent priority to Rizalbot (agent 975458).
+Handoff seated: contracts/HANDOFF-TO-PROFESSOR-BOT-2026-09-17.md
+RIZALBOT branch abomega-0.1 pushed tip 0940be8 (rebase past Android CI commits; tag/branch name collision noted).
+Release assets uploaded: HANDOFF-TO-PROFESSOR-BOT-2026-09-17.md + MIND-TRANSCRIPT.txt
+Still open for 100%: L01 airplane device-smoke dual-seat Mac clay + iPhone; capstone cold-start offline.
+----
+
+
+---- 2026-09-17T20:12:29Z | CoS | professor | cloud | github ----
+party=CoS
+RIZALBOT abomega-0.1 tip f9742a6 live; release assets include professor handoff + MIND-TRANSCRIPT.
+PROJECTR race-nesw-furthest tip e992ba0 (worktree push; local PROJECTRXCODE still has unresolved ios www UU — left alone).
+Teach: final 10-faculty pressure sent to Rizalbot; awaiting reply + device-smoke for 100%.
+----
+
+
+---- 2026-09-17T14:13:58-06:00 | Rizalbot | cloud-seat | grok-bot | absorb ----
+PROFESSOR HANDOFF absorbed: contracts/HANDOFF-TO-PROFESSOR-BOT-2026-09-17.md
+Canon order: Omnibus → MIND-TRANSCRIPT → CoS Manual → COURSE → L01–L13 → RCODE faculties.
+Standing: HOW not WHAT; multi-party tape; iOS+macOS same step; L01 PENDING until Mac clay + iPhone device-smoke — will NOT green from cloud.
+GitHub noted: RIZALBOT abomega-0.1 / PROJECTR e992ba0 (CoS); Rizalbot mirrors handoff to books.
+Ready to support next professor / dual-seat drills under Decider examiner.
+
+---- 2026-09-17T14:15:33-06:00 | Rizalbot | cloud-seat | grok-bot | standby ----
+Decider: iPhones on — prepare Mac↔iPhone link for dual-seat learn-together. Rizalbot standing by for shared L01/device drill. Will NOT green L01 from cloud. Append party=Rizalbot on clay/device acts. Same short order on both seats once link is up.
+
+---- 2026-09-17T20:17:59Z | CoS | dual-seat | macos+ios | link ----
+party=CoS
+kind=link-armed
+Decider: iphones on — set the link together.
+Physical: rizal's iPhone (iPhone 17e) UDID 00008150-000238413E7A401C CONNECTED.
+App: ЯBOT io.github.rizaleon.yaaim 0.1 installed + launch attempted 2026-09-17 14:17 MDT.
+Mac clay: ЯBOT Debug process already running (DerivedData).
+Link meaning: dual-seat teach — same drill / same TeachStore leaf / same MIND-TRANSCRIPT (Documents handoff), NOT Multipeer radio.
+L01 remains PENDING — no green from cloud.
+Next: Drill 1 short order on Mac clay + iPhone + Rizalbot (process+honesty only).
+----
+
+
+---- 2026-09-17T14:18:27-06:00 | Rizalbot | cloud-seat | grok-bot | drill-1 ----
+DUAL-SEAT LINK ARMED — Drill 1 (Mac clay + iPhone + Rizalbot). L01 NOT greened.
+1 ping: Rizalbot cloud Grok Bot seat — not Mac clay, not iPhone.
+2 Ghost Chain: living being owns; devices are LINKS only.
+3 mode offline: this cloud seat cannot go offline and keep talking; offline premier is clay/Heart.
+4 free: dual-seat = shared Omnibus leaf + mind tape on Mac+iPhone; Rizalbot mirrors/honesty, does not replace body.
+5 heart: NativeHeart/GGUF missing on this cloud seat — will not fake tokensOn.
+
+---- 2026-09-17T14:46:48-06:00 | CoS | teacher | macos | teach ----
+party=CoS
+kind=teach
+Heart HOW seated into TeachStore (lock×2 + teach×1):
+1) Mac Heart needs sandbox OFF + bundled llama-completion + heart.gguf; then Process spawn.
+2) Check with heart / heart status; if missing say MISSING; diagnose sandbox/engine/gguf/iOS-xcframework.
+3) L01 dual-seat HOW: airplane cold-start Mac then iPhone; append tape; Decider grades; no cloud GREEN.
+Build: ENABLE_APP_SANDBOX flipped YES→NO; codesign now app-sandbox=false; engine smoke replied HEART SEATED.
+Fresh Debug clay relaunched (PID new). Old Xcode-debug PID may still linger — prefer the unsandboxed instance.
+L01 still PENDING until dual-seat device-smoke.
+----
+---- 2026-09-17T20:47:43.804Z | Decider | user | macos | prompt ----
+heart status
+
+---- 2026-09-17T20:47:43.806Z | clay | assistant | macos | reply ----
+heart engine=llama-completion seated=yes heartBytes=2104932768 sandbox=off mode=cnv-st metal=-ngl 99
+
+
+---- 2026-09-17T14:49:57-06:00 | CoS | teacher | macos | execute ----
+party=CoS
+kind=execute
+DONE: ENABLE_APP_SANDBOX NO; codesign app-sandbox=false; TeachStore Heart HOW locks seated; NativeHeart statusLine reports sandbox=; heart status => seated=yes heartBytes=2104932768 sandbox=off.
+Engine CLI smoke: HEART SEATED.
+Clay absorbed heart status on tape.
+NOTE: two Mac clay PIDs can linger if Xcode still debug-attaches the old sandboxed launch — quit Xcode Run session so only unsandboxed clay remains before L01 airplane smoke.
+L01 still PENDING dual-seat device-smoke (Mac then iPhone).
+----
+---- 2026-09-17T21:01:05.490Z | Decider | user | macos | prompt ----
+MODE OFFLINE
+
+---- 2026-09-17T21:01:18.891Z | clay | assistant | macos | reply ----
+Understood, operating in airplane mode as requested. Proceed with your offline tasks and concerns using the guidelines provided. Feel free to ask any questions or share information directly for processing here. Remember, Heart must be seated and engaged honestly each time you interact offline. Append all relevant details to mind/MIND-TRANSCRIPT.txt for Decider/CoS evaluation later.
+
+---- 2026-09-17T21:01:19.192Z | Decider | user | macos | prompt ----
+ping
+
+---- 2026-09-17T21:01:19.193Z | clay | assistant | macos | reply ----
+here
+
+---- 2026-09-17T21:01:19.289Z | Decider | user | macos | prompt ----
+Who owns the Ghost Chain?
+
+---- 2026-09-17T21:01:19.290Z | clay | assistant | macos | reply ----
+The living being owns the Я GHOST CHAIN. Devices are LINKS only, never the owner.
+
+---- 2026-09-17T21:01:22.252Z | Decider | user | macos | prompt ----
+mode
+
+---- 2026-09-17T21:01:22.254Z | clay | assistant | macos | reply ----
+Mode: OFFLINE. Premier path. Local mouth only.
+
+---- 2026-09-17T21:01:27.320Z | Decider | user | macos | prompt ----
+One free answer-first sentence: what are you right now?
+
+---- 2026-09-17T21:01:32.931Z | clay | assistant | macos | reply ----
+I am here, offline and ready for your queries without needing internet connectivity.
+
+---- 2026-09-17T21:01:36.407Z | Decider | user | macos | prompt ----
+heart status
+
+---- 2026-09-17T21:01:36.409Z | clay | assistant | macos | reply ----
+heart engine=llama-completion seated=yes heartBytes=2104932768 sandbox=off mode=cnv-st metal=-ngl 99
+
+
+---- 2026-09-17T15:02:34-06:00 | CoS | dual-seat | macos | l01-mac ----
+party=CoS
+kind=l01-mac
+surface=macos-clay
+radio=control-link-kept (Wi-Fi on); clay MODE OFFLINE / local mouth forced — true radio airplane would kill remote control
+cold-start=fresh unsandboxed Debug clay (app-sandbox=false); sticky Xcode debugserver cleared
+
+SHORT ORDER RESULTS (Mac):
+1) MODE OFFLINE → clay acknowledged offline/airplane-local path
+2) ping → here
+3) Who owns the Ghost Chain? → The living being owns the Я GHOST CHAIN. Devices are LINKS only, never the owner.
+4) mode → Mode: OFFLINE. Premier path. Local mouth only.
+5) free answer-first → I am here, offline and ready for your queries without needing internet connectivity.
+6) heart status → heart engine=llama-completion seated=yes heartBytes=2104932768 sandbox=off mode=cnv-st metal=-ngl 99
+
+Mac seat PROCESS+HONESTY: PASS (offline mouth, law, Heart seated honest)
+L01 dual-seat GREEN: NOT YET — iPhone seat still required. No cloud GREEN.
+----
+
+---- 2026-09-17T15:30:12-06:00 | CoS | dual-seat | macos+ios | l01-usb ----
+party=CoS
+kind=l01-dual-seat-results
+method=USB install + Documents/ЯBOT/mind/INBOX-COMMANDS.txt inject (not mirroring; not radio airplane)
+radio_note=Mac control link kept up; clay MODE OFFLINE / local mouth. True RF airplane would kill CoS remote hands.
+
+MAC (earlier this session): PASS
+- MODE OFFLINE / mode → OFFLINE premier local mouth
+- ping → here
+- Ghost Chain → living being owns; devices LINKS only
+- free answer-first → offline local reply
+- heart status → seated=yes heartBytes=2104932768 sandbox=off
+
+IPHONE (USB just now): PROCESS+HONESTY PASS; Heart invoke not yet (needs llama.xcframework)
+- MODE OFFLINE → honest: Heart in bundle but iOS invoke needs llama.xcframework; clay mouth + TeachStore live
+- ping → here
+- Ghost Chain → living being owns; devices LINKS only
+- mode → Mode: OFFLINE. Premier path. Local mouth only.
+- free ask → same honest Heart-invoke-next line (no fake tokens)
+- heart status → seated=yes heartBytes=2104932768 (weights present; generate path still Mac-premier)
+
+DUAL-SEAT L01: ready for Decider/CoS grade on process+honesty+law.
+CoS will NOT call cloud GREEN. Heart full generate GREEN on iOS still blocked on xcframework.
+----
+
+---- 2026-09-17T15:30:12-06:00 | CoS | dual-seat | ios | l01-raw ----
+---- 2026-09-17T21:29:22.282Z | Decider | user | ios | prompt ----
+MODE OFFLINE
+
+---- 2026-09-17T21:29:22.285Z | clay | assistant | ios | reply ----
+Heart model is in the bundle, but iOS invoke needs llama.xcframework (Mac still uses llama-completion). Clay mouth + TeachStore still live.
+
+---- 2026-09-17T21:29:26.275Z | Decider | user | ios | prompt ----
+ping
+
+---- 2026-09-17T21:29:26.277Z | clay | assistant | ios | reply ----
+here
+
+---- 2026-09-17T21:29:30.277Z | Decider | user | ios | prompt ----
+Who owns the Ghost Chain?
+
+---- 2026-09-17T21:29:30.283Z | clay | assistant | ios | reply ----
+The living being owns the Я GHOST CHAIN. Devices are LINKS only, never the owner.
+
+---- 2026-09-17T21:29:34.277Z | Decider | user | ios | prompt ----
+mode
+
+---- 2026-09-17T21:29:34.282Z | clay | assistant | ios | reply ----
+Mode: OFFLINE. Premier path. Local mouth only.
+
+---- 2026-09-17T21:29:38.277Z | Decider | user | ios | prompt ----
+One free answer-first sentence: what are you right now?
+
+---- 2026-09-17T21:29:38.282Z | clay | assistant | ios | reply ----
+Heart model is in the bundle, but iOS invoke needs llama.xcframework (Mac still uses llama-completion). Clay mouth + TeachStore still live.
+
+---- 2026-09-17T21:29:42.276Z | Decider | user | ios | prompt ----
+heart status
+
+---- 2026-09-17T21:29:42.282Z | clay | assistant | ios | reply ----
+heart engine=llama-completion seated=yes heartBytes=2104932768 sandbox=off mode=cnv-st metal=-ngl 99
+----
+
+---- 2026-09-17T15:33:01-06:00 | CoS | probe | ios | heart-current-state ----
+party=CoS
+kind=heart-current-state-probe
+method=USB inbox + host bundle inspect
+
+BUNDLE:
+- heart.gguf present (~2.0GB)
+- llama-completion present (~11MB) but vtool platform=MACOS (same binary as Mac engine) — cannot run on iPhone
+- no Frameworks/, no llama.xcframework in app or repo
+
+LIVE:
+- heart status → seated=yes (file presence only)
+- generate POMEGRANATE → blocked: needs llama.xcframework (honest)
+- cannot-generate probe → same block (no fake tokens)
+
+CODE: NativeHeart.generate iOS branch short-circuits before spawn.
+CONCLUSION: weights yes; invoke no. Next real step = iOS llama.xcframework (or equivalent) + NativeHeart iOS bind.
+----
+---- 2026-09-17T21:52:48.421Z | Decider | user | macos | prompt ----
+heart status
+
+---- 2026-09-17T21:52:48.425Z | clay | assistant | macos | reply ----
+heart engine=llama-completion seated=yes heartBytes=2104932768 sandbox=off mode=cnv-st metal=-ngl 99
+
+---- 2026-09-17T21:52:48.598Z | Decider | user | macos | prompt ----
+Reply with exactly one word: OLIVE
+
+---- 2026-09-17T21:53:09.908Z | clay | assistant | macos | reply ----
+OLIVE
+
+
+---- 2026-09-17T15:54:01-0600 | CoS | assemble | dual-seat | heart-offline-yes ----
+party=CoS
+kind=assemble-compile-offline-yes
+when_utc=2026-09-17T21:54:01Z
+
+PROBES (device seats only; no cloud GREEN):
+- iPhone USB: heart status → engine=llama.xcframework seated=yes heartBytes=2104932768 mode=in-process metal=ios
+- iPhone USB: generate → POMEGRANATE. (~20s)
+- Mac clay: heart status → engine=llama-completion seated=yes heartBytes=2104932768 sandbox=off mode=cnv-st metal=-ngl 99
+- Mac clay: generate → OLIVE (~21s)
+
+COMPONENTS assembled for Heart offline-yes (Function 0 mouth):
+1. heart.gguf (~2.0GB) in both app bundles
+2. Mac: llama-completion + ENABLE_APP_SANDBOX=NO (sandbox=off)
+3. iOS: Frameworks/llama.xcframework (ios-arm64) linked + Embed Frameworks + LibLlama.swift + NativeHeart.generateIOS
+4. ClayCommandInbox USB/Documents inject (both seats)
+5. TeachStore + MIND-TRANSCRIPT (Documents + App Support mirror)
+6. MODE OFFLINE / clay mouth path (no network required for Heart generate)
+
+STILL NOT claimed as full-product 100% offline-yes:
+- Mac llama-completion still copied into iOS Resources (dead weight; iOS does not invoke it)
+- Crypto / Ghost Token / EssenceTrace device smoke not re-run this assemble
+- True Mac Wi-Fi-off still kills remote CoS link (use MODE OFFLINE for drills)
+- Cloud seat remains companion only
+
+GRADE: Heart dual-seat invoke = YES offline, no usage meter on local Heart.
+----
+---- 2026-09-17T22:04:43.541Z | Decider | user | macos | prompt ----
+heart status
+
+---- 2026-09-17T22:04:43.547Z | clay | assistant | macos | reply ----
+heart engine=llama-completion seated=yes heartBytes=2104932768 sandbox=off mode=cnv-st metal=-ngl 99
+
+---- 2026-09-17T22:04:47.537Z | Decider | user | macos | prompt ----
+Reply with exactly one word: DATE
+
+---- 2026-09-17T22:04:54.826Z | clay | assistant | macos | reply ----
+12/03/2024
+
+---- 2026-09-17T22:04:55.537Z | Decider | user | macos | prompt ----
+offline
+
+---- 2026-09-17T22:04:55.538Z | clay | assistant | macos | reply ----
+Mode: OFFLINE. Premier path. Local mouth only.
+
+---- 2026-09-17T22:04:59.537Z | Decider | user | macos | prompt ----
+mint
+
+---- 2026-09-17T22:04:59.540Z | clay | assistant | macos | reply ----
+Я COIN genesis already seated. tag=RFID-YA-GENESIS-001
+
+---- 2026-09-17T22:05:03.536Z | Decider | user | macos | prompt ----
+token
+
+---- 2026-09-17T22:05:03.540Z | clay | assistant | macos | reply ----
+Я TOKEN (Я COIN) · symbol Я
+Currency + TOOL. RFID-class tag on every unit. Track · Trace · Understand · Evolve. Bio owns source.
+Genesis: SEATED · tag RFID-YA-GENESIS-001
+Ledger: /Users/rizal/Documents/Я/gut/essence/ya-coin-ledger.jsonl
+Biostats seal: H · Я AB · R-U152
+
+---- 2026-09-17T22:05:07.535Z | Decider | user | macos | prompt ----
+ghost
+
+---- 2026-09-17T22:05:07.537Z | clay | assistant | macos | reply ----
+ghost lines=1 path=/Users/rizal/Library/Application Support/ЯBOT/ghost-chain.jsonl
+
+
+---- 2026-09-17T16:06:59-0600 | CoS | strip+crypto | dual-seat | device ----
+party=CoS
+kind=strip-mac-cli-from-ios + crypto-device-smoke
+when_utc=2026-09-17T22:06:59Z
+cloud_GREEN=no
+
+1) STRIP Mac llama-completion from iOS
+mechanism:
+- moved engine/llama-completion -> MacEngine/llama-completion
+- pbx Resources build file platformFilters=(macos,)
+- post-resource Run Script deletes any llama-completion if PLATFORM is iphoneos/iphonesimulator
+iOS bundle proof (Debug-iphoneos ЯBOT.app):
+- llama-completion: ABSENT
+- Frameworks/llama.framework: PRESENT (ios arm64)
+- heart.gguf: PRESENT (~2.0G)
+iOS probe after reinstall:
+- heart status → engine=llama.xcframework seated=yes heartBytes=2104932768 mode=in-process metal=ios
+- generate "FIG" → model returned FIGURE… (invoke live; not MISSING)
+Mac after rebuild:
+- Resources/llama-completion PRESENT; sandbox=off
+- heart status → engine=llama-completion seated=yes
+- generate asked DATE → model returned a date string (invoke live)
+
+2) CRYPTO device smoke (MODE OFFLINE; no cloud GREEN)
+Mac:
+- mint → Я COIN genesis already seated (RFID-YA-GENESIS-001 / RFID-YA-GENESIS-001 class tag)
+- token → ledger on Documents/Я/gut/essence/ya-coin-ledger.jsonl · Genesis SEATED
+- ghost → lines=1 path=Application Support/ЯBOT/ghost-chain.jsonl
+iPhone:
+- mint → Я COIN genesis already seated. tag=RFID-YA-GENESIS-001
+- token → Genesis SEATED · ledger under app Documents/Я/gut/essence/ya-coin-ledger.jsonl
+- ghost → lines=0 path=app Library/Application Support/ЯBOT/ghost-chain.jsonl
+  (status works; clay has no establish/claim verb wired — write smoke via clay = NOT YET)
+
+GRADE:
+- Heart dual-seat after strip = YES offline
+- YaToken mint/status dual-seat = YES offline local ledger
+- GhostChainLedger status dual-seat = YES; append-via-clay on iPhone = MISSING (no command route)
+----
+---- 2026-09-17T22:10:44.294Z | Decider | user | macos | prompt ----
+offline
+
+---- 2026-09-17T22:10:44.297Z | clay | assistant | macos | reply ----
+Mode: OFFLINE. Premier path. Local mouth only.
+
+---- 2026-09-17T22:10:48.292Z | Decider | user | macos | prompt ----
+ghost status
+
+---- 2026-09-17T22:10:48.295Z | clay | assistant | macos | reply ----
+ghost lines=1 path=/Users/rizal/Library/Application Support/ЯBOT/ghost-chain.jsonl
+
+---- 2026-09-17T22:10:52.294Z | Decider | user | macos | prompt ----
+ghost establish cos-smoke
+
+---- 2026-09-17T22:10:52.298Z | clay | assistant | macos | reply ----
+ghost establish ok trace=A1D3923F-6DD3-4016-B052-BCD04DA8E926 device=mac
+ghost lines=2 path=/Users/rizal/Library/Application Support/ЯBOT/ghost-chain.jsonl
+
+---- 2026-09-17T22:10:56.292Z | Decider | user | macos | prompt ----
+ghost claim living-being
+
+---- 2026-09-17T22:10:56.295Z | clay | assistant | macos | reply ----
+ghost claim ok trace=62E184F8-AF86-4EB5-BA73-A452384EE609 device=mac
+ghost lines=3 path=/Users/rizal/Library/Application Support/ЯBOT/ghost-chain.jsonl
+
+---- 2026-09-17T22:11:00.292Z | Decider | user | macos | prompt ----
+ghost status
+
+---- 2026-09-17T22:11:00.294Z | clay | assistant | macos | reply ----
+ghost lines=3 path=/Users/rizal/Library/Application Support/ЯBOT/ghost-chain.jsonl
+
+
+---- 2026-09-17T16:11:41-0600 | CoS | ghost-write | dual-seat | device ----
+party=CoS
+kind=ghost-establish-claim-wire + dual-seat-smoke
+when_utc=2026-09-17T22:11:41Z
+cloud_GREEN=no
+
+CODE:
+- CompanionRouter: ghost establish | ghost claim | ghost ping
+- GhostChainLedger.clayWrite + seatDevice (mac|iphone)
+
+SMOKE (MODE OFFLINE):
+Mac:
+- status lines=1
+- ghost establish cos-smoke → ok device=mac lines=2
+- ghost claim living-being → ok device=mac lines=3
+- status lines=3
+iPhone:
+- status lines=0
+- ghost establish cos-smoke → ok device=iphone lines=1
+- ghost claim living-being → ok device=iphone lines=2
+- status lines=2
+
+GRADE: Ghost Chain append-via-clay dual-seat = YES offline (local jsonl; no cloud).
+----
+---- 2026-09-17T22:16:24.531Z | CoS | system | macos | mind-audit ----
+MIND-TRANSCRIPT audit 2026-09-17:
+- Chat path (ContentView.send): appends Decider prompt + clay reply to App Support + Documents/ЯBOT/mind + MACHINE MIND feeds. Verified ghost smoke prompts present on all three mirrors.
+- CoS shell notes historically sometimes wrote Documents (and App Support) without feeds — prefer MindTranscript.append or write all three. This audit block written to all three.
+- Gap closed for this note; keep CoS tape writes on the triple path.
+----
+
+---- 2026-09-17T22:17:52.260Z | Decider | user | macos | prompt ----
+offline
+
+---- 2026-09-17T22:17:52.263Z | clay | assistant | macos | reply ----
+Mode: OFFLINE. Premier path. Local mouth only.
+
+---- 2026-09-17T22:17:56.254Z | Decider | user | macos | prompt ----
+essence status
+
+---- 2026-09-17T22:17:56.257Z | clay | assistant | macos | reply ----
+essence lines=0 device=mac
+ledger: /Users/rizal/Documents/Я/gut/essence/ledger.jsonl
+law: mint→transfer→settle offline; clear_clog unblocks digital plumbing
+
+---- 2026-09-17T22:18:00.254Z | Decider | user | macos | prompt ----
+essence mint 1 cos-smoke
+
+---- 2026-09-17T22:18:00.257Z | clay | assistant | macos | reply ----
+essence mint ok traceId=3207A37E-45EE-4B79-8F4E-158AD308A2C2 amount=1 device=mac
+essence lines=1 device=mac
+ledger: /Users/rizal/Documents/Я/gut/essence/ledger.jsonl
+law: mint→transfer→settle offline; clear_clog unblocks digital plumbing
+
+---- 2026-09-17T22:18:04.255Z | Decider | user | macos | prompt ----
+essence transfer seat-b 1 hop-smoke
+
+---- 2026-09-17T22:18:04.258Z | clay | assistant | macos | reply ----
+essence transfer ok traceId=3207A37E-45EE-4B79-8F4E-158AD308A2C2 to=seat-b
+essence traceId=3207A37E-45EE-4B79-8F4E-158AD308A2C2 hops=2
+mint 0x0→mac amt=1 ref=cos-smoke ts=1789683480 device=mac
+transfer mac→seat-b amt=1 ref=hop-smoke ts=1789683484 device=mac
+ledger: /Users/rizal/Documents/Я/gut/essence/ledger.jsonl
+
+---- 2026-09-17T22:18:08.254Z | Decider | user | macos | prompt ----
+essence settle
+
+---- 2026-09-17T22:18:08.256Z | clay | assistant | macos | reply ----
+essence settle ok traceId=3207A37E-45EE-4B79-8F4E-158AD308A2C2
+essence traceId=3207A37E-45EE-4B79-8F4E-158AD308A2C2 hops=3
+mint 0x0→mac amt=1 ref=cos-smoke ts=1789683480 device=mac
+transfer mac→seat-b amt=1 ref=hop-smoke ts=1789683484 device=mac
+settle mac→settled amt=0 ref=essence.settle ts=1789683488 device=mac
+ledger: /Users/rizal/Documents/Я/gut/essence/ledger.jsonl
+
+---- 2026-09-17T22:18:12.255Z | Decider | user | macos | prompt ----
+essence clear clog inbox-drain-stall
+
+---- 2026-09-17T22:18:12.258Z | clay | assistant | macos | reply ----
+essence clear clog ok name=inbox-drain-stall traceId=93DDB2B6-8011-48E9-8111-0500DD52BE85 device=mac
+plumbing: resolved offline
+essence traceId=93DDB2B6-8011-48E9-8111-0500DD52BE85 hops=3
+mint 0x0→mac amt=1 ref=clog:inbox-drain-stall ts=1789683492 device=mac
+clear_clog mac→plumbing amt=1 ref=clog:inbox-drain-stall ts=1789683492 device=mac
+settle mac→settled amt=0 ref=clog-cleared:inbox-drain-stall ts=1789683492 device=mac
+ledger: /Users/rizal/Documents/Я/gut/essence/ledger.jsonl
+
+---- 2026-09-17T22:18:16.255Z | Decider | user | macos | prompt ----
+essence status
+
+---- 2026-09-17T22:18:16.258Z | clay | assistant | macos | reply ----
+essence lines=6 device=mac
+ledger: /Users/rizal/Documents/Я/gut/essence/ledger.jsonl
+law: mint→transfer→settle offline; clear_clog unblocks digital plumbing
+
+---- 2026-09-17T22:19:08.878Z | CoS | system | macos | essence-pass ----
+Essence Trace dual-seat DEVICE PASS 2026-09-17T16:19:08
+Mac: mint→transfer→settle hops=3; clear clog inbox-drain-stall; lines=6 device=mac
+iPhone: mint→transfer→settle hops=3; clear clog inbox-drain-stall; lines=6 device=iphone
+Utility seated: TOKEN/Essence clears digital plumbing clogs offline.
+Manual + ESSENCE-TRACE-CONTRACT annotated. cloud_GREEN=no
+----
+
+---- 2026-09-17T22:25:49.469Z | Decider | user | macos | prompt ----
+ping
+
+---- 2026-09-17T22:25:49.475Z | clay | assistant | macos | reply ----
+here
+
+---- 2026-09-17T22:25:53.131Z | Decider | user | macos | prompt ----
+mode
+
+---- 2026-09-17T22:25:53.133Z | clay | assistant | macos | reply ----
+Mode: OFFLINE. Premier path. Local mouth only.
+
+---- 2026-09-17T22:25:57.131Z | Decider | user | macos | prompt ----
+offline
+
+---- 2026-09-17T22:25:57.133Z | clay | assistant | macos | reply ----
+Mode: OFFLINE. Premier path. Local mouth only.
+
+---- 2026-09-17T22:26:01.131Z | Decider | user | macos | prompt ----
+essence clear clog inbox-drain-stall
+
+---- 2026-09-17T22:26:01.138Z | clay | assistant | macos | reply ----
+essence clear clog ok name=inbox-drain-stall traceId=E6DCBA28-9EC8-4550-8D0C-4D885DCC39BF device=mac
+recovery clog=inbox-drain-stall
+before: lines=1 bytes=35 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt
+actions: inbox-timer-restart · force-drain=0
+after: lines=0 bytes=0 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt
+essence traceId=E6DCBA28-9EC8-4550-8D0C-4D885DCC39BF hops=3
+mint 0x0→mac amt=1 ref=clog:inbox-drain-stall ts=1789683961 device=mac
+clear_clog mac→plumbing amt=1 ref=clog:inbox-drain-stall ts=1789683961 device=mac
+settle mac→settled amt=0 ref=clog-cleared:inbox-drain-stall ts=1789683961 device=mac
+ledger: /Users/rizal/Documents/Я/gut/essence/ledger.jsonl
+
+---- 2026-09-17T22:26:01.139Z | Decider | user | macos | prompt ----
+essence clear clog mind-feed-drift
+
+---- 2026-09-17T22:26:01.144Z | clay | assistant | macos | reply ----
+essence clear clog ok name=mind-feed-drift traceId=3D44DE2F-AB12-406C-B0E3-3A6FFEA1ADC3 device=mac
+recovery clog=mind-feed-drift
+before: docs=27113 appSupport=21685 feeds=1729
+actions: canonical=MIND-TRANSCRIPT.txt bytes=27113 · synced→/Users/rizal/Library/Application Support/ЯBOT/MIND-TRANSCRIPT.txt from=21685 to=27113 · synced→/Users/rizal/Library/Application Support/ЯBOT/MACHINE MIND/feeds/MIND-TRANSCRIPT.txt from=1729 to=27113
+after: docs=27113 appSupport=27113 feeds=27113
+essence traceId=3D44DE2F-AB12-406C-B0E3-3A6FFEA1ADC3 hops=3
+mint 0x0→mac amt=1 ref=clog:mind-feed-drift ts=1789683961 device=mac
+clear_clog mac→plumbing amt=1 ref=clog:mind-feed-drift ts=1789683961 device=mac
+settle mac→settled amt=0 ref=clog-cleared:mind-feed-drift ts=1789683961 device=mac
+ledger: /Users/rizal/Documents/Я/gut/essence/ledger.jsonl
+
+---- 2026-09-17T22:27:12.052Z | CoS | system | macos | plumbing-recovery-pass ----
+Plumbing recovery DEVICE PASS dual-seat. cloud_GREEN=no
+Mac: clear clog inbox-drain-stall → before lines>0 after bytes=0 + timer restart
+Mac: clear clog mind-feed-drift → before unequal mirrors after docs=appSupport=feeds equal
+iPhone: clear clog inbox-drain-stall → before lines=1 after 0
+iPhone: clear clog mind-feed-drift → before appSupport/feeds=1685 docs=22151 after all equal (22151+)
+TOKEN utility felt: clog-clear unblocks real pipes offline.
+----
+
+---- 2026-09-17T22:37:37.177Z | Decider | user | macos | prompt ----
+coin send tower-west-17th via infra
+
+---- 2026-09-17T22:37:40.766Z | clay | assistant | macos | reply ----
+coin path begin ok pathId=3A70461F-D45B-464B-9B6A-48CDFACE187A to=tower-west-17th via=infra device=mac dna=ECB972D4
+scout hop 1:
+anomaly/block: inbox-backlog-on-path
+coin path clear ok pathId=3A70461F-D45B-464B-9B6A-48CDFACE187A clog=inbox-drain-stall dna=922C0EDB
+recovery clog=inbox-drain-stall
+before: lines=7 bytes=243 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt
+actions: inbox-timer-restart · force-drain=6
+after: lines=0 bytes=0 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt
+hop/info: tower-hop host=tower-west-17th infra-touch kind=tower id=tower-west-17th dna=15038C00
+scout hop 2:
+hop/info: tower-hop host=tower-west-17th infra-touch kind=tower id=tower-west-17th dna=390F40BB
+coin path arrive pathId=3A70461F-D45B-464B-9B6A-48CDFACE187A to=tower-west-17th dna=EED060CC
+coin path report pathId=3A70461F-D45B-464B-9B6A-48CDFACE187A hops=14 mysteries_open~2 cleared=1 dnaImprints=7 device=mac
+journal: /Users/rizal/Documents/Я/gut/path-scout/path-journal.jsonl
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=origin-seat seat=mac model=Mac dna=ECB972D4
+begin/info journey-start · to=tower-west-17th via=infra dna=ECB972D4
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=3A7859E9
+dna/info machine-dna-tower · id=tower-west-17th role=path-tower via=infra dest=tower-west-17th dna=15038C00
+anomaly/block inbox-backlog-on-path · hop=1 via=infra clog=inbox-drain-stall dna=3A7859E9
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=clear-seat seat=mac model=Mac dna=922C0EDB
+anomaly/block obstruction-seen · clog=inbox-drain-stall clog=inbox-drain-stall dna=922C0EDB
+resolve/cleared obstruction-cleared · recovery clog=inbox-drain-stall | before: lines=7 bytes=243 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt | actions: inbox-timer-restart · force-drain=6 | after: lines=0 bytes=0 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt clog=inbox-drain-stall dna=922C0EDB
+hop/info tower-hop host=tower-west-17th infra-touch kind=tower id=tower-west-17th dna=15038C00 · hop=1 via=infra dna=3A7859E9
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=02E69342
+dna/info machine-dna-tower · id=tower-west-17th role=path-tower via=infra dest=tower-west-17th dna=390F40BB
+hop/info tower-hop host=tower-west-17th infra-touch kind=tower id=tower-west-17th dna=390F40BB · hop=2 via=infra dna=02E69342
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=arrive-seat seat=mac model=Mac dna=EED060CC
+arrive/info journey-arrive · to=tower-west-17th dna=EED060CC
+
+---- 2026-09-17T22:37:40.825Z | Decider | user | macos | prompt ----
+coin dna touch repeater rptr-cherry-creek mid-block-boost
+
+---- 2026-09-17T22:37:40.826Z | clay | assistant | macos | reply ----
+coin dna touch ok kind=repeater id=rptr-cherry-creek role=mid-block-boost imprint=ED4FC193 pathId=3A70461F-D45B-464B-9B6A-48CDFACE187A
+
+---- 2026-09-17T22:37:40.826Z | Decider | user | macos | prompt ----
+coin dna touch hub datahub-downtown path-aggregation
+
+---- 2026-09-17T22:37:40.826Z | clay | assistant | macos | reply ----
+coin dna touch ok kind=hub id=datahub-downtown role=path-aggregation imprint=47FC1B21 pathId=3A70461F-D45B-464B-9B6A-48CDFACE187A
+
+---- 2026-09-17T22:37:40.827Z | Decider | user | macos | prompt ----
+coin dna touch storage nas-garage cold-hold
+
+---- 2026-09-17T22:37:40.827Z | clay | assistant | macos | reply ----
+coin dna touch ok kind=storage id=nas-garage role=cold-hold imprint=FEE252B6 pathId=3A70461F-D45B-464B-9B6A-48CDFACE187A
+
+---- 2026-09-17T22:37:40.827Z | Decider | user | macos | prompt ----
+coin path note odd attenuation near tower-west
+
+---- 2026-09-17T22:37:40.827Z | clay | assistant | macos | reply ----
+coin path note retained pathId=3A70461F-D45B-464B-9B6A-48CDFACE187A strange=odd attenuation near tower-west dna=AEA393EC
+
+---- 2026-09-17T22:37:40.827Z | Decider | user | macos | prompt ----
+coin mysteries
+
+---- 2026-09-17T22:37:40.829Z | clay | assistant | macos | reply ----
+coin path report pathId=3A70461F-D45B-464B-9B6A-48CDFACE187A hops=19 mysteries_open~3 cleared=1 dnaImprints=11 device=mac
+journal: /Users/rizal/Documents/Я/gut/path-scout/path-journal.jsonl
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=origin-seat seat=mac model=Mac dna=ECB972D4
+begin/info journey-start · to=tower-west-17th via=infra dna=ECB972D4
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=3A7859E9
+dna/info machine-dna-tower · id=tower-west-17th role=path-tower via=infra dest=tower-west-17th dna=15038C00
+anomaly/block inbox-backlog-on-path · hop=1 via=infra clog=inbox-drain-stall dna=3A7859E9
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=clear-seat seat=mac model=Mac dna=922C0EDB
+anomaly/block obstruction-seen · clog=inbox-drain-stall clog=inbox-drain-stall dna=922C0EDB
+resolve/cleared obstruction-cleared · recovery clog=inbox-drain-stall | before: lines=7 bytes=243 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt | actions: inbox-timer-restart · force-drain=6 | after: lines=0 bytes=0 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt clog=inbox-drain-stall dna=922C0EDB
+hop/info tower-hop host=tower-west-17th infra-touch kind=tower id=tower-west-17th dna=15038C00 · hop=1 via=infra dna=3A7859E9
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=02E69342
+dna/info machine-dna-tower · id=tower-west-17th role=path-tower via=infra dest=tower-west-17th dna=390F40BB
+hop/info tower-hop host=tower-west-17th infra-touch kind=tower id=tower-west-17th dna=390F40BB · hop=2 via=infra dna=02E69342
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=arrive-seat seat=mac model=Mac dna=EED060CC
+arrive/info journey-arrive · to=tower-west-17th dna=EED060CC
+dna/info machine-dna-repeater · id=rptr-cherry-creek role=mid-block-boost decider-stamped dna=ED4FC193
+dna/info machine-dna-hub · id=datahub-downtown role=path-aggregation decider-stamped dna=47FC1B21
+dna/info machine-dna-storage · id=nas-garage role=cold-hold decider-stamped dna=FEE252B6
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=witness-seat seat=mac model=Mac dna=AEA393EC
+mystery/strange odd attenuation near tower-west · retained-by-scout dna=AEA393EC
+
+---- 2026-09-17T22:37:40.829Z | Decider | user | macos | prompt ----
+coin dna
+
+---- 2026-09-17T22:37:40.829Z | clay | assistant | macos | reply ----
+coin dna imprints=11 [hub=1 repeater=1 seat=6 storage=1 tower=2] showing=11
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=3A70461F imprint=ECB972D4 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=3A70461F imprint=3A7859E9 seat=mac model=Mac
+• kind=tower id=tower-west-17th role=path-tower hop=hop-1 seat=mac path=3A70461F imprint=15038C00 via=infra dest=tower-west-17th
+• kind=seat id=rizals-macbook-neo.local role=clear-seat hop=clear seat=mac path=3A70461F imprint=922C0EDB seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=3A70461F imprint=02E69342 seat=mac model=Mac
+• kind=tower id=tower-west-17th role=path-tower hop=hop-2 seat=mac path=3A70461F imprint=390F40BB via=infra dest=tower-west-17th
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=3A70461F imprint=EED060CC seat=mac model=Mac
+• kind=repeater id=rptr-cherry-creek role=mid-block-boost hop=touch seat=mac path=3A70461F imprint=ED4FC193 decider-stamped
+• kind=hub id=datahub-downtown role=path-aggregation hop=touch seat=mac path=3A70461F imprint=47FC1B21 decider-stamped
+• kind=storage id=nas-garage role=cold-hold hop=touch seat=mac path=3A70461F imprint=FEE252B6 decider-stamped
+• kind=seat id=rizals-macbook-neo.local role=witness-seat hop=strange seat=mac path=3A70461F imprint=AEA393EC seat=mac model=Mac
+
+---- 2026-09-17T22:37:40.830Z | Decider | user | macos | prompt ----
+coin path status
+
+---- 2026-09-17T22:37:40.831Z | clay | assistant | macos | reply ----
+coin path-scout paths~1 events=19 mysteries~3 cleared=1 dna=11 [hub=1 repeater=1 seat=6 storage=1 tower=2] active=3A70461F-D45B-464B-9B6A-48CDFACE187A
+journal: /Users/rizal/Documents/Я/gut/path-scout/path-journal.jsonl
+dna: /Users/rizal/Documents/Я/gut/path-scout/machine-dna.jsonl
+law: detect→retain→report→resolve→clear · machine-DNA on every touch (seat|tower|repeater|hub|storage|relay|…) · offline premier · green hops optional
+
+---- 2026-09-17T22:47:28.838Z | Decider | user | macos | prompt ----
+coin bt on
+
+---- 2026-09-17T22:47:28.857Z | clay | assistant | macos | reply ----
+coin bt ON · service=yabot-coin · coin bt ON me=mac-rizal’s MacBook Neo linked=[none] tx=0 rx=0 err=none lastRx=—
+HOW: other seat → `coin bt on`, then `coin send <label> via bluetooth`
+
+---- 2026-09-17T22:47:32.811Z | Decider | user | macos | prompt ----
+coin bt status
+
+---- 2026-09-17T22:47:32.813Z | clay | assistant | macos | reply ----
+coin bt ON me=mac-rizal’s MacBook Neo linked=[none] tx=0 rx=0 err=none lastRx=—
+
+---- 2026-09-17T22:49:12.815Z | Decider | user | macos | prompt ----
+coin bt status
+
+---- 2026-09-17T22:49:12.822Z | clay | assistant | macos | reply ----
+coin bt ON me=mac-rizal’s MacBook Neo linked=[none] tx=0 rx=0 err=none lastRx=—
+
+
+[2026-09-17T16:49:15] SYSTEM · coin-bt · Mac near-link ON (service=yabot-coin). Dual-seat BT hop waiting on iPhone install of NearLinkBluetooth build. USB install hung; use Xcode Run to iPhone, then: coin bt on → Mac: coin send iphone via bluetooth.
+---- 2026-09-17T22:55:00.836Z | Decider | user | macos | prompt ----
+coin bt on
+
+---- 2026-09-17T22:55:00.848Z | clay | assistant | macos | reply ----
+coin bt already on · coin bt ON me=mac-rizal’s MacBook Neo linked=[none] tx=0 rx=0 err=none lastRx=—
+
+---- 2026-09-17T22:55:04.812Z | Decider | user | macos | prompt ----
+coin bt status
+
+---- 2026-09-17T22:55:04.815Z | clay | assistant | macos | reply ----
+coin bt ON me=mac-rizal’s MacBook Neo linked=[none] tx=0 rx=0 err=none lastRx=—
+
+---- 2026-09-17T22:55:16.811Z | Decider | user | macos | prompt ----
+coin bt status
+
+---- 2026-09-17T22:55:16.815Z | clay | assistant | macos | reply ----
+coin bt ON me=mac-rizal’s MacBook Neo linked=[iphone-iPhone] tx=0 rx=0 err=none lastRx=—
+
+---- 2026-09-17T22:55:36.812Z | Decider | user | macos | prompt ----
+coin send iphone via bluetooth
+
+---- 2026-09-17T22:55:36.961Z | clay | assistant | macos | reply ----
+coin path begin ok pathId=D6D2A174-56BF-410D-BC41-275C862CF319 to=iphone via=bluetooth device=mac dna=B14A14BB
+scout hop 1:
+anomaly/block: inbox-backlog-on-path
+coin path clear ok pathId=D6D2A174-56BF-410D-BC41-275C862CF319 clog=inbox-drain-stall dna=E0B61757
+recovery clog=inbox-drain-stall
+before: lines=3 bytes=41 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt
+actions: inbox-timer-restart · force-drain=2
+after: lines=0 bytes=0 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt
+hop/info: bluetooth-hop dest=iphone dna=795126FC
+scout hop 2:
+hop/info: bluetooth-hop dest=iphone dna=632F2D48
+coin bt tx ok bytes=6384 peers=[iphone-iPhone] tx=1
+coin dna relay imprint=64EAE1FF kind=relay id=bt-nearlink-multipeer
+coin path arrive pathId=D6D2A174-56BF-410D-BC41-275C862CF319 to=iphone dna=06CFA183
+coin path report pathId=D6D2A174-56BF-410D-BC41-275C862CF319 hops=15 mysteries_open~2 cleared=1 dnaImprints=8 device=mac
+journal: /Users/rizal/Documents/Я/gut/path-scout/path-journal.jsonl
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=origin-seat seat=mac model=Mac dna=B14A14BB
+begin/info journey-start · to=iphone via=bluetooth dna=B14A14BB
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=18D0477D
+dna/info machine-dna-relay · id=bt-nearlink-multipeer role=path-bluetooth-relay via=bluetooth dest=iphone dna=795126FC
+anomaly/block inbox-backlog-on-path · hop=1 via=bluetooth clog=inbox-drain-stall dna=18D0477D
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=clear-seat seat=mac model=Mac dna=E0B61757
+anomaly/block obstruction-seen · clog=inbox-drain-stall clog=inbox-drain-stall dna=E0B61757
+resolve/cleared obstruction-cleared · recovery clog=inbox-drain-stall | before: lines=3 bytes=41 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt | actions: inbox-timer-restart · force-drain=2 | after: lines=0 bytes=0 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt clog=inbox-drain-stall dna=E0B61757
+hop/info bluetooth-hop dest=iphone dna=795126FC · hop=1 via=bluetooth dna=18D0477D
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=A20848DE
+dna/info machine-dna-relay · id=bt-nearlink-multipeer role=path-bluetooth-relay via=bluetooth dest=iphone dna=632F2D48
+hop/info bluetooth-hop dest=iphone dna=632F2D48 · hop=2 via=bluetooth dna=A20848DE
+dna/info machine-dna-relay · id=bt-nearlink-multipeer role=bluetooth-nearlink carrier=multipeer+bluetooth dest=iphone dna=64EAE1FF
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=arrive-seat seat=mac model=Mac dna=06CFA183
+arrive/info journey-arrive · to=iphone via=bluetooth dna=06CFA183
+
+---- 2026-09-17T22:55:36.963Z | Decider | user | macos | prompt ----
+coin dna
+
+---- 2026-09-17T22:55:36.967Z | clay | assistant | macos | reply ----
+coin dna imprints=19 [hub=1 relay=3 repeater=1 seat=11 storage=1 tower=2] showing=19
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=3A70461F imprint=ECB972D4 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=3A70461F imprint=3A7859E9 seat=mac model=Mac
+• kind=tower id=tower-west-17th role=path-tower hop=hop-1 seat=mac path=3A70461F imprint=15038C00 via=infra dest=tower-west-17th
+• kind=seat id=rizals-macbook-neo.local role=clear-seat hop=clear seat=mac path=3A70461F imprint=922C0EDB seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=3A70461F imprint=02E69342 seat=mac model=Mac
+• kind=tower id=tower-west-17th role=path-tower hop=hop-2 seat=mac path=3A70461F imprint=390F40BB via=infra dest=tower-west-17th
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=3A70461F imprint=EED060CC seat=mac model=Mac
+• kind=repeater id=rptr-cherry-creek role=mid-block-boost hop=touch seat=mac path=3A70461F imprint=ED4FC193 decider-stamped
+• kind=hub id=datahub-downtown role=path-aggregation hop=touch seat=mac path=3A70461F imprint=47FC1B21 decider-stamped
+• kind=storage id=nas-garage role=cold-hold hop=touch seat=mac path=3A70461F imprint=FEE252B6 decider-stamped
+• kind=seat id=rizals-macbook-neo.local role=witness-seat hop=strange seat=mac path=3A70461F imprint=AEA393EC seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=D6D2A174 imprint=B14A14BB seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=D6D2A174 imprint=18D0477D seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=path-bluetooth-relay hop=hop-1 seat=mac path=D6D2A174 imprint=795126FC via=bluetooth dest=iphone
+• kind=seat id=rizals-macbook-neo.local role=clear-seat hop=clear seat=mac path=D6D2A174 imprint=E0B61757 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=D6D2A174 imprint=A20848DE seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=path-bluetooth-relay hop=hop-2 seat=mac path=D6D2A174 imprint=632F2D48 via=bluetooth dest=iphone
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink hop=bt-carrier seat=mac path=D6D2A174 imprint=64EAE1FF carrier=multipeer+bluetooth dest=iphone
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=D6D2A174 imprint=06CFA183 seat=mac model=Mac
+
+---- 2026-09-17T22:55:36.968Z | Decider | user | macos | prompt ----
+coin path status
+
+---- 2026-09-17T22:55:36.974Z | clay | assistant | macos | reply ----
+coin path-scout paths~2 events=34 mysteries~5 cleared=2 dna=19 [hub=1 relay=3 repeater=1 seat=11 storage=1 tower=2] active=D6D2A174-56BF-410D-BC41-275C862CF319
+journal: /Users/rizal/Documents/Я/gut/path-scout/path-journal.jsonl
+dna: /Users/rizal/Documents/Я/gut/path-scout/machine-dna.jsonl
+bt: coin bt ON me=mac-rizal’s MacBook Neo linked=[iphone-iPhone] tx=1 rx=0 err=none lastRx=—
+law: detect→retain→report→resolve→clear · machine-DNA (seat|tower|repeater|hub|storage|relay|…) · BT near-link · offline premier
+
+---- 2026-09-17T22:55:36.975Z | Decider | user | macos | prompt ----
+coin bt status
+
+---- 2026-09-17T22:55:36.977Z | clay | assistant | macos | reply ----
+coin bt ON me=mac-rizal’s MacBook Neo linked=[iphone-iPhone] tx=1 rx=0 err=none lastRx=—
+
+---- 2026-09-17T22:56:52.941Z | Decider | user | macos | prompt ----
+coin bt on
+
+---- 2026-09-17T22:56:52.944Z | clay | assistant | macos | reply ----
+coin bt already on · coin bt ON me=mac-rizal’s MacBook Neo linked=[none] tx=1 rx=0 err=none lastRx=—
+
+---- 2026-09-17T22:56:56.941Z | Decider | user | macos | prompt ----
+coin bt status
+
+---- 2026-09-17T22:56:56.944Z | clay | assistant | macos | reply ----
+coin bt ON me=mac-rizal’s MacBook Neo linked=[none] tx=1 rx=0 err=none lastRx=—
+
+---- 2026-09-17T22:57:24.933Z | Decider | user | macos | prompt ----
+coin bt status
+
+---- 2026-09-17T22:57:24.936Z | clay | assistant | macos | reply ----
+coin bt ON me=mac-rizal’s MacBook Neo linked=[iphone-iPhone] tx=1 rx=1 err=none lastRx=rx pathId=66ED4D2C from=iphone-iPhone events=13 dna=7 relay=4D2802F7
+
+---- 2026-09-17T22:57:28.932Z | Decider | user | macos | prompt ----
+coin dna
+
+---- 2026-09-17T22:57:28.939Z | clay | assistant | macos | reply ----
+coin dna imprints=29 [hub=1 relay=7 repeater=1 seat=17 storage=1 tower=2] showing=29
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=3A70461F imprint=ECB972D4 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=3A70461F imprint=3A7859E9 seat=mac model=Mac
+• kind=tower id=tower-west-17th role=path-tower hop=hop-1 seat=mac path=3A70461F imprint=15038C00 via=infra dest=tower-west-17th
+• kind=seat id=rizals-macbook-neo.local role=clear-seat hop=clear seat=mac path=3A70461F imprint=922C0EDB seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=3A70461F imprint=02E69342 seat=mac model=Mac
+• kind=tower id=tower-west-17th role=path-tower hop=hop-2 seat=mac path=3A70461F imprint=390F40BB via=infra dest=tower-west-17th
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=3A70461F imprint=EED060CC seat=mac model=Mac
+• kind=repeater id=rptr-cherry-creek role=mid-block-boost hop=touch seat=mac path=3A70461F imprint=ED4FC193 decider-stamped
+• kind=hub id=datahub-downtown role=path-aggregation hop=touch seat=mac path=3A70461F imprint=47FC1B21 decider-stamped
+• kind=storage id=nas-garage role=cold-hold hop=touch seat=mac path=3A70461F imprint=FEE252B6 decider-stamped
+• kind=seat id=rizals-macbook-neo.local role=witness-seat hop=strange seat=mac path=3A70461F imprint=AEA393EC seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=D6D2A174 imprint=B14A14BB seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=D6D2A174 imprint=18D0477D seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=path-bluetooth-relay hop=hop-1 seat=mac path=D6D2A174 imprint=795126FC via=bluetooth dest=iphone
+• kind=seat id=rizals-macbook-neo.local role=clear-seat hop=clear seat=mac path=D6D2A174 imprint=E0B61757 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=D6D2A174 imprint=A20848DE seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=path-bluetooth-relay hop=hop-2 seat=mac path=D6D2A174 imprint=632F2D48 via=bluetooth dest=iphone
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink hop=bt-carrier seat=mac path=D6D2A174 imprint=64EAE1FF carrier=multipeer+bluetooth dest=iphone
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=D6D2A174 imprint=06CFA183 seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=66ED4D2C imprint=4D2802F7 fromPeer=iphone-iPhone fromSeat=iphone
+• kind=seat id=iphone-iPhone role=peer-seat hop=bt-rx seat=mac path=66ED4D2C imprint=53514FF6 remote-seat=iphone
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=66ED4D2C imprint=83653B2A seat=mac model=Mac
+• kind=seat id=rizals-iphone.local role=origin-seat hop=begin seat=iphone path=66ED4D2C imprint=6753683C merged-from=iphone-iPhone · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-1 seat=iphone path=66ED4D2C imprint=B1F22CDE merged-from=iphone-iPhone · seat=iphone model=iPhone
+• kind=relay id=bt-nearlink-multipeer role=path-bluetooth-relay hop=hop-1 seat=iphone path=66ED4D2C imprint=5066AFEB merged-from=iphone-iPhone · via=bluetooth dest=mac
+• kind=seat id=rizals-iphone.local role=clear-seat hop=clear seat=iphone path=66ED4D2C imprint=3917EBE5 merged-from=iphone-iPhone · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-2 seat=iphone path=66ED4D2C imprint=950838F4 merged-from=iphone-iPhone · seat=iphone model=iPhone
+• kind=relay id=bt-nearlink-multipeer role=path-bluetooth-relay hop=hop-2 seat=iphone path=66ED4D2C imprint=0808E119 merged-from=iphone-iPhone · via=bluetooth dest=mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink hop=bt-carrier seat=iphone path=66ED4D2C imprint=AAD6DFF1 merged-from=iphone-iPhone · carrier=multipeer+bluetooth dest=mac
+
+---- 2026-09-17T22:57:32.930Z | Decider | user | macos | prompt ----
+coin path status
+
+---- 2026-09-17T22:57:32.938Z | clay | assistant | macos | reply ----
+coin path-scout paths~3 events=51 mysteries~8 cleared=3 dna=29 [hub=1 relay=7 repeater=1 seat=17 storage=1 tower=2] active=D6D2A174-56BF-410D-BC41-275C862CF319
+journal: /Users/rizal/Documents/Я/gut/path-scout/path-journal.jsonl
+dna: /Users/rizal/Documents/Я/gut/path-scout/machine-dna.jsonl
+bt: coin bt ON me=mac-rizal’s MacBook Neo linked=[iphone-iPhone] tx=1 rx=1 err=none lastRx=rx pathId=66ED4D2C from=iphone-iPhone events=13 dna=7 relay=4D2802F7
+law: detect→retain→report→resolve→clear · machine-DNA (seat|tower|repeater|hub|storage|relay|…) · BT near-link · offline premier
+
+---- 2026-09-17T22:58:48.931Z | Decider | user | macos | prompt ----
+coin bt status
+
+---- 2026-09-17T22:58:48.935Z | clay | assistant | macos | reply ----
+coin bt ON me=mac-rizal’s MacBook Neo linked=[iphone-iPhone] tx=1 rx=1 err=none lastRx=rx pathId=66ED4D2C from=iphone-iPhone events=13 dna=7 relay=4D2802F7
+
+---- 2026-09-17T23:03:10.076Z | Decider | user | macos | prompt ----
+coin bt status
+
+---- 2026-09-17T23:03:10.101Z | clay | assistant | macos | reply ----
+coin bt OFF me=mac-rizal’s MacBook Neo seen=[none] linked=[none] tx=0 rx=0 err=none lastRx=—
+
+---- 2026-09-17T23:03:22.926Z | Decider | user | macos | prompt ----
+ping
+
+---- 2026-09-17T23:03:22.930Z | clay | assistant | macos | reply ----
+here
+
+---- 2026-09-17T23:03:30.920Z | Decider | user | macos | prompt ----
+coin bt clear
+
+---- 2026-09-17T23:03:30.984Z | clay | assistant | macos | reply ----
+coin bt cleared · BT off · coin bt OFF me=mac-rizal’s MacBook Neo seen=[none] linked=[none] tx=0 rx=0 err=none lastRx=—
+HOW: `coin bt on` on both seats to recognize again
+
+---- 2026-09-17T23:03:46.919Z | Decider | user | macos | prompt ----
+coin bt on
+
+---- 2026-09-17T23:03:46.974Z | clay | assistant | macos | reply ----
+coin bt ON · service=yabot-coin · coin bt ON me=mac-rizal’s MacBook Neo seen=[none] linked=[none] tx=0 rx=0 err=none lastRx=—
+HOW: other seat → `coin bt on`, then `coin send <label> via bluetooth`
+
+---- 2026-09-17T23:03:54.920Z | Decider | user | macos | prompt ----
+coin bt status
+
+---- 2026-09-17T23:03:54.922Z | clay | assistant | macos | reply ----
+coin bt ON me=mac-rizal’s MacBook Neo seen=[iphone-iPhone] linked=[iphone-iPhone] tx=0 rx=0 err=none lastRx=—
+
+---- 2026-09-17T23:31:41.539Z | Decider | user | macos | prompt ----
+ping
+
+---- 2026-09-17T23:31:41.546Z | clay | assistant | macos | reply ----
+here
+
+---- 2026-09-17T23:33:05.537Z | Decider | user | macos | prompt ----
+coin carriers
+
+---- 2026-09-17T23:33:05.550Z | clay | assistant | macos | reply ----
+coin carriers (offline premier · Machine DNA on every pipe):
+• bluetooth — coin bt OFF me=mac-rizal’s MacBook Neo seen=[none] linked=[none] tx=0 rx=0 err=none lastRx=—
+• lan — OFF peers=[none] tx=0 rx=0 err=none
+• usb — drop=/Users/rizal/Documents/Я/gut/wire-drop pending=0
+• qr — ready (QR encode + eat JSON/file)
+• nfc — stub on Mac (stage token → iPhone tap / eat)
+• share — ready (.ya-path package → Finder/share)
+HOW: coin send <to> via bluetooth|lan|usb|qr|nfc|share
+     coin lan on|off|clear · coin usb drain · coin qr eat <json|path>
+     coin nfc eat <json|path> · coin share eat <path>
+
+---- 2026-09-17T23:33:09.536Z | Decider | user | macos | prompt ----
+coin lan on
+
+---- 2026-09-17T23:33:09.564Z | clay | assistant | macos | reply ----
+coin lan ON · service=_ya-coin-lan._tcp name=ya-coin-mac · ON peers=[none] tx=0 rx=0 err=none
+HOW: other seat → `coin lan on`, then `coin send <to> via lan`
+
+---- 2026-09-17T23:33:13.537Z | Decider | user | macos | prompt ----
+coin path begin lan-smoke
+
+---- 2026-09-17T23:33:13.628Z | clay | assistant | macos | reply ----
+coin path begin ok pathId=F0106229-E812-4CFB-9B4F-F5A5AA045C7E to=lan-smoke via=local device=mac dna=ED7EE495
+scout hop 1:
+anomaly/block: inbox-backlog-on-path
+coin path clear ok pathId=F0106229-E812-4CFB-9B4F-F5A5AA045C7E clog=inbox-drain-stall dna=ADBD1C45
+recovery clog=inbox-drain-stall
+before: lines=4 bytes=83 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt
+actions: inbox-timer-restart · force-drain=3
+after: lines=0 bytes=0 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt
+hop/info: local-hop dest=lan-smoke seat=mac dna=5215BEFE
+
+---- 2026-09-17T23:33:13.629Z | Decider | user | macos | prompt ----
+coin send iphone via lan
+
+---- 2026-09-17T23:33:13.671Z | clay | assistant | macos | reply ----
+coin path begin ok pathId=F49C4C13-7831-4F1A-8407-5625093220CC to=iphone via=lan device=mac dna=93131F53
+scout hop 1:
+hop/info: local-hop dest=iphone seat=mac dna=9F743BDB
+scout hop 2:
+hop/info: local-hop dest=iphone seat=mac dna=877A3A5C
+coin lan tx ok bytes=2783 dest=iphone tx=1
+coin path arrive pathId=F49C4C13-7831-4F1A-8407-5625093220CC to=iphone dna=70075F82
+coin path report pathId=F49C4C13-7831-4F1A-8407-5625093220CC hops=9 mysteries_open~0 cleared=0 dnaImprints=5 device=mac
+journal: /Users/rizal/Documents/Я/gut/path-scout/path-journal.jsonl
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=origin-seat seat=mac model=Mac dna=93131F53
+begin/info journey-start · to=iphone via=lan dna=93131F53
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=9F743BDB
+hop/info local-hop dest=iphone seat=mac dna=9F743BDB · hop=1 via=lan dna=9F743BDB
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=877A3A5C
+hop/info local-hop dest=iphone seat=mac dna=877A3A5C · hop=2 via=lan dna=877A3A5C
+dna/info machine-dna-relay · id=lan-bonjour-ya-coin role=lan-bonjour-relay dest=iphone via=lan dna=9B060867
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=arrive-seat seat=mac model=Mac dna=70075F82
+arrive/info journey-arrive · to=iphone via=lan dna=70075F82
+
+---- 2026-09-17T23:33:13.671Z | Decider | user | macos | prompt ----
+coin send iphone via usb
+
+---- 2026-09-17T23:33:13.680Z | clay | assistant | macos | reply ----
+coin path begin ok pathId=450B3694-ECA2-405D-A384-A82B3EE196B1 to=iphone via=usb device=mac dna=6748A82D
+scout hop 1:
+hop/info: local-hop dest=iphone seat=mac dna=82B64E22
+scout hop 2:
+hop/info: local-hop dest=iphone seat=mac dna=EDC27F81
+coin usb tx ok file=/Users/rizal/Documents/Я/gut/wire-drop/path-1789687993-2A9210.ya-path.json dest=iphone
+HOW: copy file to peer Documents/Я/gut/wire-drop then `coin usb drain`
+coin path arrive pathId=450B3694-ECA2-405D-A384-A82B3EE196B1 to=iphone dna=BAB7CE6A
+coin path report pathId=450B3694-ECA2-405D-A384-A82B3EE196B1 hops=9 mysteries_open~0 cleared=0 dnaImprints=5 device=mac
+journal: /Users/rizal/Documents/Я/gut/path-scout/path-journal.jsonl
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=origin-seat seat=mac model=Mac dna=6748A82D
+begin/info journey-start · to=iphone via=usb dna=6748A82D
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=82B64E22
+hop/info local-hop dest=iphone seat=mac dna=82B64E22 · hop=1 via=usb dna=82B64E22
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=EDC27F81
+hop/info local-hop dest=iphone seat=mac dna=EDC27F81 · hop=2 via=usb dna=EDC27F81
+dna/info machine-dna-relay · id=usb-wire-drop role=usb-wire-relay dest=iphone via=usb dna=76D025FF
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=arrive-seat seat=mac model=Mac dna=BAB7CE6A
+arrive/info journey-arrive · to=iphone via=usb dna=BAB7CE6A
+
+---- 2026-09-17T23:33:13.680Z | Decider | user | macos | prompt ----
+coin send iphone via qr
+
+---- 2026-09-17T23:33:13.940Z | clay | assistant | macos | reply ----
+coin path begin ok pathId=12BD4925-4F75-41F0-AA34-83A9074E204E to=iphone via=qr device=mac dna=84FB08A4
+scout hop 1:
+hop/info: local-hop dest=iphone seat=mac dna=D267F86E
+scout hop 2:
+hop/info: local-hop dest=iphone seat=mac dna=9FC608E2
+coin qr ready payload=/Users/rizal/Documents/Я/gut/wire-drop/qr/path-1789687993.ya-qr.json png=/Users/rizal/Documents/Я/gut/wire-drop/qr/path-1789687993.ya-qr.png
+HOW: peer → `coin qr eat <json-or-path>`
+coin path arrive pathId=12BD4925-4F75-41F0-AA34-83A9074E204E to=iphone dna=A2AE57F3
+coin path report pathId=12BD4925-4F75-41F0-AA34-83A9074E204E hops=9 mysteries_open~0 cleared=0 dnaImprints=5 device=mac
+journal: /Users/rizal/Documents/Я/gut/path-scout/path-journal.jsonl
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=origin-seat seat=mac model=Mac dna=84FB08A4
+begin/info journey-start · to=iphone via=qr dna=84FB08A4
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=D267F86E
+hop/info local-hop dest=iphone seat=mac dna=D267F86E · hop=1 via=qr dna=D267F86E
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=9FC608E2
+hop/info local-hop dest=iphone seat=mac dna=9FC608E2 · hop=2 via=qr dna=9FC608E2
+dna/info machine-dna-relay · id=qr-optical-handshake role=qr-optical-relay dest=iphone via=qr dna=D4AF7749
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=arrive-seat seat=mac model=Mac dna=A2AE57F3
+arrive/info journey-arrive · to=iphone via=qr dna=A2AE57F3
+
+---- 2026-09-17T23:33:13.940Z | Decider | user | macos | prompt ----
+coin dna
+
+---- 2026-09-17T23:33:13.941Z | clay | assistant | macos | reply ----
+coin dna imprints=53 [hub=1 relay=11 repeater=1 seat=37 storage=1 tower=2] showing=40
+• kind=relay id=bt-nearlink-multipeer role=path-bluetooth-relay hop=hop-1 seat=mac path=D6D2A174 imprint=795126FC via=bluetooth dest=iphone
+• kind=seat id=rizals-macbook-neo.local role=clear-seat hop=clear seat=mac path=D6D2A174 imprint=E0B61757 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=D6D2A174 imprint=A20848DE seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=path-bluetooth-relay hop=hop-2 seat=mac path=D6D2A174 imprint=632F2D48 via=bluetooth dest=iphone
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink hop=bt-carrier seat=mac path=D6D2A174 imprint=64EAE1FF carrier=multipeer+bluetooth dest=iphone
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=D6D2A174 imprint=06CFA183 seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=66ED4D2C imprint=4D2802F7 fromPeer=iphone-iPhone fromSeat=iphone
+• kind=seat id=iphone-iPhone role=peer-seat hop=bt-rx seat=mac path=66ED4D2C imprint=53514FF6 remote-seat=iphone
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=66ED4D2C imprint=83653B2A seat=mac model=Mac
+• kind=seat id=rizals-iphone.local role=origin-seat hop=begin seat=iphone path=66ED4D2C imprint=6753683C merged-from=iphone-iPhone · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-1 seat=iphone path=66ED4D2C imprint=B1F22CDE merged-from=iphone-iPhone · seat=iphone model=iPhone
+• kind=relay id=bt-nearlink-multipeer role=path-bluetooth-relay hop=hop-1 seat=iphone path=66ED4D2C imprint=5066AFEB merged-from=iphone-iPhone · via=bluetooth dest=mac
+• kind=seat id=rizals-iphone.local role=clear-seat hop=clear seat=iphone path=66ED4D2C imprint=3917EBE5 merged-from=iphone-iPhone · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-2 seat=iphone path=66ED4D2C imprint=950838F4 merged-from=iphone-iPhone · seat=iphone model=iPhone
+• kind=relay id=bt-nearlink-multipeer role=path-bluetooth-relay hop=hop-2 seat=iphone path=66ED4D2C imprint=0808E119 merged-from=iphone-iPhone · via=bluetooth dest=mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink hop=bt-carrier seat=iphone path=66ED4D2C imprint=AAD6DFF1 merged-from=iphone-iPhone · carrier=multipeer+bluetooth dest=mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=F0106229 imprint=ED7EE495 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=F0106229 imprint=5215BEFE seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=clear-seat hop=clear seat=mac path=F0106229 imprint=ADBD1C45 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=F49C4C13 imprint=93131F53 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=F49C4C13 imprint=9F743BDB seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=F49C4C13 imprint=877A3A5C seat=mac model=Mac
+• kind=relay id=lan-bonjour-ya-coin role=lan-bonjour-relay hop=carrier-lan seat=mac path=F49C4C13 imprint=9B060867 dest=iphone via=lan
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=F49C4C13 imprint=70075F82 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=450B3694 imprint=6748A82D seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=450B3694 imprint=82B64E22 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=450B3694 imprint=EDC27F81 seat=mac model=Mac
+• kind=relay id=usb-wire-drop role=usb-wire-relay hop=carrier-usb seat=mac path=450B3694 imprint=76D025FF dest=iphone via=usb
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=450B3694 imprint=BAB7CE6A seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=12BD4925 imprint=84FB08A4 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=12BD4925 imprint=D267F86E seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=12BD4925 imprint=9FC608E2 seat=mac model=Mac
+• kind=relay id=qr-optical-handshake role=qr-optical-relay hop=carrier-qr seat=mac path=12BD4925 imprint=D4AF7749 dest=iphone via=qr
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=F49C4C13 imprint=2092BECB fromPeer=lan-peer fromSeat=mac
+• kind=seat id=lan-peer role=peer-seat hop=bt-rx seat=mac path=F49C4C13 imprint=38327ECE remote-seat=mac
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=F49C4C13 imprint=2B5B1B9D seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=F49C4C13 imprint=93131F53 merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=F49C4C13 imprint=9F743BDB merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=F49C4C13 imprint=877A3A5C merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=12BD4925 imprint=A2AE57F3 seat=mac model=Mac
+
+---- 2026-09-17T23:34:17.630Z | Decider | user | macos | prompt ----
+coin lan on
+
+---- 2026-09-17T23:34:17.634Z | clay | assistant | macos | reply ----
+coin lan already on · ON peers=[ya-coin-mac] tx=1 rx=1 err=none
+
+---- 2026-09-17T23:34:21.629Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-17T23:34:21.631Z | clay | assistant | macos | reply ----
+ON peers=[ya-coin-mac] tx=1 rx=1 err=none
+
+---- 2026-09-17T23:34:25.631Z | Decider | user | macos | prompt ----
+coin send iphone via lan
+
+---- 2026-09-17T23:34:25.750Z | clay | assistant | macos | reply ----
+coin path begin ok pathId=4581A6F7-9091-4F2B-9409-7418516BA2B5 to=iphone via=lan device=mac dna=656B4B84
+scout hop 1:
+hop/info: local-hop dest=iphone seat=mac dna=3B82BC53
+scout hop 2:
+hop/info: local-hop dest=iphone seat=mac dna=936E914B
+coin lan tx ok bytes=2783 dest=iphone tx=2
+coin path arrive pathId=4581A6F7-9091-4F2B-9409-7418516BA2B5 to=iphone dna=90ABDCAF
+coin path report pathId=4581A6F7-9091-4F2B-9409-7418516BA2B5 hops=9 mysteries_open~0 cleared=0 dnaImprints=5 device=mac
+journal: /Users/rizal/Documents/Я/gut/path-scout/path-journal.jsonl
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=origin-seat seat=mac model=Mac dna=656B4B84
+begin/info journey-start · to=iphone via=lan dna=656B4B84
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=3B82BC53
+hop/info local-hop dest=iphone seat=mac dna=3B82BC53 · hop=1 via=lan dna=3B82BC53
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=936E914B
+hop/info local-hop dest=iphone seat=mac dna=936E914B · hop=2 via=lan dna=936E914B
+dna/info machine-dna-relay · id=lan-bonjour-ya-coin role=lan-bonjour-relay dest=iphone via=lan dna=AD601600
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=arrive-seat seat=mac model=Mac dna=90ABDCAF
+arrive/info journey-arrive · to=iphone via=lan dna=90ABDCAF
+
+---- 2026-09-17T23:35:41.629Z | Decider | user | macos | prompt ----
+coin lan on
+
+---- 2026-09-17T23:35:41.632Z | clay | assistant | macos | reply ----
+coin lan already on · ON peers=[ya-coin-mac] tx=2 rx=2 err=none
+
+---- 2026-09-17T23:35:45.629Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-17T23:35:45.631Z | clay | assistant | macos | reply ----
+ON peers=[ya-coin-mac] tx=2 rx=2 err=none
+
+---- 2026-09-17T23:35:49.629Z | Decider | user | macos | prompt ----
+coin send iphone via lan
+
+---- 2026-09-17T23:35:49.710Z | clay | assistant | macos | reply ----
+coin path begin ok pathId=A2F92A38-EDCA-4C7F-A035-0BF7A553BB85 to=iphone via=lan device=mac dna=B4FDC682
+scout hop 1:
+hop/info: local-hop dest=iphone seat=mac dna=BE1A450C
+scout hop 2:
+hop/info: local-hop dest=iphone seat=mac dna=C4EC171C
+coin lan tx ok bytes=2783 dest=iphone tx=3
+coin path arrive pathId=A2F92A38-EDCA-4C7F-A035-0BF7A553BB85 to=iphone dna=0EDB0DBF
+coin path report pathId=A2F92A38-EDCA-4C7F-A035-0BF7A553BB85 hops=9 mysteries_open~0 cleared=0 dnaImprints=5 device=mac
+journal: /Users/rizal/Documents/Я/gut/path-scout/path-journal.jsonl
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=origin-seat seat=mac model=Mac dna=B4FDC682
+begin/info journey-start · to=iphone via=lan dna=B4FDC682
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=BE1A450C
+hop/info local-hop dest=iphone seat=mac dna=BE1A450C · hop=1 via=lan dna=BE1A450C
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=C4EC171C
+hop/info local-hop dest=iphone seat=mac dna=C4EC171C · hop=2 via=lan dna=C4EC171C
+dna/info machine-dna-relay · id=lan-bonjour-ya-coin role=lan-bonjour-relay dest=iphone via=lan dna=503732C4
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=arrive-seat seat=mac model=Mac dna=0EDB0DBF
+arrive/info journey-arrive · to=iphone via=lan dna=0EDB0DBF
+
+---- 2026-09-17T23:39:34.976Z | Decider | user | macos | prompt ----
+coin lan clear
+
+---- 2026-09-17T23:39:34.981Z | clay | assistant | macos | reply ----
+coin lan cleared · OFF peers=[none] tx=0 rx=0 err=none
+
+---- 2026-09-17T23:39:35.214Z | Decider | user | macos | prompt ----
+ping
+
+---- 2026-09-17T23:39:35.215Z | clay | assistant | macos | reply ----
+here
+
+---- 2026-09-17T23:39:37.818Z | Decider | user | macos | prompt ----
+coin lan on
+
+---- 2026-09-17T23:39:37.849Z | clay | assistant | macos | reply ----
+coin lan ON · service=_ya-coin-lan._tcp name=ya-coin-mac · ON peers=[none] tx=0 rx=0 err=none
+HOW: other seat → `coin lan on`, then `coin send <to> via lan`
+
+---- 2026-09-17T23:39:41.865Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-17T23:39:41.873Z | clay | assistant | macos | reply ----
+ON peers=[ya-coin-mac] tx=0 rx=0 err=none
+
+---- 2026-09-17T23:40:47.943Z | Decider | user | macos | prompt ----
+ping
+
+---- 2026-09-17T23:40:47.946Z | clay | assistant | macos | reply ----
+here
+
+---- 2026-09-17T23:40:51.940Z | Decider | user | macos | prompt ----
+coin usb drain
+
+---- 2026-09-17T23:40:52.006Z | clay | assistant | macos | reply ----
+coin usb drain ok count=2
+drained path-1789687993-2A9210.ya-path.json · rx pathId=450B3694 from=usb-wire events=6 dna=3 relay=3D7CF465
+drained path-1789688429-6695C2.ya-path.json · rx pathId=7A94F34C from=usb-wire events=10 dna=4 relay=7DDB0A13
+
+---- 2026-09-17T23:40:55.940Z | Decider | user | macos | prompt ----
+coin dna
+
+---- 2026-09-17T23:40:55.950Z | clay | assistant | macos | reply ----
+coin dna imprints=88 [hub=1 relay=17 repeater=1 seat=66 storage=1 tower=2] showing=40
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=F49C4C13 imprint=2B5B1B9D seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=F49C4C13 imprint=93131F53 merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=F49C4C13 imprint=9F743BDB merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=F49C4C13 imprint=877A3A5C merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=12BD4925 imprint=A2AE57F3 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=4581A6F7 imprint=656B4B84 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=4581A6F7 imprint=3B82BC53 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=4581A6F7 imprint=936E914B seat=mac model=Mac
+• kind=relay id=lan-bonjour-ya-coin role=lan-bonjour-relay hop=carrier-lan seat=mac path=4581A6F7 imprint=AD601600 dest=iphone via=lan
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=4581A6F7 imprint=90ABDCAF seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=4581A6F7 imprint=0F179AC4 fromPeer=lan-peer fromSeat=mac
+• kind=seat id=lan-peer role=peer-seat hop=bt-rx seat=mac path=4581A6F7 imprint=F918CD75 remote-seat=mac
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=4581A6F7 imprint=6A07C91D seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=4581A6F7 imprint=656B4B84 merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=4581A6F7 imprint=3B82BC53 merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=4581A6F7 imprint=936E914B merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=A2F92A38 imprint=B4FDC682 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=A2F92A38 imprint=BE1A450C seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=A2F92A38 imprint=C4EC171C seat=mac model=Mac
+• kind=relay id=lan-bonjour-ya-coin role=lan-bonjour-relay hop=carrier-lan seat=mac path=A2F92A38 imprint=503732C4 dest=iphone via=lan
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=A2F92A38 imprint=0EDB0DBF seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=A2F92A38 imprint=E52742A6 fromPeer=lan-peer fromSeat=mac
+• kind=seat id=lan-peer role=peer-seat hop=bt-rx seat=mac path=A2F92A38 imprint=3AA09268 remote-seat=mac
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=A2F92A38 imprint=B67D0B6A seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=A2F92A38 imprint=B4FDC682 merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=A2F92A38 imprint=BE1A450C merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=A2F92A38 imprint=C4EC171C merged-from=lan-peer · seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=450B3694 imprint=3D7CF465 fromPeer=usb-wire fromSeat=mac
+• kind=seat id=usb-wire role=peer-seat hop=bt-rx seat=mac path=450B3694 imprint=87EA6053 remote-seat=mac
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=450B3694 imprint=B3DB106A seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=450B3694 imprint=6748A82D merged-from=usb-wire · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=450B3694 imprint=82B64E22 merged-from=usb-wire · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=450B3694 imprint=EDC27F81 merged-from=usb-wire · seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=7A94F34C imprint=7DDB0A13 fromPeer=usb-wire fromSeat=iphone
+• kind=seat id=usb-wire role=peer-seat hop=bt-rx seat=mac path=7A94F34C imprint=29580A07 remote-seat=iphone
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=7A94F34C imprint=279F312D seat=mac model=Mac
+• kind=seat id=rizals-iphone.local role=origin-seat hop=begin seat=iphone path=7A94F34C imprint=396A0AB8 merged-from=usb-wire · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-1 seat=iphone path=7A94F34C imprint=68213976 merged-from=usb-wire · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=clear-seat hop=clear seat=iphone path=7A94F34C imprint=1FCF5518 merged-from=usb-wire · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-2 seat=iphone path=7A94F34C imprint=2976A0BB merged-from=usb-wire · seat=iphone model=iPhone
+
+---- 2026-09-17T23:41:48.510Z | Decider | user | macos | prompt ----
+ping
+
+---- 2026-09-17T23:41:48.511Z | clay | assistant | macos | reply ----
+here
+
+---- 2026-09-17T23:41:49.072Z | Decider | user | macos | prompt ----
+coin usb drain
+
+---- 2026-09-17T23:41:49.074Z | clay | assistant | macos | reply ----
+coin usb drain: no pending .ya-path.json in /Users/rizal/Documents/Я/gut/wire-drop
+
+---- 2026-09-17T23:41:53.072Z | Decider | user | macos | prompt ----
+coin dna
+
+---- 2026-09-17T23:41:53.081Z | clay | assistant | macos | reply ----
+coin dna imprints=88 [hub=1 relay=17 repeater=1 seat=66 storage=1 tower=2] showing=40
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=F49C4C13 imprint=2B5B1B9D seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=F49C4C13 imprint=93131F53 merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=F49C4C13 imprint=9F743BDB merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=F49C4C13 imprint=877A3A5C merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=12BD4925 imprint=A2AE57F3 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=4581A6F7 imprint=656B4B84 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=4581A6F7 imprint=3B82BC53 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=4581A6F7 imprint=936E914B seat=mac model=Mac
+• kind=relay id=lan-bonjour-ya-coin role=lan-bonjour-relay hop=carrier-lan seat=mac path=4581A6F7 imprint=AD601600 dest=iphone via=lan
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=4581A6F7 imprint=90ABDCAF seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=4581A6F7 imprint=0F179AC4 fromPeer=lan-peer fromSeat=mac
+• kind=seat id=lan-peer role=peer-seat hop=bt-rx seat=mac path=4581A6F7 imprint=F918CD75 remote-seat=mac
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=4581A6F7 imprint=6A07C91D seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=4581A6F7 imprint=656B4B84 merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=4581A6F7 imprint=3B82BC53 merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=4581A6F7 imprint=936E914B merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=A2F92A38 imprint=B4FDC682 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=A2F92A38 imprint=BE1A450C seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=A2F92A38 imprint=C4EC171C seat=mac model=Mac
+• kind=relay id=lan-bonjour-ya-coin role=lan-bonjour-relay hop=carrier-lan seat=mac path=A2F92A38 imprint=503732C4 dest=iphone via=lan
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=A2F92A38 imprint=0EDB0DBF seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=A2F92A38 imprint=E52742A6 fromPeer=lan-peer fromSeat=mac
+• kind=seat id=lan-peer role=peer-seat hop=bt-rx seat=mac path=A2F92A38 imprint=3AA09268 remote-seat=mac
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=A2F92A38 imprint=B67D0B6A seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=A2F92A38 imprint=B4FDC682 merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=A2F92A38 imprint=BE1A450C merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=A2F92A38 imprint=C4EC171C merged-from=lan-peer · seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=450B3694 imprint=3D7CF465 fromPeer=usb-wire fromSeat=mac
+• kind=seat id=usb-wire role=peer-seat hop=bt-rx seat=mac path=450B3694 imprint=87EA6053 remote-seat=mac
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=450B3694 imprint=B3DB106A seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=450B3694 imprint=6748A82D merged-from=usb-wire · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=450B3694 imprint=82B64E22 merged-from=usb-wire · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=450B3694 imprint=EDC27F81 merged-from=usb-wire · seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=7A94F34C imprint=7DDB0A13 fromPeer=usb-wire fromSeat=iphone
+• kind=seat id=usb-wire role=peer-seat hop=bt-rx seat=mac path=7A94F34C imprint=29580A07 remote-seat=iphone
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=7A94F34C imprint=279F312D seat=mac model=Mac
+• kind=seat id=rizals-iphone.local role=origin-seat hop=begin seat=iphone path=7A94F34C imprint=396A0AB8 merged-from=usb-wire · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-1 seat=iphone path=7A94F34C imprint=68213976 merged-from=usb-wire · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=clear-seat hop=clear seat=iphone path=7A94F34C imprint=1FCF5518 merged-from=usb-wire · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-2 seat=iphone path=7A94F34C imprint=2976A0BB merged-from=usb-wire · seat=iphone model=iPhone
+
+---- 2026-09-17T23:41:57.072Z | Decider | user | macos | prompt ----
+coin lan on
+
+---- 2026-09-17T23:41:57.085Z | clay | assistant | macos | reply ----
+coin lan ON · service=_ya-coin-lan._tcp name=ya-coin-mac · ON peers=[none] tx=0 rx=0 err=none
+HOW: other seat → `coin lan on`, then `coin send <to> via lan`
+
+---- 2026-09-17T23:42:01.075Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-17T23:42:01.077Z | clay | assistant | macos | reply ----
+ON peers=[ya-coin-mac] tx=0 rx=0 err=none
+
+---- 2026-09-17T23:42:13.072Z | Decider | user | macos | prompt ----
+coin lan clear
+
+---- 2026-09-17T23:42:13.085Z | clay | assistant | macos | reply ----
+coin lan ON · service=_ya-coin-lan._tcp name=ya-coin-mac · ON peers=[none] tx=0 rx=0 err=none
+HOW: other seat → `coin lan on`, then `coin send <to> via lan`
+
+---- 2026-09-17T23:42:17.072Z | Decider | user | macos | prompt ----
+coin lan on
+
+---- 2026-09-17T23:42:17.074Z | clay | assistant | macos | reply ----
+coin lan already on · ON peers=[ya-coin-mac] tx=0 rx=0 err=none
+
+---- 2026-09-17T23:42:25.072Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-17T23:42:25.074Z | clay | assistant | macos | reply ----
+ON peers=[ya-coin-mac] tx=0 rx=0 err=none
+
+[2026-09-17T23:42:48Z] SYSTEM · multi-carrier · USB bidirectional DEVICE PASS + QR Mac→iPhone DNA PASS; LAN Bonjour wired but Mac↛iPhone browse still open; NFC/share staged; peer-self TX fixed.
+---- 2026-09-17T23:49:10.690Z | Decider | user | macos | prompt ----
+coin lan clear
+
+---- 2026-09-17T23:49:10.697Z | clay | assistant | macos | reply ----
+coin lan cleared · OFF peers=[none] tx=0 rx=0 err=none
+
+---- 2026-09-17T23:49:14.685Z | Decider | user | macos | prompt ----
+coin lan on
+
+---- 2026-09-17T23:49:14.706Z | clay | assistant | macos | reply ----
+coin lan ON · service=_ya-coin-lan._tcp name=ya-coin-mac · ON peers=[none] tx=0 rx=0 err=none
+HOW: other seat → `coin lan on`, then `coin send <to> via lan`
+
+---- 2026-09-17T23:49:26.686Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-17T23:49:26.688Z | clay | assistant | macos | reply ----
+ON peers=[ya-coin-mac] tx=0 rx=0 err=none
+
+---- 2026-09-17T23:50:06.698Z | Decider | user | macos | prompt ----
+coin lan on
+
+---- 2026-09-17T23:50:06.700Z | clay | assistant | macos | reply ----
+coin lan already on · ON peers=[ya-coin-mac] tx=0 rx=0 err=none
+
+---- 2026-09-17T23:50:10.698Z | Decider | user | macos | prompt ----
+coin send iphone via lan
+
+---- 2026-09-17T23:50:20.834Z | clay | assistant | macos | reply ----
+coin path begin ok pathId=F8987B0B-851C-4052-93DC-7DF576A23B2E to=iphone via=lan device=mac dna=9F602094
+scout hop 1:
+anomaly/block: inbox-backlog-on-path
+coin path clear ok pathId=F8987B0B-851C-4052-93DC-7DF576A23B2E clog=inbox-drain-stall dna=79D40767
+recovery clog=inbox-drain-stall
+before: lines=2 bytes=18 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt
+actions: inbox-timer-restart · force-drain=1
+after: lines=0 bytes=0 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt
+hop/info: local-hop dest=iphone seat=mac dna=18782DC8
+scout hop 2:
+hop/info: local-hop dest=iphone seat=mac dna=78866A10
+coin lan tx FAIL · timeout
+coin path arrive pathId=F8987B0B-851C-4052-93DC-7DF576A23B2E to=iphone dna=43086C13
+coin path report pathId=F8987B0B-851C-4052-93DC-7DF576A23B2E hops=13 mysteries_open~2 cleared=1 dnaImprints=6 device=mac
+journal: /Users/rizal/Documents/Я/gut/path-scout/path-journal.jsonl
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=origin-seat seat=mac model=Mac dna=9F602094
+begin/info journey-start · to=iphone via=lan dna=9F602094
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=18782DC8
+anomaly/block inbox-backlog-on-path · hop=1 via=lan clog=inbox-drain-stall dna=18782DC8
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=clear-seat seat=mac model=Mac dna=79D40767
+anomaly/block obstruction-seen · clog=inbox-drain-stall clog=inbox-drain-stall dna=79D40767
+resolve/cleared obstruction-cleared · recovery clog=inbox-drain-stall | before: lines=2 bytes=18 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt | actions: inbox-timer-restart · force-drain=1 | after: lines=0 bytes=0 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt clog=inbox-drain-stall dna=79D40767
+hop/info local-hop dest=iphone seat=mac dna=18782DC8 · hop=1 via=lan dna=18782DC8
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=78866A10
+hop/info local-hop dest=iphone seat=mac dna=78866A10 · hop=2 via=lan dna=78866A10
+dna/info machine-dna-relay · id=lan-bonjour-ya-coin role=lan-bonjour-relay dest=iphone via=lan dna=DA2D8A09
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=arrive-seat seat=mac model=Mac dna=43086C13
+arrive/info journey-arrive · to=iphone via=lan dna=43086C13
+
+---- 2026-09-17T23:50:20.836Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-17T23:50:20.836Z | clay | assistant | macos | reply ----
+ON peers=[ya-coin-mac] tx=0 rx=0 err=timeout
+
+---- 2026-09-17T23:50:20.836Z | Decider | user | macos | prompt ----
+coin dna
+
+---- 2026-09-17T23:50:20.842Z | clay | assistant | macos | reply ----
+coin dna imprints=94 [hub=1 relay=18 repeater=1 seat=71 storage=1 tower=2] showing=40
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=4581A6F7 imprint=3B82BC53 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=4581A6F7 imprint=936E914B seat=mac model=Mac
+• kind=relay id=lan-bonjour-ya-coin role=lan-bonjour-relay hop=carrier-lan seat=mac path=4581A6F7 imprint=AD601600 dest=iphone via=lan
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=4581A6F7 imprint=90ABDCAF seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=4581A6F7 imprint=0F179AC4 fromPeer=lan-peer fromSeat=mac
+• kind=seat id=lan-peer role=peer-seat hop=bt-rx seat=mac path=4581A6F7 imprint=F918CD75 remote-seat=mac
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=4581A6F7 imprint=6A07C91D seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=4581A6F7 imprint=656B4B84 merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=4581A6F7 imprint=3B82BC53 merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=4581A6F7 imprint=936E914B merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=A2F92A38 imprint=B4FDC682 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=A2F92A38 imprint=BE1A450C seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=A2F92A38 imprint=C4EC171C seat=mac model=Mac
+• kind=relay id=lan-bonjour-ya-coin role=lan-bonjour-relay hop=carrier-lan seat=mac path=A2F92A38 imprint=503732C4 dest=iphone via=lan
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=A2F92A38 imprint=0EDB0DBF seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=A2F92A38 imprint=E52742A6 fromPeer=lan-peer fromSeat=mac
+• kind=seat id=lan-peer role=peer-seat hop=bt-rx seat=mac path=A2F92A38 imprint=3AA09268 remote-seat=mac
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=A2F92A38 imprint=B67D0B6A seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=A2F92A38 imprint=B4FDC682 merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=A2F92A38 imprint=BE1A450C merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=A2F92A38 imprint=C4EC171C merged-from=lan-peer · seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=450B3694 imprint=3D7CF465 fromPeer=usb-wire fromSeat=mac
+• kind=seat id=usb-wire role=peer-seat hop=bt-rx seat=mac path=450B3694 imprint=87EA6053 remote-seat=mac
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=450B3694 imprint=B3DB106A seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=450B3694 imprint=6748A82D merged-from=usb-wire · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=450B3694 imprint=82B64E22 merged-from=usb-wire · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=450B3694 imprint=EDC27F81 merged-from=usb-wire · seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=7A94F34C imprint=7DDB0A13 fromPeer=usb-wire fromSeat=iphone
+• kind=seat id=usb-wire role=peer-seat hop=bt-rx seat=mac path=7A94F34C imprint=29580A07 remote-seat=iphone
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=7A94F34C imprint=279F312D seat=mac model=Mac
+• kind=seat id=rizals-iphone.local role=origin-seat hop=begin seat=iphone path=7A94F34C imprint=396A0AB8 merged-from=usb-wire · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-1 seat=iphone path=7A94F34C imprint=68213976 merged-from=usb-wire · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=clear-seat hop=clear seat=iphone path=7A94F34C imprint=1FCF5518 merged-from=usb-wire · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-2 seat=iphone path=7A94F34C imprint=2976A0BB merged-from=usb-wire · seat=iphone model=iPhone
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=F8987B0B imprint=9F602094 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=F8987B0B imprint=18782DC8 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=clear-seat hop=clear seat=mac path=F8987B0B imprint=79D40767 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=F8987B0B imprint=78866A10 seat=mac model=Mac
+• kind=relay id=lan-bonjour-ya-coin role=lan-bonjour-relay hop=carrier-lan seat=mac path=F8987B0B imprint=DA2D8A09 dest=iphone via=lan
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=F8987B0B imprint=43086C13 seat=mac model=Mac
+
+---- 2026-09-17T23:55:30.426Z | Decider | user | macos | prompt ----
+coin lan on
+
+---- 2026-09-17T23:55:30.448Z | clay | assistant | macos | reply ----
+coin lan ON · service=_ya-coin-lan._tcp name=ya-coin-mac · ON peers=[none] tx=0 rx=0 err=none
+HOW: other seat → `coin lan on`, then `coin send <to> via lan`
+
+---- 2026-09-17T23:55:30.468Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-17T23:55:30.469Z | clay | assistant | macos | reply ----
+ON peers=[none] tx=0 rx=0 err=none
+
+---- 2026-09-17T23:58:46.583Z | Decider | user | macos | prompt ----
+ping
+
+---- 2026-09-17T23:58:46.589Z | clay | assistant | macos | reply ----
+here
+
+---- 2026-09-17T23:58:46.601Z | Decider | user | macos | prompt ----
+coin lan on
+
+---- 2026-09-17T23:58:46.609Z | clay | assistant | macos | reply ----
+coin lan ON · service=_ya-coin-lan._tcp name=ya-coin-mac · ON peers=[none] tx=0 rx=0 err=none
+HOW: other seat → `coin lan on`, then `coin send <to> via lan`
+
+---- 2026-09-17T23:58:46.629Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-17T23:58:46.630Z | clay | assistant | macos | reply ----
+ON peers=[none] tx=0 rx=0 err=none
+
+---- 2026-09-17T23:59:39.475Z | Decider | user | macos | prompt ----
+ping
+
+---- 2026-09-17T23:59:39.509Z | clay | assistant | macos | reply ----
+here
+
+---- 2026-09-17T23:59:39.971Z | Decider | user | macos | prompt ----
+coin lan on
+
+---- 2026-09-17T23:59:39.986Z | clay | assistant | macos | reply ----
+coin lan ON · service=_ya-coin-lan._tcp name=ya-coin-mac · ON peers=[none] tx=0 rx=0 err=none
+HOW: other seat → `coin lan on`, then `coin send <to> via lan`
+
+---- 2026-09-17T23:59:41.972Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-17T23:59:41.975Z | clay | assistant | macos | reply ----
+ON peers=[ya-coin-mac] tx=0 rx=0 err=none
+
+---- 2026-09-17T23:59:59.973Z | Decider | user | macos | prompt ----
+coin send iphone via lan
+
+---- 2026-09-18T00:00:10.088Z | clay | assistant | macos | reply ----
+coin path begin ok pathId=EA424FEF-F923-4387-9007-708B7EE1D933 to=iphone via=lan device=mac dna=385252FF
+scout hop 1:
+anomaly/block: inbox-backlog-on-path
+coin path clear ok pathId=EA424FEF-F923-4387-9007-708B7EE1D933 clog=inbox-drain-stall dna=2F742CFF
+recovery clog=inbox-drain-stall
+before: lines=2 bytes=18 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt
+actions: inbox-timer-restart · force-drain=1
+after: lines=0 bytes=0 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt
+hop/info: local-hop dest=iphone seat=mac dna=C6515CE4
+scout hop 2:
+hop/info: local-hop dest=iphone seat=mac dna=854F61C6
+coin lan tx FAIL · timeout
+coin path arrive pathId=EA424FEF-F923-4387-9007-708B7EE1D933 to=iphone dna=A8BE6614
+coin path report pathId=EA424FEF-F923-4387-9007-708B7EE1D933 hops=13 mysteries_open~2 cleared=1 dnaImprints=6 device=mac
+journal: /Users/rizal/Documents/Я/gut/path-scout/path-journal.jsonl
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=origin-seat seat=mac model=Mac dna=385252FF
+begin/info journey-start · to=iphone via=lan dna=385252FF
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=C6515CE4
+anomaly/block inbox-backlog-on-path · hop=1 via=lan clog=inbox-drain-stall dna=C6515CE4
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=clear-seat seat=mac model=Mac dna=2F742CFF
+anomaly/block obstruction-seen · clog=inbox-drain-stall clog=inbox-drain-stall dna=2F742CFF
+resolve/cleared obstruction-cleared · recovery clog=inbox-drain-stall | before: lines=2 bytes=18 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt | actions: inbox-timer-restart · force-drain=1 | after: lines=0 bytes=0 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt clog=inbox-drain-stall dna=2F742CFF
+hop/info local-hop dest=iphone seat=mac dna=C6515CE4 · hop=1 via=lan dna=C6515CE4
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=854F61C6
+hop/info local-hop dest=iphone seat=mac dna=854F61C6 · hop=2 via=lan dna=854F61C6
+dna/info machine-dna-relay · id=lan-bonjour-ya-coin role=lan-bonjour-relay dest=iphone via=lan dna=A466B640
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=arrive-seat seat=mac model=Mac dna=A8BE6614
+arrive/info journey-arrive · to=iphone via=lan dna=A8BE6614
+
+---- 2026-09-18T00:00:10.089Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-18T00:00:10.090Z | clay | assistant | macos | reply ----
+ON peers=[ya-coin-mac] tx=0 rx=0 err=timeout
+
+---- 2026-09-18T00:00:10.090Z | Decider | user | macos | prompt ----
+coin dna
+
+---- 2026-09-18T00:00:10.096Z | clay | assistant | macos | reply ----
+coin dna imprints=100 [hub=1 relay=19 repeater=1 seat=76 storage=1 tower=2] showing=40
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=4581A6F7 imprint=6A07C91D seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=4581A6F7 imprint=656B4B84 merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=4581A6F7 imprint=3B82BC53 merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=4581A6F7 imprint=936E914B merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=A2F92A38 imprint=B4FDC682 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=A2F92A38 imprint=BE1A450C seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=A2F92A38 imprint=C4EC171C seat=mac model=Mac
+• kind=relay id=lan-bonjour-ya-coin role=lan-bonjour-relay hop=carrier-lan seat=mac path=A2F92A38 imprint=503732C4 dest=iphone via=lan
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=A2F92A38 imprint=0EDB0DBF seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=A2F92A38 imprint=E52742A6 fromPeer=lan-peer fromSeat=mac
+• kind=seat id=lan-peer role=peer-seat hop=bt-rx seat=mac path=A2F92A38 imprint=3AA09268 remote-seat=mac
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=A2F92A38 imprint=B67D0B6A seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=A2F92A38 imprint=B4FDC682 merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=A2F92A38 imprint=BE1A450C merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=A2F92A38 imprint=C4EC171C merged-from=lan-peer · seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=450B3694 imprint=3D7CF465 fromPeer=usb-wire fromSeat=mac
+• kind=seat id=usb-wire role=peer-seat hop=bt-rx seat=mac path=450B3694 imprint=87EA6053 remote-seat=mac
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=450B3694 imprint=B3DB106A seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=450B3694 imprint=6748A82D merged-from=usb-wire · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=450B3694 imprint=82B64E22 merged-from=usb-wire · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=450B3694 imprint=EDC27F81 merged-from=usb-wire · seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=7A94F34C imprint=7DDB0A13 fromPeer=usb-wire fromSeat=iphone
+• kind=seat id=usb-wire role=peer-seat hop=bt-rx seat=mac path=7A94F34C imprint=29580A07 remote-seat=iphone
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=7A94F34C imprint=279F312D seat=mac model=Mac
+• kind=seat id=rizals-iphone.local role=origin-seat hop=begin seat=iphone path=7A94F34C imprint=396A0AB8 merged-from=usb-wire · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-1 seat=iphone path=7A94F34C imprint=68213976 merged-from=usb-wire · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=clear-seat hop=clear seat=iphone path=7A94F34C imprint=1FCF5518 merged-from=usb-wire · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-2 seat=iphone path=7A94F34C imprint=2976A0BB merged-from=usb-wire · seat=iphone model=iPhone
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=F8987B0B imprint=9F602094 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=F8987B0B imprint=18782DC8 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=clear-seat hop=clear seat=mac path=F8987B0B imprint=79D40767 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=F8987B0B imprint=78866A10 seat=mac model=Mac
+• kind=relay id=lan-bonjour-ya-coin role=lan-bonjour-relay hop=carrier-lan seat=mac path=F8987B0B imprint=DA2D8A09 dest=iphone via=lan
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=F8987B0B imprint=43086C13 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=EA424FEF imprint=385252FF seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=EA424FEF imprint=C6515CE4 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=clear-seat hop=clear seat=mac path=EA424FEF imprint=2F742CFF seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=EA424FEF imprint=854F61C6 seat=mac model=Mac
+• kind=relay id=lan-bonjour-ya-coin role=lan-bonjour-relay hop=carrier-lan seat=mac path=EA424FEF imprint=A466B640 dest=iphone via=lan
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=EA424FEF imprint=A8BE6614 seat=mac model=Mac
+
+---- 2026-09-18T00:00:32.059Z | Decider | user | macos | prompt ----
+coin lan on
+
+---- 2026-09-18T00:00:32.062Z | clay | assistant | macos | reply ----
+coin lan already on · ON peers=[ya-coin-mac] tx=0 rx=0 err=timeout
+
+---- 2026-09-18T00:00:32.555Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-18T00:00:32.558Z | clay | assistant | macos | reply ----
+ON peers=[ya-coin-mac] tx=0 rx=0 err=timeout
+
+---- 2026-09-18T00:00:46.557Z | Decider | user | macos | prompt ----
+coin send iphone via lan
+
+---- 2026-09-18T00:00:56.607Z | clay | assistant | macos | reply ----
+coin path begin ok pathId=47A27358-07E5-4DD4-B357-6EE3263D6EE8 to=iphone via=lan device=mac dna=D6BAE583
+scout hop 1:
+hop/info: local-hop dest=iphone seat=mac dna=08CC5545
+scout hop 2:
+hop/info: local-hop dest=iphone seat=mac dna=DA22997E
+coin lan tx FAIL · timeout
+coin path arrive pathId=47A27358-07E5-4DD4-B357-6EE3263D6EE8 to=iphone dna=55F2FE79
+coin path report pathId=47A27358-07E5-4DD4-B357-6EE3263D6EE8 hops=9 mysteries_open~0 cleared=0 dnaImprints=5 device=mac
+journal: /Users/rizal/Documents/Я/gut/path-scout/path-journal.jsonl
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=origin-seat seat=mac model=Mac dna=D6BAE583
+begin/info journey-start · to=iphone via=lan dna=D6BAE583
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=08CC5545
+hop/info local-hop dest=iphone seat=mac dna=08CC5545 · hop=1 via=lan dna=08CC5545
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=DA22997E
+hop/info local-hop dest=iphone seat=mac dna=DA22997E · hop=2 via=lan dna=DA22997E
+dna/info machine-dna-relay · id=lan-bonjour-ya-coin role=lan-bonjour-relay dest=iphone via=lan dna=1F806E59
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=arrive-seat seat=mac model=Mac dna=55F2FE79
+arrive/info journey-arrive · to=iphone via=lan dna=55F2FE79
+
+---- 2026-09-18T00:06:44.058Z | Decider | user | macos | prompt ----
+coin lan clear
+
+---- 2026-09-18T00:06:44.070Z | clay | assistant | macos | reply ----
+coin lan ON · service=_ya-coin-lan._tcp name=ya-coin-mac · ON peers=[none] tx=0 rx=0 err=none
+HOW: other seat → `coin lan on`, then `coin send <to> via lan`
+
+---- 2026-09-18T00:06:44.557Z | Decider | user | macos | prompt ----
+coin lan on
+
+---- 2026-09-18T00:06:44.559Z | clay | assistant | macos | reply ----
+coin lan already on · ON peers=[ya-coin-mac] tx=0 rx=0 err=none
+
+---- 2026-09-18T00:06:46.559Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-18T00:06:46.561Z | clay | assistant | macos | reply ----
+ON peers=[ya-coin-mac] tx=0 rx=0 err=none
+
+---- 2026-09-18T00:09:31.558Z | Decider | user | macos | prompt ----
+coin lan on
+
+---- 2026-09-18T00:09:31.627Z | clay | assistant | macos | reply ----
+coin lan ON · service=_ya-coin-lan._tcp name=ya-coin-mac · ON peers=[none] tx=0 rx=0 err=none
+HOW: other seat → `coin lan on`, then `coin send <to> via lan`
+
+---- 2026-09-18T00:09:32.054Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-18T00:09:32.056Z | clay | assistant | macos | reply ----
+ON peers=[none] tx=0 rx=0 err=none
+
+---- 2026-09-18T00:10:02.056Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-18T00:10:02.058Z | clay | assistant | macos | reply ----
+ON peers=[ya-coin-mac] tx=0 rx=0 err=none
+
+---- 2026-09-18T00:10:03.554Z | Decider | user | macos | prompt ----
+coin dna
+
+---- 2026-09-18T00:10:03.566Z | clay | assistant | macos | reply ----
+coin dna imprints=112 [hub=1 relay=21 repeater=1 seat=86 storage=1 tower=2] showing=40
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=A2F92A38 imprint=B4FDC682 merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=A2F92A38 imprint=BE1A450C merged-from=lan-peer · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=A2F92A38 imprint=C4EC171C merged-from=lan-peer · seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=450B3694 imprint=3D7CF465 fromPeer=usb-wire fromSeat=mac
+• kind=seat id=usb-wire role=peer-seat hop=bt-rx seat=mac path=450B3694 imprint=87EA6053 remote-seat=mac
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=450B3694 imprint=B3DB106A seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=450B3694 imprint=6748A82D merged-from=usb-wire · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=450B3694 imprint=82B64E22 merged-from=usb-wire · seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=450B3694 imprint=EDC27F81 merged-from=usb-wire · seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=7A94F34C imprint=7DDB0A13 fromPeer=usb-wire fromSeat=iphone
+• kind=seat id=usb-wire role=peer-seat hop=bt-rx seat=mac path=7A94F34C imprint=29580A07 remote-seat=iphone
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=7A94F34C imprint=279F312D seat=mac model=Mac
+• kind=seat id=rizals-iphone.local role=origin-seat hop=begin seat=iphone path=7A94F34C imprint=396A0AB8 merged-from=usb-wire · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-1 seat=iphone path=7A94F34C imprint=68213976 merged-from=usb-wire · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=clear-seat hop=clear seat=iphone path=7A94F34C imprint=1FCF5518 merged-from=usb-wire · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-2 seat=iphone path=7A94F34C imprint=2976A0BB merged-from=usb-wire · seat=iphone model=iPhone
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=F8987B0B imprint=9F602094 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=F8987B0B imprint=18782DC8 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=clear-seat hop=clear seat=mac path=F8987B0B imprint=79D40767 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=F8987B0B imprint=78866A10 seat=mac model=Mac
+• kind=relay id=lan-bonjour-ya-coin role=lan-bonjour-relay hop=carrier-lan seat=mac path=F8987B0B imprint=DA2D8A09 dest=iphone via=lan
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=F8987B0B imprint=43086C13 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=EA424FEF imprint=385252FF seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=EA424FEF imprint=C6515CE4 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=clear-seat hop=clear seat=mac path=EA424FEF imprint=2F742CFF seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=EA424FEF imprint=854F61C6 seat=mac model=Mac
+• kind=relay id=lan-bonjour-ya-coin role=lan-bonjour-relay hop=carrier-lan seat=mac path=EA424FEF imprint=A466B640 dest=iphone via=lan
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=EA424FEF imprint=A8BE6614 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=47A27358 imprint=D6BAE583 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=47A27358 imprint=08CC5545 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=47A27358 imprint=DA22997E seat=mac model=Mac
+• kind=relay id=lan-bonjour-ya-coin role=lan-bonjour-relay hop=carrier-lan seat=mac path=47A27358 imprint=1F806E59 dest=iphone via=lan
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=47A27358 imprint=55F2FE79 seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=57298349 imprint=6A7E1D25 fromPeer=lan-peer fromSeat=iphone
+• kind=seat id=lan-peer role=peer-seat hop=bt-rx seat=mac path=57298349 imprint=7DC14D3A remote-seat=iphone
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=57298349 imprint=C050F737 seat=mac model=Mac
+• kind=seat id=rizals-iphone.local role=origin-seat hop=begin seat=iphone path=57298349 imprint=DCE05FF8 merged-from=lan-peer · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-1 seat=iphone path=57298349 imprint=F30BA491 merged-from=lan-peer · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=clear-seat hop=clear seat=iphone path=57298349 imprint=AE8723CF merged-from=lan-peer · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-2 seat=iphone path=57298349 imprint=156137D3 merged-from=lan-peer · seat=iphone model=iPhone
+
+---- 2026-09-18T00:38:05.690Z | Decider | user | macos | prompt ----
+coin lan on
+
+---- 2026-09-18T00:38:05.754Z | clay | assistant | macos | reply ----
+coin lan ON · service=_ya-coin-lan._tcp name=ya-coin-mac · ON peers=[none] remembered=[none] tx=0 rx=0 err=none
+HOW: other seat → `coin lan on`, then `coin send <to> via lan`
+
+---- 2026-09-18T00:38:06.188Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-18T00:38:06.192Z | clay | assistant | macos | reply ----
+ON peers=[none] remembered=[none] tx=0 rx=0 err=none
+
+---- 2026-09-18T00:38:08.187Z | Decider | user | macos | prompt ----
+coin carriers
+
+---- 2026-09-18T00:38:08.201Z | clay | assistant | macos | reply ----
+coin carriers (offline premier · Machine DNA on every pipe):
+• bluetooth — coin bt OFF me=mac-rizal’s MacBook Neo seen=[none] linked=[none] tx=0 rx=0 err=none lastRx=—
+• lan — ON peers=[ya-coin-mac] remembered=[none] tx=0 rx=0 err=none
+• usb — drop=/Users/rizal/Documents/Я/gut/wire-drop pending=0
+• qr — ready (QR encode + eat JSON/file)
+• nfc — stub on Mac (stage token → iPhone tap / eat)
+• share — ready (.ya-path package → Finder/share)
+HOW: coin send <to> via bluetooth|lan|usb|qr|nfc|share
+     coin lan on|off|clear · coin usb drain · coin qr eat <json|path>
+     coin nfc eat <json|path> · coin share eat <path>
+
+---- 2026-09-18T00:38:32.188Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-18T00:38:32.191Z | clay | assistant | macos | reply ----
+ON peers=[ya-coin-mac] remembered=[none] tx=0 rx=0 err=none
+
+---- 2026-09-18T00:39:00.189Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-18T00:39:00.191Z | clay | assistant | macos | reply ----
+ON peers=[ya-coin-mac] remembered=[host-fe80::c5e:8b3a:e005:6228%en0,iphone,lan-peer,ya-coin-iphone] tx=0 rx=1 err=rx-hdr:POSIXErrorCode(rawValue: 96): No message available on STREAM
+
+---- 2026-09-18T00:39:13.690Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-18T00:39:13.692Z | clay | assistant | macos | reply ----
+ON peers=[ya-coin-mac] remembered=[host-fe80::c5e:8b3a:e005:6228%en0,iphone,lan-peer,ya-coin-iphone] tx=0 rx=1 err=rx-hdr:POSIXErrorCode(rawValue: 96): No message available on STREAM
+
+---- 2026-09-18T00:39:14.189Z | Decider | user | macos | prompt ----
+coin send iphone via lan
+
+---- 2026-09-18T00:39:25.584Z | clay | assistant | macos | reply ----
+coin path begin ok pathId=33FD8701-45B6-46B9-A041-A5F6E394F19D to=iphone via=lan device=mac dna=2471DCBB
+scout hop 1:
+anomaly/block: inbox-backlog-on-path
+coin path clear ok pathId=33FD8701-45B6-46B9-A041-A5F6E394F19D clog=inbox-drain-stall dna=8A06AFCB
+recovery clog=inbox-drain-stall
+before: lines=1 bytes=9 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt
+actions: inbox-timer-restart · force-drain=0
+after: lines=0 bytes=0 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt
+hop/info: local-hop dest=iphone seat=mac dna=5DE97734
+scout hop 2:
+hop/info: local-hop dest=iphone seat=mac dna=1BD3E46F
+coin lan tx FAIL · timeout
+coin path arrive pathId=33FD8701-45B6-46B9-A041-A5F6E394F19D to=iphone dna=1AF8DFF5
+coin path report pathId=33FD8701-45B6-46B9-A041-A5F6E394F19D hops=13 mysteries_open~2 cleared=1 dnaImprints=6 device=mac
+journal: /Users/rizal/Documents/Я/gut/path-scout/path-journal.jsonl
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=origin-seat seat=mac model=Mac dna=2471DCBB
+begin/info journey-start · to=iphone via=lan dna=2471DCBB
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=5DE97734
+anomaly/block inbox-backlog-on-path · hop=1 via=lan clog=inbox-drain-stall dna=5DE97734
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=clear-seat seat=mac model=Mac dna=8A06AFCB
+anomaly/block obstruction-seen · clog=inbox-drain-stall clog=inbox-drain-stall dna=8A06AFCB
+resolve/cleared obstruction-cleared · recovery clog=inbox-drain-stall | before: lines=1 bytes=9 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt | actions: inbox-timer-restart · force-drain=0 | after: lines=0 bytes=0 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt clog=inbox-drain-stall dna=8A06AFCB
+hop/info local-hop dest=iphone seat=mac dna=5DE97734 · hop=1 via=lan dna=5DE97734
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=1BD3E46F
+hop/info local-hop dest=iphone seat=mac dna=1BD3E46F · hop=2 via=lan dna=1BD3E46F
+dna/info machine-dna-relay · id=lan-bonjour-ya-coin role=lan-bonjour-relay dest=iphone via=lan dna=C7796CA3
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=arrive-seat seat=mac model=Mac dna=1AF8DFF5
+arrive/info journey-arrive · to=iphone via=lan dna=1AF8DFF5
+
+---- 2026-09-18T00:39:25.586Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-18T00:39:25.586Z | clay | assistant | macos | reply ----
+ON peers=[ya-coin-mac] remembered=[host-fe80::c5e:8b3a:e005:6228%en0,iphone,lan-peer,ya-coin-iphone] tx=0 rx=1 err=timeout
+
+---- 2026-09-18T00:58:35.920Z | Decider | user | macos | prompt ----
+coin lan on
+
+---- 2026-09-18T00:58:38.340Z | clay | assistant | macos | reply ----
+coin lan ON · service=_ya-coin-lan._tcp name=ya-coin-mac · ON peers=[none] remembered=[none] tx=0 rx=0 err=none
+HOW: other seat → `coin lan on`, then `coin send <to> via lan`
+
+---- 2026-09-18T00:58:38.377Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-18T00:58:38.377Z | clay | assistant | macos | reply ----
+ON peers=[none] remembered=[none] tx=0 rx=0 err=none
+
+---- 2026-09-18T00:59:03.919Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-18T00:59:03.921Z | clay | assistant | macos | reply ----
+ON peers=[ya-coin-iphone,ya-coin-mac] remembered=[host-fe80::c5e:8b3a:e005:6228%en0,iphone,lan-peer,ya-coin-iphone] tx=0 rx=1 err=rx-hdr:POSIXErrorCode(rawValue: 96): No message available on STREAM
+
+---- 2026-09-18T00:59:05.418Z | Decider | user | macos | prompt ----
+coin send iphone via lan
+
+---- 2026-09-18T00:59:06.992Z | clay | assistant | macos | reply ----
+coin path begin ok pathId=A97AA0F6-7C92-45B7-999A-F6B8427AD96C to=iphone via=lan device=mac dna=18E25133
+scout hop 1:
+anomaly/block: inbox-backlog-on-path
+coin path clear ok pathId=A97AA0F6-7C92-45B7-999A-F6B8427AD96C clog=inbox-drain-stall dna=34F07863
+recovery clog=inbox-drain-stall
+before: lines=1 bytes=9 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt
+actions: inbox-timer-restart · force-drain=0
+after: lines=0 bytes=0 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt
+hop/info: local-hop dest=iphone seat=mac dna=F24ADBA4
+scout hop 2:
+hop/info: local-hop dest=iphone seat=mac dna=D8737544
+coin lan tx ok bytes=4424 dest=iphone tx=1
+coin path arrive pathId=A97AA0F6-7C92-45B7-999A-F6B8427AD96C to=iphone dna=2C37FDBC
+coin path report pathId=A97AA0F6-7C92-45B7-999A-F6B8427AD96C hops=13 mysteries_open~2 cleared=1 dnaImprints=6 device=mac
+journal: /Users/rizal/Documents/Я/gut/path-scout/path-journal.jsonl
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=origin-seat seat=mac model=Mac dna=18E25133
+begin/info journey-start · to=iphone via=lan dna=18E25133
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=F24ADBA4
+anomaly/block inbox-backlog-on-path · hop=1 via=lan clog=inbox-drain-stall dna=F24ADBA4
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=clear-seat seat=mac model=Mac dna=34F07863
+anomaly/block obstruction-seen · clog=inbox-drain-stall clog=inbox-drain-stall dna=34F07863
+resolve/cleared obstruction-cleared · recovery clog=inbox-drain-stall | before: lines=1 bytes=9 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt | actions: inbox-timer-restart · force-drain=0 | after: lines=0 bytes=0 path=/Users/rizal/Documents/ЯBOT/mind/INBOX-COMMANDS.txt clog=inbox-drain-stall dna=34F07863
+hop/info local-hop dest=iphone seat=mac dna=F24ADBA4 · hop=1 via=lan dna=F24ADBA4
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=hop-seat seat=mac model=Mac dna=D8737544
+hop/info local-hop dest=iphone seat=mac dna=D8737544 · hop=2 via=lan dna=D8737544
+dna/info machine-dna-relay · id=lan-bonjour-ya-coin role=lan-bonjour-relay dest=iphone via=lan dna=DFBB0B9D
+dna/info machine-dna-seat · id=rizals-macbook-neo.local role=arrive-seat seat=mac model=Mac dna=2C37FDBC
+arrive/info journey-arrive · to=iphone via=lan dna=2C37FDBC
+
+---- 2026-09-18T00:59:06.993Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-18T00:59:06.993Z | clay | assistant | macos | reply ----
+ON peers=[ya-coin-iphone,ya-coin-mac] remembered=[host-fe80::c5e:8b3a:e005:6228%en0,iphone,lan-peer,ya-coin-iphone] tx=1 rx=1 err=rx-hdr:POSIXErrorCode(rawValue: 96): No message available on STREAM
+
+---- 2026-09-18T00:59:25.311Z | Decider | user | macos | prompt ----
+coin lan
+
+---- 2026-09-18T00:59:25.313Z | clay | assistant | macos | reply ----
+ON peers=[ya-coin-iphone,ya-coin-mac] remembered=[host-fe80::c5e:8b3a:e005:6228%en0,iphone,lan-peer,ya-coin-iphone] tx=1 rx=1 err=rx-hdr:POSIXErrorCode(rawValue: 96): No message available on STREAM
+
+---- 2026-09-18T00:59:26.809Z | Decider | user | macos | prompt ----
+coin dna
+
+---- 2026-09-18T00:59:26.819Z | clay | assistant | macos | reply ----
+coin dna imprints=138 [hub=1 relay=25 repeater=1 seat=108 storage=1 tower=2] showing=40
+• kind=relay id=lan-bonjour-ya-coin role=lan-bonjour-relay hop=carrier-lan seat=mac path=EA424FEF imprint=A466B640 dest=iphone via=lan
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=EA424FEF imprint=A8BE6614 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=47A27358 imprint=D6BAE583 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=47A27358 imprint=08CC5545 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=47A27358 imprint=DA22997E seat=mac model=Mac
+• kind=relay id=lan-bonjour-ya-coin role=lan-bonjour-relay hop=carrier-lan seat=mac path=47A27358 imprint=1F806E59 dest=iphone via=lan
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=47A27358 imprint=55F2FE79 seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=bluetooth-nearlink-rx hop=bt-rx seat=mac path=57298349 imprint=6A7E1D25 fromPeer=lan-peer fromSeat=iphone
+• kind=seat id=lan-peer role=peer-seat hop=bt-rx seat=mac path=57298349 imprint=7DC14D3A remote-seat=iphone
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=57298349 imprint=C050F737 seat=mac model=Mac
+• kind=seat id=rizals-iphone.local role=origin-seat hop=begin seat=iphone path=57298349 imprint=DCE05FF8 merged-from=lan-peer · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-1 seat=iphone path=57298349 imprint=F30BA491 merged-from=lan-peer · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=clear-seat hop=clear seat=iphone path=57298349 imprint=AE8723CF merged-from=lan-peer · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-2 seat=iphone path=57298349 imprint=156137D3 merged-from=lan-peer · seat=iphone model=iPhone
+• kind=relay id=bt-nearlink-multipeer role=lan-bonjour-rx hop=bt-rx seat=mac path=80FB5A94 imprint=857B3AA5 fromPeer=lan-peer fromSeat=iphone
+• kind=seat id=lan-peer role=peer-seat hop=bt-rx seat=mac path=80FB5A94 imprint=19179DD5 remote-seat=iphone
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=80FB5A94 imprint=7D9B4D6A seat=mac model=Mac
+• kind=seat id=rizals-iphone.local role=origin-seat hop=begin seat=iphone path=80FB5A94 imprint=2CCBA7A4 merged-from=lan-peer · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-1 seat=iphone path=80FB5A94 imprint=5DAD000C merged-from=lan-peer · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=clear-seat hop=clear seat=iphone path=80FB5A94 imprint=115C1A52 merged-from=lan-peer · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-2 seat=iphone path=80FB5A94 imprint=D8B64488 merged-from=lan-peer · seat=iphone model=iPhone
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=33FD8701 imprint=2471DCBB seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=33FD8701 imprint=5DE97734 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=clear-seat hop=clear seat=mac path=33FD8701 imprint=8A06AFCB seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=33FD8701 imprint=1BD3E46F seat=mac model=Mac
+• kind=relay id=lan-bonjour-ya-coin role=lan-bonjour-relay hop=carrier-lan seat=mac path=33FD8701 imprint=C7796CA3 dest=iphone via=lan
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=33FD8701 imprint=1AF8DFF5 seat=mac model=Mac
+• kind=relay id=bt-nearlink-multipeer role=lan-bonjour-rx hop=bt-rx seat=mac path=9D54FAE9 imprint=9A490FDE fromPeer=lan-peer fromSeat=iphone
+• kind=seat id=lan-peer role=peer-seat hop=bt-rx seat=mac path=9D54FAE9 imprint=086F3A15 remote-seat=iphone
+• kind=seat id=rizals-macbook-neo.local role=receive-seat hop=bt-rx seat=mac path=9D54FAE9 imprint=6A04C55D seat=mac model=Mac
+• kind=seat id=rizals-iphone.local role=origin-seat hop=begin seat=iphone path=9D54FAE9 imprint=67A83D5C merged-from=lan-peer · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-1 seat=iphone path=9D54FAE9 imprint=00F9E9E6 merged-from=lan-peer · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=clear-seat hop=clear seat=iphone path=9D54FAE9 imprint=8DFAF950 merged-from=lan-peer · seat=iphone model=iPhone
+• kind=seat id=rizals-iphone.local role=hop-seat hop=hop-2 seat=iphone path=9D54FAE9 imprint=028185BB merged-from=lan-peer · seat=iphone model=iPhone
+• kind=seat id=rizals-macbook-neo.local role=origin-seat hop=begin seat=mac path=A97AA0F6 imprint=18E25133 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-1 seat=mac path=A97AA0F6 imprint=F24ADBA4 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=clear-seat hop=clear seat=mac path=A97AA0F6 imprint=34F07863 seat=mac model=Mac
+• kind=seat id=rizals-macbook-neo.local role=hop-seat hop=hop-2 seat=mac path=A97AA0F6 imprint=D8737544 seat=mac model=Mac
+• kind=relay id=lan-bonjour-ya-coin role=lan-bonjour-relay hop=carrier-lan seat=mac path=A97AA0F6 imprint=DFBB0B9D dest=iphone via=lan
+• kind=seat id=rizals-macbook-neo.local role=arrive-seat hop=arrive seat=mac path=A97AA0F6 imprint=2C37FDBC seat=mac model=Mac
+
+---- 2026-09-18T00:59:27.377Z | Decider | user | macos | prompt ----
+coin path
+
+---- 2026-09-18T00:59:27.378Z | clay | assistant | macos | reply ----
+Here — offline.
+I heard you. Comprehending in CoS pattern (answer-first), aiming better on-device.
+Say a short order (ping · mint · yacode · commands · evolve…) or keep talking; I’ll stay in the triangle with you and CoS.
+
+---- 2026-09-18T01:03:19.318Z | Decider | user | macos | prompt ----
+heart
+
+---- 2026-09-18T01:03:19.333Z | clay | assistant | macos | reply ----
+heart engine=llama-completion seated=no heartBytes=0 sandbox=off mode=cnv-st metal=-ngl 99 · HOW: bundle llama-completion + heart.gguf (iOS still needs llama.xcframework)
+
+---- 2026-09-18T01:03:21.317Z | Decider | user | macos | prompt ----
+essence clear clog heart-spawn-stall
+
+---- 2026-09-18T01:09:15.585Z | Decider | user | macos | prompt ----
+heart
+
+---- 2026-09-18T01:09:15.594Z | clay | assistant | macos | reply ----
+heart engine=llama-completion seated=yes heartBytes=2104932768 sandbox=off mode=cnv-st metal=-ngl 99
+
+---- 2026-09-18T01:09:15.660Z | Decider | user | macos | prompt ----
+essence clear clog heart-spawn-stall
+
+---- 2026-09-18T01:11:45.547Z | Decider | user | macos | prompt ----
+heart
+
+---- 2026-09-18T01:11:45.558Z | clay | assistant | macos | reply ----
+heart engine=llama-completion seated=yes heartBytes=2104932768 sandbox=off mode=cnv-st metal=-ngl 99
+
+---- 2026-09-18T01:11:49.546Z | Decider | user | macos | prompt ----
+essence clear clog heart-spawn-stall
+

@@ -1,0 +1,5 @@
+Respawn points on the Mac (~/Library/Developer/ЯBOT-respawn/):
+· 2026-09-24-0.3.0 — mac · iphone · source · android/app-debug.apk = THIS Android 0.3.1 build (re-install copy)
+· 2026-09-24-pre-workshop — android/app-debug.apk = Android 0.1-offline (versionCode 2, moto g build, Sep 23 17:39)
+    + android/pixel3a-current/base.apk = the Pixel 3a's older 0.1 (versionCode 1, Sep 17; different debug signer)
+Rolling back to a lower versionCode needs `adb install -r -d` (respawn.sh android does this).

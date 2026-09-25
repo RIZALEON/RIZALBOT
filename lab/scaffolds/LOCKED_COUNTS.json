@@ -1,0 +1,49 @@
+{
+  "kit": "AncestryDNA_V1_20260909",
+  "build": "GRCh37",
+  "array": "AncestryDNA V1.0",
+  "generated_utc_note": "source stamped 09/09/2026 23:14:59 UTC",
+  "locked_counts": {
+    "total_snps_in_file": 701472,
+    "called_auto_chr1_22": 673703,
+    "called_X_file_chrom_23": 17365,
+    "called_Y_file_chrom_24": 860,
+    "dropped_chrom_25_PAR": 440,
+    "union_base_MACRO_X_Y": 691928,
+    "pin_only_from_680": 3,
+    "base_union_total": 691931,
+    "micro_pins": 680,
+    "macro_living_relatedness_grid": 673703
+  },
+  "observed_counts": {
+    "total_snps_parsed": 701472,
+    "macro": 673703,
+    "X": 17365,
+    "Y": 860,
+    "PAR_dropped": 440,
+    "nocall_auto": 8846,
+    "base_union": 691931,
+    "pin_only": 3,
+    "pin_plus_grid": 671,
+    "pin_plus_x": 6,
+    "base_layer_counts": {
+      "GRID": 673032,
+      "PIN+GRID": 671,
+      "PIN_ONLY": 3,
+      "X": 17359,
+      "PIN+X": 6,
+      "Y": 860
+    }
+  },
+  "sha256": {
+    "ancestry_file": "96703d856aafaaca6765930d036c52316158a660221967cef95a65fb9fe6e9e6",
+    "gnome_pins_json": "1aecab79c46e28db082cf0898659e4917265a2d9a1fb99b73c4450bb5da4e3d1",
+    "KIT_MACRO_673703.bed": "bb553b4119f516aaa3d995a6c2d2aff11003e6db21719e78eaff515fc9608156",
+    "KIT_X_17365.bed": "5640a986c076c8e1aa4efd76902165ebda2920eaa287dbac32f60d09e89383ce",
+    "KIT_Y_860.bed": "31f7e37cd462a9c19afcc1619b39eec064160edef84f5f710efe5d0a73675f06",
+    "KIT_BASE_SCAFFOLD_691931.bed": "c9e6604f1284d2d76c8ce834d430fe97925e4ad33661cfde4c972ed8e553f687",
+    "macro-scaffold.tsv.gz": "d32ee2edcc961c3219e5fcb3d1ad10e773e8ee724089e664d28598139727fa68",
+    "base-scaffold.tsv.gz": "b4f695396dcec7f158c787b20e97d29fde5f886a96e75b0b1ebd6e6b7df910ca"
+  },
+  "match_decider_locks": true
+}

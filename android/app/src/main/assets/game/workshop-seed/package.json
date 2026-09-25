@@ -1,0 +1,28 @@
+{
+  "name": "terraformya-blueface",
+  "version": "1.0.0",
+  "description": "BLUEFACE - code-drawn claymation goblin hero for Я Game / TeraformЯ (TypeScript + Phaser 4)",
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc --noEmit -p .",
+    "build": "tsc --noEmit -p . && vite build && vite build --mode single",
+    "build:web": "vite build",
+    "build:single": "vite build --mode single",
+    "preview": "vite preview",
+    "shots": "node scripts/shots.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "phaser": "^4.2.1"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1",
+    "vite-plugin-singlefile": "^2.3.3"
+  },
+  "private": true,
+  "type": "module"
+}

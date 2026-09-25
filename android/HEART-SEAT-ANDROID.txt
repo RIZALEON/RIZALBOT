@@ -1,0 +1,58 @@
+HEART-SEAT-ANDROID
+Written: 2026-09-23 ~1:40 PM MT (America/Denver)
+SoT: /Users/rizal/Library/Developer/ЯBOT-localbuild/android/
+Twin: /Users/rizal/Documents/ЯBOT/android/
+
+GOAL
+Compile + seat Android Heart (libllama JNI) offline. GGUF NOT baked into APK.
+
+NDK
+- Installed: ndk;27.2.12479018 + cmake;3.22.1 via sdkmanager
+- ANDROID_HOME=/opt/homebrew/share/android-commandlinetools
+- ndkVersion in app/build.gradle.kts = 27.2.12479018
+
+LLAMA.CPP
+- Fresh shallow clone (Documents tree was sparse/dataless):
+  /Users/rizal/Library/Developer/ya-deps/llama.cpp
+- NOT duplicating 2GB GGUF into APK or multiple host copies.
+
+COMPILE (Gradle externalNativeBuild)
+  export JAVA_HOME=~/Library/Java/Temurin-17/jdk/Contents/Home
+  cd /Users/rizal/Library/Developer/ЯBOT-localbuild/android
+  ./gradlew :app:assembleDebug
+
+Native outputs
+- libyabot_llama.so (arm64-v8a) ~4.9MB stripped + libc++_shared.so
+- Packaged in APK (~25MB)
+- JNI: app/src/main/cpp/yabot_llama_jni.cpp
+- Kotlin: LlamaBridge.kt + NativeHeart.kt
+- Load path: context.filesDir/heart.gguf
+
+HEART WEIGHTS ON DEVICE (emu)
+- Prefer 1.5B coder for emu RAM (NOT 3B — OOM risk on ~2.5GB emu):
+  Documents/ЯBOT/hearts-archive/heart-coder-qwen25-1.5b.gguf (~1.04GB / 1117320768 bytes)
+- Seat recipe (emulator adb root):
+  adb root
+  adb push heart-coder-qwen25-1.5b.gguf /data/local/tmp/heart.gguf
+  adb shell am start -n io.github.rizaleon.abomega.debug/...MainActivity
+  adb shell cp /data/local/tmp/heart.gguf /data/data/io.github.rizaleon.abomega.debug/files/heart.gguf
+  adb shell rm /data/local/tmp/heart.gguf
+- Model label in status: qwen25-1.5b-coder-ish
+
+SMOKE (generate)
+- Heart LOAD: OK (~4–6s)
+- Heart GENERATE: OK offline on yabot_api35 arm64 emu
+  prompt "hi" → "Hello! How can I assist you today? Is there anything you would like to"
+  ~4–5 s/token on emu CPU (n_ctx=512, max_new=16, greedy sampler)
+- logcat: yabot_llama generate done tokens=16 chars=71
+
+BLOCKERS / NOTES
+- Emu decode is slow (~0.2 tok/s). Physical device should be faster.
+- Do NOT adb-push 3B (~2GB) onto emu without checking free RAM.
+- iOS still uses llama.xcframework only — Android now has .so.
+
+SUCCESS
+[x] NDK install
+[x] libyabot_llama.so arm64-v8a
+[x] GGUF from filesDir
+[x] offline generate on emulator

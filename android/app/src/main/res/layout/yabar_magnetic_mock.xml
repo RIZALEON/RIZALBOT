@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LIVE clay ЯBAR 0.3.1 — TOOLBAR LAW: every icon sits ON the face of the redwood ЯBAR,
+     inside its height (40dp icons in a 58dp bar), NO plate/background behind any icon.
+     Nine equal magnet slots so it fits narrow phones (Pixel 3a ≈ 393dp) without overlap:
+     LEFT Bolte·Lab·Garage·Search | CENTER Ghost Home | RIGHT Wallet·ClayFace(Я Game)·Online·Mind -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/yabar_root"
+    android:layout_width="match_parent"
+    android:layout_height="58dp">
+
+    <ImageView
+        android:id="@+id/yabar_lumber"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/yabarlumbershelf"
+        android:contentDescription="Redwood YABAR" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/yabar_bolte"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="1dp"
+            android:src="@drawable/bolte"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:contentDescription="Bolte · ЯMANUAL"
+            android:clickable="true"
+            android:focusable="true" />
+        <ImageView
+            android:id="@+id/yabar_lab"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="1dp"
+            android:src="@drawable/labicon"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:contentDescription="Lab"
+            android:clickable="true"
+            android:focusable="true" />
+        <ImageView
+            android:id="@+id/yabar_garage"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="1dp"
+            android:src="@drawable/btn_garage"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:contentDescription="Garage"
+            android:clickable="true"
+            android:focusable="true" />
+        <ImageView
+            android:id="@+id/yabar_search"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="1dp"
+            android:src="@drawable/btnsearch"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:contentDescription="Search"
+            android:clickable="true"
+            android:focusable="true" />
+        <ImageView
+            android:id="@+id/yabar_home"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="1dp"
+            android:src="@drawable/btnhome"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:contentDescription="Ghost Home"
+            android:clickable="true"
+            android:focusable="true" />
+        <ImageView
+            android:id="@+id/yabar_wallet"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="1dp"
+            android:src="@drawable/btnwallet"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:contentDescription="Wallet"
+            android:clickable="true"
+            android:focusable="true" />
+        <ImageView
+            android:id="@+id/yabar_clayface"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="1dp"
+            android:src="@drawable/btn_clayface"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:contentDescription="Я Game door"
+            android:clickable="true"
+            android:focusable="true" />
+        <ImageView
+            android:id="@+id/yabar_online"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="1dp"
+            android:src="@drawable/btnonline"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:contentDescription="Online Offline"
+            android:clickable="true"
+            android:focusable="true" />
+        <ImageView
+            android:id="@+id/yabar_mind"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="1dp"
+            android:src="@drawable/btnmind"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:contentDescription="Machine Mind"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+</FrameLayout>

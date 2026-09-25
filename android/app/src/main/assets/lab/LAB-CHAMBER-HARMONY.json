@@ -1,0 +1,33 @@
+{
+  "schema": "YaLabRoom.cement.v1",
+  "room_id": "lab.of.creations",
+  "title": "Lab of Genetic and Technological Creations",
+  "canon_relpath": "lab/rooms/LAB-OF-CREATIONS.jpg",
+  "canon_absolute_mac": "/Users/rizal/Documents/\u042fBOT/lab/rooms/LAB-OF-CREATIONS.jpg",
+  "deep_links": {
+    "canonical": "yabot://lab/chamber",
+    "aliases": [
+      "yabot://lab/room",
+      "yabot://lab/void",
+      "yabot://lab/rbits",
+      "yabot://lab/creations"
+    ]
+  },
+  "asset_names": {
+    "bundle": "LabOfCreations",
+    "hot_assets": [
+      "LabOfCreations.png",
+      "LabChamber.png"
+    ],
+    "filename": "LAB-OF-CREATIONS.jpg"
+  },
+  "platforms": {
+    "macos": "Documents/\u042fBOT/lab/rooms/LAB-OF-CREATIONS.jpg",
+    "ios": "Documents/\u042fBOT/lab/rooms/LAB-OF-CREATIONS.jpg (+ bundle LabOfCreations)",
+    "android": "assets/lab/rooms/LAB-OF-CREATIONS.jpg",
+    "linux": "$YABOT_ROOT/lab/rooms/LAB-OF-CREATIONS.jpg",
+    "yaos": "\u042fBOT_ROOT/lab/rooms/LAB-OF-CREATIONS.jpg"
+  },
+  "law": "ONE room \u00b7 ONE relpath lab/rooms/LAB-OF-CREATIONS.jpg \u00b7 all OS \u00b7 genetic + technological creations",
+  "ts": "2026-09-22T12:28:00-06:00"
+}

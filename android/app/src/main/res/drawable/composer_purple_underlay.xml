@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Opaque purple clay underlay under BtnComposer (alpha corners would show wall otherwise) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/clay_purple" />
+    <corners android:radius="22dp" />
+</shape>

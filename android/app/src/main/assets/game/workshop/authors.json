@@ -1,0 +1,9 @@
+{
+  "defaultAuthor" : "yabot",
+  "gamewrite" : [
+    "yabot",
+    "yamax"
+  ],
+  "note" : "Which Garage-roster bots have gamewrite (ids from seat/BOT-LABELS.json roster). Names and faces come from the Garage roster only. Edit freely; no rebuild.",
+  "schema" : "WorkshopAuthors.v2"
+}
