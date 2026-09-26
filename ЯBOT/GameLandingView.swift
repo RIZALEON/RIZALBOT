@@ -10,16 +10,21 @@ import UIKit
 /// Я Game door — BtnClayFace opens this UNDER sticky Redwood ЯBAR.
 /// Prefer local landing file when present; else online https://rizal.info/game/ (http fallback).
 /// Decider owns the real landing page. NonNuclear: door only — no spend / auto-rewards / mint.
-/// 0.3.0 game menu: Play (this landing) · GAME BUILDERS WORKSHOP (yabot://game/workshop).
+/// 0.3.0 game menu: Play (this landing) · GAME BUILDERS WORKSHOP (yabot://game/workshop) · 0.3.3 ЯBROWSER (private).
 struct GameLandingView: View {
     @Binding var isPresented: Bool
     var isOnline: Bool = false
-    /// Game menu section: false = Play · true = GAME BUILDERS WORKSHOP.
+    /// Game menu section: false = Play · true = GAME BUILDERS WORKSHOP. (Menu opens from the Igorot Headaxe panel.)
     @Binding var showWorkshop: Bool
 
     @State private var sourceNote: String = "resolving…"
     @State private var loadURL: URL? = nil
     @State private var reloadToken: Int = 0
+    /// 0.3.3 game menu: ЯBROWSER (private browser bar, no native bridge).
+    @State private var showBrowser: Bool = false
+    /// 0.3.3: the top-left Igorot Headaxe panel IS the game MENU button (Decider). Menu: Play · Workshop · ЯBROWSER · Headaxe · Home.
+    @State private var showMenu: Bool = false
+    @State private var menuNote: String = ""
 
     var body: some View {
         ZStack {
@@ -33,14 +38,40 @@ struct GameLandingView: View {
         .animation(.easeInOut(duration: 0.18), value: showWorkshop)
     }
 
-    /// Game menu chips (clay capsules, no plates).
-    private var gameMenu: some View {
-        HStack(spacing: 10) {
-            GameMenuChip(title: "Play", active: !showWorkshop) { showWorkshop = false }
-            GameMenuChip(title: "GAME BUILDERS WORKSHOP", active: showWorkshop) { showWorkshop = true }
-            Spacer(minLength: 0)
+    /// Game MENU (opened by the Igorot Headaxe panel): carved plank buttons, gold lettering.
+    private var gameMenuPanel: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            PlankButton(title: "Play", active: !showWorkshop && !showBrowser) {
+                showBrowser = false; showWorkshop = false; showMenu = false
+            }
+            PlankButton(title: "GAME BUILDERS WORKSHOP", active: showWorkshop) {
+                showBrowser = false; showWorkshop = true; showMenu = false
+            }
+            PlankButton(title: "ЯBROWSER", active: showBrowser, systemImage: "globe") {
+                showWorkshop = false; showBrowser = true; showMenu = false
+            }
+            PlankButton(title: "Igorot Headaxe · tool", systemImage: "hammer") {
+                menuNote = "Igorot Headaxe — TERAFORMЯ starter tool (dig · place). Equipped; tool select lives in the game."
+            }
+            PlankButton(title: "Home", systemImage: "house") {
+                showMenu = false
+                withAnimation(.easeInOut(duration: 0.18)) { isPresented = false }
+            }
+            if !menuNote.isEmpty {
+                Text(menuNote)
+                    .font(ClayTheme.clayFont(size: 10, weight: .medium))
+                    .foregroundStyle(PlankStyle.gold.opacity(0.9))
+                    .frame(maxWidth: 240, alignment: .leading)
+            }
         }
-        .padding(.horizontal, 18)
+        .padding(12)
+        .background(
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .fill(LinearGradient(colors: [PlankStyle.woodLight, PlankStyle.woodDark], startPoint: .top, endPoint: .bottom))
+                .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).strokeBorder(PlankStyle.rim, lineWidth: 3))
+                .shadow(color: .black.opacity(0.6), radius: 10, x: 0, y: 6)
+        )
+        .frame(maxWidth: 280, alignment: .leading)
     }
 
     private var playSection: some View {
@@ -49,16 +80,8 @@ struct GameLandingView: View {
 
             VStack(spacing: 10) {
                 HStack(spacing: 10) {
-                    if ClayImage.exists("BtnClayFace") {
-                        Image("BtnClayFace")
-                            .resizable()
-                            .interpolation(.high)
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 32, height: 32)
-                    } else {
-                        Image(systemName: "face.smiling.inverse")
-                            .font(.system(size: 22))
-                            .foregroundStyle(ClayTheme.offWhite)
+                    HeadaxeMenuButton(open: showMenu) {
+                        withAnimation(.easeInOut(duration: 0.15)) { showMenu.toggle() }
                     }
                     VStack(alignment: .leading, spacing: 2) {
                         Text("Я Game")
@@ -80,15 +103,19 @@ struct GameLandingView: View {
                 .padding(.horizontal, 18)
                 .padding(.top, RedwoodYabarMetrics.contentTopClearance)
 
-                gameMenu
 
-                GameWebDoor(url: loadURL, reloadToken: reloadToken)
-                    .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 14, style: .continuous)
-                            .stroke(Color.orange.opacity(0.28), lineWidth: 1)
-                    )
-                    .padding(.horizontal, 14)
+                if showBrowser {
+                    YaBrowserView(isOnline: isOnline)
+                        .padding(.horizontal, 14)
+                } else {
+                    GameWebDoor(url: loadURL, reloadToken: reloadToken)
+                        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                                .stroke(Color.orange.opacity(0.28), lineWidth: 1)
+                        )
+                        .padding(.horizontal, 14)
+                }
 
                 HStack(spacing: 12) {
                     ClayButton(asset: "BtnSearch", systemFallback: "arrow.clockwise",
@@ -110,6 +137,17 @@ struct GameLandingView: View {
                 }
                 .padding(.horizontal, 18)
                 .padding(.bottom, 14)
+            }
+        }
+        .overlay(alignment: .topLeading) {
+            if showMenu {
+                ZStack(alignment: .topLeading) {
+                    Color.black.opacity(0.001).ignoresSafeArea().onTapGesture { showMenu = false }  // tap-out closes
+                    gameMenuPanel
+                        .padding(.leading, 18)
+                        .padding(.top, RedwoodYabarMetrics.contentTopClearance + 70)
+                }
+                .transition(.opacity)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -188,6 +226,76 @@ struct GameLandingView: View {
     <p>NonNuclear door only. Crown Я. Mint ref BB9uA5BuacDnWyDf5Npc9nMb9yFbyThsNrQPBYJ5Q1Lv</p>
     </body></html>
     """
+}
+
+/// TERAFORMЯ plank look: carved wood, gold lettering, bronze rim.
+enum PlankStyle {
+    static let woodLight = Color(red: 0.45, green: 0.29, blue: 0.16)
+    static let woodDark = Color(red: 0.25, green: 0.15, blue: 0.08)
+    static let rim = Color(red: 0.82, green: 0.60, blue: 0.32)
+    static let gold = Color(red: 1.0, green: 0.84, blue: 0.45)
+}
+
+/// Top-left Igorot Headaxe panel = the game MENU button (keeps the headaxe artwork + label).
+struct HeadaxeMenuButton: View {
+    var open: Bool
+    var action: () -> Void
+    var body: some View {
+        Group {
+            if ClayImage.exists("BtnHeadaxeMenu") {
+                Image("BtnHeadaxeMenu").resizable().interpolation(.high).aspectRatio(contentMode: .fit)
+            } else {
+                HStack(spacing: 6) {
+                    Image(systemName: "hammer.fill").foregroundStyle(Color(white: 0.85))
+                    Text("Igorot Headaxe").font(ClayTheme.clayFont(size: 13, weight: .bold)).foregroundStyle(PlankStyle.gold)
+                }
+                .padding(.horizontal, 12).padding(.vertical, 8)
+                .background(RoundedRectangle(cornerRadius: 10).fill(Color(red: 0.10, green: 0.18, blue: 0.30))
+                    .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(PlankStyle.rim, lineWidth: 3)))
+            }
+        }
+        .frame(height: 50)
+        .overlay(alignment: .bottomTrailing) {
+            Image(systemName: open ? "chevron.up.circle.fill" : "chevron.down.circle.fill")
+                .font(.system(size: 12, weight: .bold))
+                .foregroundStyle(PlankStyle.gold)
+                .offset(x: 4, y: 4)
+        }
+        .contentShape(Rectangle())
+        .onTapGesture { action() }
+        .help("MENU — Play · Workshop · ЯBROWSER · Headaxe · Home")
+        .accessibilityLabel("Igorot Headaxe — game menu")
+        .accessibilityAddTraits(.isButton)
+    }
+}
+
+/// Carved plank menu button (gold lettering).
+struct PlankButton: View {
+    let title: String
+    var active: Bool = false
+    var systemImage: String? = nil
+    var action: () -> Void
+    var body: some View {
+        HStack(spacing: 8) {
+            if let systemImage { Image(systemName: systemImage).font(.system(size: 12, weight: .bold)) }
+            Text(title).font(ClayTheme.clayFont(size: 13, weight: .heavy))
+            Spacer(minLength: 0)
+        }
+        .foregroundStyle(PlankStyle.gold)
+        .padding(.horizontal, 14).padding(.vertical, 9)
+        .frame(minWidth: 230, alignment: .leading)
+        .background(
+            RoundedRectangle(cornerRadius: 9, style: .continuous)
+                .fill(LinearGradient(colors: active ? [Color(red: 0.36, green: 0.52, blue: 0.22), Color(red: 0.20, green: 0.33, blue: 0.12)]
+                                                    : [PlankStyle.woodLight.opacity(1.2), PlankStyle.woodDark],
+                                     startPoint: .top, endPoint: .bottom))
+                .overlay(RoundedRectangle(cornerRadius: 9, style: .continuous).strokeBorder(PlankStyle.rim.opacity(0.9), lineWidth: 2))
+        )
+        .contentShape(Rectangle())
+        .onTapGesture { action() }
+        .accessibilityLabel(title)
+        .accessibilityAddTraits(.isButton)
+    }
 }
 
 /// Clay capsule chip for the game menu / workshop — tap only (no Button plate).

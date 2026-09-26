@@ -53,3 +53,14 @@ install script seats it with adb push + run-as cp and checks `seated=yes`.
 - Garage Training lane: a "rizal.pw" link/button opens the web classroom (last verified non-raw base, else primary). Status and help rows show both URLs.
 - rizal.info game/workshop links are unchanged.
 - Verified 2026-09-25: the github.io manifest is byte-identical to assets/classroom/manifest.json, and all 3 lesson sha256s match.
+
+## ЯBROWSER + Igorot Headaxe MENU (Decider addition, 2026-09-25 21:35 MDT)
+- The game landing's top-left **Igorot Headaxe panel is the game MENU button** (Mac/iOS `GameLandingView` via `HeadaxeMenuButton`; Android `GameDoor`). The artwork (`BtnHeadaxeMenu` imageset / `drawable-nodpi/btn_headaxe_menu.png`) is cropped from the Decider's TERAFORMЯ reference screenshot.
+- It replaces the decorative BtnClayFace icon, which had no action. The Play / GAME BUILDERS WORKSHOP chip row moved into the menu.
+- Menu items (carved plank buttons, gold lettering): Play · GAME BUILDERS WORKSHOP · **ЯBROWSER** · Igorot Headaxe · tool (info only; no tool action existed in ЯBOT code) · Home.
+- The TERAFORMЯ SELECT WORLD page in the screenshot is not implemented in the ЯBOT repo or in the Codex TERAFORMЯ project (a Phaser HUD); it exists only as concept art and plan docs. When that page is built, its headaxe panel should reuse this menu.
+- **ЯBROWSER** (`YaBrowser.swift`, `YaBrowser.kt`): address bar, back, forward, reload, home (offline game), plus quick buttons for offline game/index.html, https://rizal.info/game/ and https://rizal.pw/classroom/.
+  - Mac/iOS privacy: `WKWebsiteDataStore.nonPersistent()`, an empty `WKUserContentController` (no script message handlers or user scripts), and a data wipe on disappear.
+  - Android privacy: no `addJavascriptInterface`, `LOAD_NO_CACHE`, `saveFormData=false`, no geolocation or multi-window. On close it clears history, cache, form data, WebStorage, cookies and HTTP auth, then destroys the WebView.
+  - Both: only http/https/file/about/data navigations are allowed, so pages can't trigger yabot:// or other app-scheme hand-offs.
+  - No native bridge (save / wallet / chain.propose) exists in any ЯBOT WebView today, and ЯBROWSER uses its own isolated configuration.
