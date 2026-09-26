@@ -17,7 +17,7 @@ import androidx.core.view.WindowCompat
 import java.util.concurrent.Executors
 
 /**
- * ЯBOT Android 0.3.1 — iPhone clay twin + OFFLINE PREMIER command brain + Heart seat.
+ * ЯBOT Android 0.3.3 — iPhone clay twin + OFFLINE PREMIER command brain + Heart seat.
  * 0.3.1 parity with Mac/iPhone: Я Game door (stone clay-face button) → Play · GAME BUILDERS WORKSHOP,
  * gamewrite drafts (ЯBOT · ЯMAX), Decider-only Approve & Apply with respawn snapshots, Garage roster
  * with faces, ЯMANUAL landing, honest `respawn`, naming law (Я = Machine Mind · U = human · bots by name).
@@ -135,6 +135,10 @@ class MainActivity : AppCompatActivity() {
                 openDoor(OfflineCommandRouter.Door.MANUAL)
                 append(BotRoster.MIND, "Deep link yabot://manual · ЯMANUAL")
             }
+            "classroom" -> {
+                openDoor(OfflineCommandRouter.Door.CLASSROOM)
+                append(BotRoster.MIND, "Deep link yabot://classroom · Garage → Training")
+            }
             "garage" -> {
                 openDoor(OfflineCommandRouter.Door.GARAGE)
                 append(BotRoster.MIND, "Deep link yabot://garage · Garage")
@@ -186,6 +190,7 @@ class MainActivity : AppCompatActivity() {
             OfflineCommandRouter.Door.WORKSHOP -> gameDoor.show(openWorkshop = true)
             OfflineCommandRouter.Door.MANUAL -> manual.show(book)
             OfflineCommandRouter.Door.GARAGE -> garage.show()
+            OfflineCommandRouter.Door.CLASSROOM -> { garage.show(); garage.openTraining() }
         }
         updateJumpFab()
     }
@@ -306,6 +311,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun dispatchUserLine(text: String) {
+        // 0.3.3 · TOKENBLAST probe (read-only network → off the UI thread). TRUEBLAST / BANGЯANG send legs are
+        // Mac/iOS only this version: no Android wallet key exists, so nothing is faked — the probe still runs.
+        val lowerLine = text.trim().lowercase()
+        val sendVerb = listOf("trueblast", "true blast", "trueblast it", "blast true", "bangrang", "bangяang", "boomerang", "bang rang")
+            .any { lowerLine == it || lowerLine.startsWith("$it ") }
+        if (TokenBlast.matches(lowerLine) || sendVerb) {
+            append(BotRoster.MIND, if (sendVerb) "TRUEBLAST / BANGЯANG · Android 0.3.3 has no device wallet key — send legs run on Mac/iPhone only (confirmation sheet there). Running the read-only TOKENBLAST probe…" else "TOKENBLAST · reading live pipes…")
+            bg.execute {
+                val out = try { TokenBlast.run(if (sendVerb) null else TokenBlast.argFrom(text), ModeStore.isOnline) } catch (e: Exception) { "TOKENBLAST failed: ${e.message}" }
+                runOnUiThread { append(BotRoster.assistantLabel(), out) }
+            }
+            return
+        }
         // gamewrite drafts may ask the Heart → author off the UI thread; the bot speaks under its own name.
         if (OfflineCommandRouter.isGameWriteDraft(text)) {
             append(BotRoster.MIND, "gamewrite · drafting into the GAME BUILDERS WORKSHOP (Decider applies)…")

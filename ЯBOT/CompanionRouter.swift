@@ -138,6 +138,13 @@ enum CompanionRouter {
         return false
     }
 
+    /// Ask ContentView to open Garage → Training (classroom).
+    static func openClassroomUI() {
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: Notification.Name("ЯBOT.OpenClassroom"), object: nil)
+        }
+    }
+
     /// Ask ContentView to open the Workshop screen (chat can point; the Decider still taps apply there).
     static func openWorkshopUI() {
         DispatchQueue.main.async {
@@ -164,6 +171,9 @@ static func classify(_ raw: String) -> ChatLane {
             "coin lan clear", "coin usb drain", "coin qr eat", "coin nfc eat", "coin share eat",
             "ghost establish", "ghost claim",
             "tokenblast", "token blast", "blast token", "blast twin", "twin blast",
+            "trueblast", "true blast", "blast true",
+            "bangrang", "bangяang", "boomerang", "bang rang",
+            "paste pair ", "pair wallet ",
             "essence mint", "essence transfer", "essence settle",
             "go online", "go offline", "feed ", "offload",
             "place set ", "place clear",
@@ -182,6 +192,7 @@ static func classify(_ raw: String) -> ChatLane {
             "tongue", "dual tongue", "cos", "voice", "triangle",
             "pingpong", "ping pong", "nslookup", "dig",
             "bot enter", "bot leave", "bot mint", "bot create", "bot new", "label teach", "label bot", "i am ",
+            "classroom", "lessons", "lesson ", "training", "wallet seats", "device wallets",
         ]
         for h in functionHints {
             if lower == h || lower.hasPrefix(h) { return .function }
@@ -224,6 +235,27 @@ static func classify(_ raw: String) -> ChatLane {
 
         if lower == "ping" || lower == "utah ping" {
             return "here"
+        }
+
+        // 0.3.3 · BANGЯANG (round trip) · TRUEBLAST (1.0 Я to sibling) — replies only; any live send opens the
+        // on-device confirmation sheet and nothing signs until the user taps Confirm there.
+        if BangRang.matches(lower) {
+            return BangRang.handle(text)
+        }
+        if TrueBlast.matches(lower) {
+            return TrueBlast.handle(lower)
+        }
+        if lower == "wallet seats" || lower == "device wallets" {
+            return YaDeviceWallets.seatsBlock()
+        }
+        if lower.hasPrefix("paste pair ") || lower.hasPrefix("pair wallet ") {
+            let pk = text.split(separator: " ").last.map(String.init) ?? ""
+            return YaDeviceWallets.pastePair(pk)
+        }
+        // 0.3.3 · CLASSROOM — Garage → Training lane (lessons · submit · scores)
+        if lower == "classroom" || lower == "lessons" || lower == "training" || lower == "classroom status" || lower.hasPrefix("lesson ") {
+            openClassroomUI()
+            return ClassroomStore.status() + "\nOpening Garage → Training…"
         }
 
         // BOT LABELS — U (human) · Я (Machine Mind, never renames/numbered) · bots by their Garage names.
@@ -282,7 +314,7 @@ static func classify(_ raw: String) -> ChatLane {
             Aliases: commands · functions · ? → help
             Contract: contracts/BASE-COMMANDS-ONE-WORD-0.1.md
 
-            BASE (1–45) · word — blurb — N/10
+            BASE (1–52) · word — blurb — N/10
             1  ping — companion heartbeat (bare ≠ ICMP) — 9/10
             2  pong — companion heartbeat reply — 9/10
             3  help — this list + extension hints — 8/10
@@ -331,6 +363,10 @@ static func classify(_ raw: String) -> ChatLane {
             46  game — Я Game / TeraformЯ door (menu: Play · GAME BUILDERS WORKSHOP) — 6/10
             47  workshop — GAME BUILDERS WORKSHOP (projects · drafts · preview · Decider apply · respawn · ledger) — 6/10
             48  gamewrite — Garage bots (ЯBOT · ЯMAX) draft game code (TS · JS · HTML · CSS · JSON/Schema · GLSL · MD · Swift*/Kotlin*) — 5/10
+            49  classroom — Garage Training: lessons · submit · scores · rizal.pw/classroom (fallback rizaleon.github.io/rizal-pw/classroom) — 5/10
+            50  trueblast — 1.0 Я to the sibling device wallet + full pipe report (LIVE · confirmation sheet · dry) — 4/10
+            51  bangrang — BANGЯANG: 1.0 Я out to the boomerang wallet and back + probes before/between/after (one sheet) — 4/10
+            52  wallet seats — DESKTOP / MOBILE / BOOMERANG pubkeys + ATAs (keys stay in Keychain) · paste pair <pubkey> — 5/10
 
             EXTENSIONS (examples — not new bases)
             · bot mint|enter|leave · heart status · ghost claim|status|establish

@@ -22,7 +22,8 @@ import java.util.concurrent.Executors
 /**
  * Я Game door — Android twin of Swift GameLandingView + GameWorkshopView (0.3.x).
  * Stone clay-face button on the ЯBAR opens this UNDER the sticky bar.
- * Game menu: Play (game/index.html: device copy first, then bundled assets) · GAME BUILDERS WORKSHOP.
+ * Game MENU (0.3.3: opened by the top-left Igorot Headaxe panel): Play (game/index.html: device copy first, then
+ * bundled assets) · GAME BUILDERS WORKSHOP · ЯBROWSER (private, no bridge) · Igorot Headaxe (tool) · Home.
  * Workshop sections: Projects · Drafts · Preview (sandbox) · Respawn · Ledger.
  * Only the Decider applies (tap + confirm dialog). NonNuclear: door only — no spend / mint / signing.
  */
@@ -49,6 +50,11 @@ class GameDoor(
     private var previewLoader: ((WebView) -> Unit)? = null
     private var previewWeb: WebView? = null
     private var playWeb: WebView? = null
+    /** 0.3.3: Igorot Headaxe panel (top-left) = game MENU button · ЯBROWSER section. */
+    private var menuOpen = false
+    private var browser = false
+    private var yaBrowser: YaBrowser? = null
+    private var menuNote = ""
 
     fun showing(): Boolean = showing
     fun inWorkshop(): Boolean = showing && workshop
@@ -70,6 +76,8 @@ class GameDoor(
     }
 
     fun hide() {
+        yaBrowser?.wipe(); yaBrowser = null
+        menuOpen = false
         root?.visibility = View.GONE
         playWeb?.loadUrl("about:blank")
         previewWeb?.loadUrl("about:blank")
@@ -83,6 +91,7 @@ class GameDoor(
         r.removeAllViews()
         playWeb = null
         previewWeb = null
+        if (!browser || workshop) { yaBrowser?.wipe(); yaBrowser = null }
         if (workshop) renderWorkshop(r) else renderPlay(r)
     }
 
@@ -95,22 +104,38 @@ class GameDoor(
 
         val header = ClayUi.row(ctx, 10)
         header.addView(ImageView(ctx).apply {
-            setImageResource(R.drawable.btn_clayface)
+            setImageResource(R.drawable.btn_headaxe_menu)   // Igorot Headaxe panel = MENU button
             scaleType = ImageView.ScaleType.FIT_CENTER
-        }, LinearLayout.LayoutParams(dp(32), dp(32)))
+            adjustViewBounds = true
+            contentDescription = "Igorot Headaxe — game menu"
+            isClickable = true
+            setOnClickListener { menuOpen = !menuOpen; render() }
+        }, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, dp(46)))
         val titles = ClayUi.column(ctx)
-        titles.addView(ClayUi.text(ctx, "Я Game", 20f, bold = true))
+        titles.addView(ClayUi.text(ctx, if (browser) "Я Game · ЯBROWSER" else "Я Game", 20f, bold = true))
         titles.addView(ClayUi.text(ctx, source, 10f, Color.argb(190, 245, 240, 232)).apply { maxLines = 2 })
         header.addView(titles, ClayUi.lp(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
         header.addView(ClayUi.chip(ctx, if (isOnline()) "ONLINE" else "OFFLINE", active = isOnline(), tint = if (isOnline()) Color.GREEN else Color.GRAY))
         col.addView(header)
 
-        col.addView(menuChips(), ClayUi.lp().apply { topMargin = dp(8); bottomMargin = dp(8) })
+        if (browser) {
+            val b = yaBrowser ?: YaBrowser(ctx, isOnline).also { yaBrowser = it }
+            val v = b.view()
+            col.addView(v, ClayUi.lp(ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f).apply { topMargin = dp(8) })
+            val bottomB = ClayUi.row(ctx, 10)
+            bottomB.addView(ClayUi.chip(ctx, "Close ЯBROWSER (wipe)") { browser = false; render() })
+            bottomB.addView(View(ctx), ClayUi.lp(0, 1, 1f))
+            bottomB.addView(ClayUi.chip(ctx, "⌂ Home") { onHome() })
+            col.addView(bottomB, ClayUi.lp().apply { topMargin = dp(8) })
+            r.addView(col, FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
+            if (menuOpen) r.addView(menuPanel(), menuPanelLp())
+            return
+        }
 
         val web = ClayUi.sandboxWebView(ctx, allowFile = true, allowNet = isOnline)
         playWeb = web
         web.loadUrl(url)
-        col.addView(web, ClayUi.lp(ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f))
+        col.addView(web, ClayUi.lp(ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f).apply { topMargin = dp(8) })
 
         val bottom = ClayUi.row(ctx, 10)
         bottom.addView(ClayUi.chip(ctx, "↻ Reload") { render() })
@@ -122,13 +147,54 @@ class GameDoor(
         bottom.addView(ClayUi.chip(ctx, "⌂ Home") { onHome() })
         col.addView(bottom, ClayUi.lp().apply { topMargin = dp(8) })
         r.addView(col, FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
+        if (menuOpen) r.addView(menuPanel(), menuPanelLp())
     }
 
-    private fun menuChips(): View {
-        val row = ClayUi.row(ctx, 10)
-        row.addView(ClayUi.chip(ctx, "Play", active = !workshop) { workshop = false; render() })
-        row.addView(ClayUi.chip(ctx, "GAME BUILDERS WORKSHOP", active = workshop) { workshop = true; render() })
-        return row
+    // MARK: MENU (opened by the Igorot Headaxe panel) — carved plank buttons, gold lettering
+
+    private val gold = Color.rgb(255, 214, 115)
+    private val rim = Color.rgb(209, 153, 82)
+
+    private fun plank(title: String, active: Boolean = false, onClick: () -> Unit): TextView = TextView(ctx).apply {
+        text = title
+        textSize = 14f
+        setTextColor(gold)
+        typeface = android.graphics.Typeface.create(android.graphics.Typeface.SERIF, android.graphics.Typeface.BOLD)
+        setPadding(dp(14), dp(9), dp(14), dp(9))
+        minWidth = dp(220)
+        background = GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM,
+            if (active) intArrayOf(Color.rgb(92, 133, 56), Color.rgb(51, 84, 31)) else intArrayOf(Color.rgb(125, 80, 44), Color.rgb(64, 38, 20))).apply {
+            cornerRadius = dp(9).toFloat(); setStroke(dp(2), rim)
+        }
+        isClickable = true
+        contentDescription = title
+        setOnClickListener { onClick() }
+    }
+
+    private fun menuPanel(): View {
+        val col = ClayUi.column(ctx).apply {
+            setPadding(dp(12), dp(12), dp(12), dp(12))
+            background = GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM, intArrayOf(Color.rgb(115, 74, 41), Color.rgb(64, 38, 20))).apply {
+                cornerRadius = dp(14).toFloat(); setStroke(dp(3), rim)
+            }
+            elevation = dp(10).toFloat()
+            isClickable = true
+        }
+        fun add(v: View) = col.addView(v, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply { bottomMargin = dp(8) })
+        add(plank("Play", active = !workshop && !browser) { browser = false; workshop = false; menuOpen = false; render() })
+        add(plank("GAME BUILDERS WORKSHOP", active = workshop) { browser = false; workshop = true; menuOpen = false; render() })
+        add(plank("🌐  ЯBROWSER", active = browser) { workshop = false; browser = true; menuOpen = false; render() })
+        add(plank("⚒  Igorot Headaxe · tool") {
+            menuNote = "Igorot Headaxe — TERAFORMЯ starter tool (dig · place). Equipped; tool select lives in the game."
+            render()
+        })
+        add(plank("⌂  Home") { menuOpen = false; onHome() })
+        if (menuNote.isNotEmpty()) col.addView(ClayUi.text(ctx, menuNote, 10f, gold).apply { maxWidth = dp(240) })
+        return col
+    }
+
+    private fun menuPanelLp() = FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply {
+        leftMargin = dp(10); topMargin = dp(64)
     }
 
     // MARK: Workshop

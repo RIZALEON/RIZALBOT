@@ -144,7 +144,7 @@ enum NativeHeart {
             "-sys", systemPrompt,
             "-p", user,
             "-n", String(max(16, min(maxNewTokens, 512))),
-            "-c", "2048",
+            "-c", "4096",   // 0.3.3 QA: systemPrompt ≈2.4k tokens overflowed 2048 ("prompt is too long")
             "-ngl", "99",
             "-cnv",
             "-st",

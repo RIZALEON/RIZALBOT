@@ -20,6 +20,8 @@ import UIKit
 /// with their origin — kept as-is, usable only from that origin (BotLabel.legacyTitles). No face, no plate.
 struct GarageWorkshopLandingView: View {
     @Binding var isPresented: Bool
+    /// 0.3.3: "training" opens straight onto the classroom lane (yabot://classroom).
+    var initialLane: String = "bots"
     @State private var selectedLane: String = "bots"
     @State private var selectedBotId: String? = nil
     @State private var botSearch: String = ""
@@ -100,6 +102,19 @@ struct GarageWorkshopLandingView: View {
             .frame(maxWidth: .infinity)
             .allowsHitTesting(false)
 
+            // 0.3.3 · Training lane = CLASSROOM (lessons · submit · scores) — stage panel right of the sidebar
+            if selectedLane == "training" {
+                VStack {
+                    ClassroomLaneView(learner: trainingLearner)
+                        .id(trainingLearner)
+                    Spacer()
+                }
+                .padding(.leading, sidebarWidth + 20)
+                .padding(.trailing, 20)
+                .padding(.top, RedwoodYabarMetrics.contentTopClearance + 40)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            }
+
             // Work strip — bottom of stage when a bot is selected
             if selectedBotId != nil, let bot = housedBots.first(where: { $0.id == selectedBotId }) {
                 VStack {
@@ -115,7 +130,10 @@ struct GarageWorkshopLandingView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .animation(.easeInOut(duration: 0.18), value: selectedBotId)
-        .onAppear { refreshRoster() }
+        .onAppear {
+            refreshRoster()
+            if initialLane != "bots" { selectedLane = initialLane }
+        }
         // Full-bleed room behind chrome (zIndex 200 overlays bar); image does NOT pad itself.
         .background {
             ZStack {
@@ -209,7 +227,7 @@ struct GarageWorkshopLandingView: View {
             }
             workAction("Open") { workStripHint = "Open · \(bot.name) (stub)" }
             workAction("Stats") { workStripHint = "Stats · \(bot.name) (stub)"; selectedLane = "stats" }
-            workAction("Train") { workStripHint = "Train · \(bot.name) (stub)"; selectedLane = "training" }
+            workAction("Train") { workStripHint = "Train · \(bot.name) · Classroom lessons"; selectedLane = "training" }
             Button {
                 clearBotSelection()
             } label: {
@@ -431,6 +449,12 @@ struct GarageWorkshopLandingView: View {
         .padding(.leading, 10)
     }
 
+    /// Learner = selected bot (Garage name) else the speaking bot else ЯBOT.
+    private var trainingLearner: String {
+        if let id = selectedBotId, let b = housedBots.first(where: { $0.id == id }) { return b.name }
+        return speakingName ?? housedBots.first?.name ?? "ЯBOT"
+    }
+
     private var filteredBots: [BotLabel.RosterBot] {
         let q = botSearch.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
         guard !q.isEmpty else { return housedBots }
@@ -497,7 +521,7 @@ struct GarageWorkshopLandingView: View {
         case "market": return "Stub · marketplace later"
         case "stats": return "Stub · bot stats later"
         case "data": return "Stub · bot data later"
-        case "training": return "Stub · training later"
+        case "training": return "Classroom · lessons for \(trainingLearner) · submit writes inbox/ only"
         case "bots":
             let names = housedBots.map(\.name)
             return names.isEmpty ? "No housed bots yet · + Create new Bot" : "Я's bots · select " + names.joined(separator: " or ")
