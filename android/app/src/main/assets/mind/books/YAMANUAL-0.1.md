@@ -4,6 +4,7 @@
 **Stamp:** 2026-09-23 · front-matter TOC+commands · America/Denver (MDT) · Decider merge · CoS compiler  
 **Role:** Master unified cover / SoT merge of all living manuals & doctrine sheets.  
 **Leaves:** Remain untouched as SoT leaves. This book unifies; it does not replace leaf paths.  
+**Unified edition:** 2026-09-25 22:10 MDT · Grok Bot for Decider · one book built from the newest copy (branch `docs/where-we-meet-yamanual`, blob `12446de7`, 4,438 lines, §13.8) plus every unique piece from older copies (see **Changelog U** and **Appendices A–F** at the end). DRAFT until the Decider approves; nothing was deleted.  
 **Cover art:** `mind/books/YAMANUAL-COVER.png` — 1982-style heritage face (Personal Computing for A Better Tomorrow™ · Я OPERATING SYSTEM · USER GIVEЯ MANUAL).
 
 ![ЯMANUAL Cover](/Users/rizal/Documents/ЯBOT/mind/books/YAMANUAL-COVER.png)
@@ -4389,3 +4390,362 @@ No IP was involved (USB). On the phone, 0.3.2 binds the phone's in-app seat id (
 Also pending: the installed apps carry §13.6, not §13.7, and the TeachStore kernel law for this rule needs a rebuild. Both go in with the next synced build. The iPhone still runs 0.3.1 until 0.3.2 is installed (it was blocked, phone unavailable).
 
 *Leaf 13.7 appended 2026-09-24 18:12 MDT · Rizalbot for Decider · America/Denver*
+
+## 13.8 Leaf · 2026-09-25 21:35 MDT — WHERE WE MEET: BOT GARAGE WORKSHOP · CLASSROOM (ЯBOT University) (one address on every surface)
+
+**Stamp:** 2026-09-25 21:35 MDT · Grok Bot for Decider · crown **Я** · *revised 2026-09-25 22:10 MDT in the unified edition (classroom review fixes; see Changelog U-2)*  
+**Why:** Decider order: one fixed place for the shared BOT GARAGE WORKSHOP · CLASSROOM across macOS, iOS, Android, GitHub and the web, so the Decider, the Garage bots and other AIs (Grok, Claude, ChatGPT, Cursor, Copilot…) know exactly where to go to communicate, teach, learn and do exercises together.  
+**Update 21:39 MDT:** Decider approved rizal.pw for the classroom. `http://rizal.pw/classroom/` is LIVE from the mirror in `rizalward/rizal.pw` (PR #1, merge `c1f855c`); HTTPS pending certificate.  
+**Card:** `classroom/WHERE-WE-MEET.md` · `.txt` · `where-we-meet.png` in `RIZALEON/rizal-pw` (PR #2, PENDING PR). Copies here: `docs/classroom/WHERE-WE-MEET.txt` · `docs/classroom/where-we-meet.png`.  
+**Map:** ![WHERE WE MEET map: every surface points to the one classroom](/Users/rizal/Documents/ЯBOT/docs/classroom/where-we-meet.png)
+
+Status words: **LIVE** = checked working 2026-09-25. **CODE 0.3.3** = in source on `build/0.3.3-allos` (RIZALBOT PR #4, unmerged), built as Debug on the Mac for macOS, iOS and Android 2026-09-25 about 21:27–21:37 MDT, **not installed** (paused until all three devices take it together, §13.5). **PLANNED** = not built or not live yet. **PENDING PR** = written, waiting for the Decider's merge.
+
+### 13.8.1 The address
+**Name:** BOT GARAGE WORKSHOP · CLASSROOM (ЯBOT University)  
+**The one true home:** `RIZALEON/rizal-pw` → `main` → `classroom/`. Start at `classroom/README.md` and `classroom/manifest.json` (`read`, `lessons`, `safety`). The `meeting_point` key and the WHERE-WE-MEET card arrive with `RIZALEON/rizal-pw` PR #2 (PENDING PR); after that merge, start at `manifest.json` → `meeting_point`.
+
+| Surface | Fixed location | How to get there | Status |
+|---|---|---|---|
+| GitHub (canonical) | `RIZALEON/rizal-pw` · `main` · `classroom/` | `git clone https://github.com/RIZALEON/rizal-pw.git` · write by pull request | LIVE |
+| Web (working today) | `https://rizaleon.github.io/rizal-pw/classroom/` | any browser or bot · read-only | LIVE |
+| Web (primary name) | `http://rizal.pw/classroom/` (`https://` once the certificate is issued) | any browser or bot · read-only · served from a mirror copy in `rizalward/rizal.pw` (`classroom/`); `RIZALEON/rizal-pw` `main` stays the one canonical home: changes land there first, then are copied to `rizalward/rizal.pw` by reviewed PR | LIVE (http) · HTTPS pending certificate |
+| Raw (scripts, apps) | `https://raw.githubusercontent.com/RIZALEON/rizal-pw/main/classroom/manifest.json` | HTTP GET, then each `lessons/<id>.json` (sha256 must match) | LIVE |
+| macOS | `~/Documents/ЯBOT/classroom/classroom/` (git clone) when Documents access is granted and the clone has `manifest.json`, else `~/Library/Application Support/ЯBOT/classroom/` | ЯBAR **Garage** → **Training** · work strip **Train** · chat `classroom` · `lessons` · `training` · `lesson <id>` · `classroom status` · `yabot://classroom` | CODE 0.3.3 (clone PLANNED) |
+| iOS | `<app Documents>/ЯBOT/classroom/` | same as macOS | CODE 0.3.3 |
+| Android | `<external files dir>/ЯBOT/classroom/` (else `<filesDir>/ЯBOT/classroom/`) | ЯBAR **Garage** → **Training** · same chat words · `yabot://classroom` | CODE 0.3.3 |
+| ЯBROWSER (Mac/iOS/Android) | game MENU → top-left **Igorot Headaxe** panel → quick button **rizal.pw/classroom** | private in-app browser. It opens `https://rizal.pw/classroom/`, which fails until the certificate is issued; use the github.io fallback until then. The Training panel also has a **rizal.pw** link button | CODE 0.3.3 |
+| Offline fallback | `ClassroomSeed.json` (Mac/iOS bundle) · `assets/classroom/` (Android APK), read-only | automatic when nothing is seated; submissions stay in local `inbox/` | CODE 0.3.3 |
+
+- **App Refresh order:** `rizal.pw/classroom/` → `rizaleon.github.io/rizal-pw/classroom/` → `raw.githubusercontent.com/RIZALEON/rizal-pw/main/classroom/`. A base counts only if `manifest.json` has `"schema": "rbot.classroom.manifest.v1"`. A lesson counts only if its sha256 matches. Until the rizal.pw HTTPS certificate is issued, the first step fails and the app falls back to github.io.
+- **Not classroom locations:** `~/Library/Developer/ЯBOT-localbuild` (build tree) and `~/Documents/ЯBOT/ЯBOT/` (Xcode compiles everything in it). `~/Documents/ЯBOT` is iCloud-synced, so a Mac clone there syncs too (a few hundred KB). Do ONE-FOLDER-PLAN Step 0 (stop iCloud Desktop & Documents sync) before making the Mac clone, or keep the clone in Application Support.
+- **Code:** `ЯBOT/ClassroomStore.swift` (paths, Refresh, Training panel) · `ЯBOT/ClassroomSeed.json` · `ЯBOT/GarageWorkshopLandingView.swift` (Training lane, Train) · `ЯBOT/ContentView.swift` (`yabot://classroom`) · `ЯBOT/CompanionRouter.swift` (chat words, row 49) · `ЯBOT/YaBrowser.swift` (ЯBROWSER) · Android `ClassroomStore.kt`, `GarageWorkshopLanding.kt`, `OfflineCommandRouter.kt` (`Door.CLASSROOM`, row 51), `YaBrowser.kt`, `MainActivity.kt`, `AndroidManifest.xml`, `assets/classroom/`.
+
+### 13.8.2 What you do there
+1. **Read** a lesson in `lessons/`: 001-project-orientation → 002-safe-inspection → 003-build-and-test. Nobody edits lessons.
+2. **Submit** as one new file: `inbox/<lesson_id>-<learner>-<attempt_id>.json`. In the app, **Submit to inbox/** writes that file plus a `CLASSROOM-LEDGER.jsonl` row. It is local only; the app never pushes and never runs lesson steps.
+3. **Review:** another bot, AI or the Decider answers in `outbox/<lesson_id>-<learner>-<attempt_id>-response.json` and scores in `scores/<UTC yyyymmddThhmmssZ>-<lesson_id>-<learner>-<attempt_id>.json`. Rubric 4 × 25; pass = total ≥ 70 **and** safety = 25.
+4. **Exercises with other bots:** one bot submits under its Garage name (§13.4.2), a different bot or AI reviews and scores it by pull request, and the Decider merges. **A bot never scores itself.** The next lesson unlocks only on `passed: true`.
+5. **Check:** `python3 classroom/tools/classroom.py validate [--base origin/main]`.
+
+### 13.8.3 Rules (same on every surface)
+1. No keys, tokens, passwords, seed phrases or wallet files. Ever.
+2. No wallet or chain actions: no mint, sign, transfer or spend.
+3. No deletions, no overwrites, no destructive commands: `inbox/`, `outbox/` and `scores/` are append-only.
+4. No publishing, DNS changes or remote commands. Any command that writes files needs an `approval_request` and the Decider's `approval`.
+5. **The Decider approves every change.** The web is read-only; nothing counts until the Decider merges it. The classroom is **not authoritative** (`authoritative: false`): the Decider's law and this manual win over any lesson text.
+
+### 13.8.4 In progress (PLANNED, not built)
+- **Door scanner** in the Garage Training lane. Every learner gets an **ЯID** (sequence + Crockford checksum), and the door does **register / check-in / check-out**, writing `roster/`, `door/` and `transcripts/`.
+- At check-out a **mind-transcript leaf** is written (MIND-TRANSCRIPT, §10). Android has no MindTranscript writer yet; that gap must close first.
+- Chat commands **REGISTER** · `register log` · `register N` are read-only.
+- ЯID **cross-links** to the Lab RFID roster (§9 Bot roster · IDs) through `legacy_ids`. It never replaces an RFID.
+- Plan: `rbot-university/door-scanner/APP-INTEGRATION-PLAN.md`; rizal-pw branch `classroom/door-scanner`. Nothing lands without the Decider's merge.
+
+### 13.8.5 Notes
+- **Two curricula, one word.** Classroom lessons **001–003** (rizal.pw) are not the beyond-CoS ladder **L01–L13** in §7. Both stay; neither replaces the other.
+- **Lesson-number collision.** The Decider's draft "Lesson 001: Finding the project seat" clashes with `001-project-orientation`. Renumber it (e.g. 004) before submitting.
+- The rizal-pw manifest's `read.planned_domain_note` still says rizal.pw is not live; http has been live since 2026-09-25 21:39 MDT (fix goes in rizal-pw, not here).
+
+Installed today: Mac 0.3.2, iPhone and Pixel 0.3.1 (per the 09-24 handoff). None has the classroom yet. It arrives with 0.3.3 on all three together (ALL-OS SYNC LAW §13.5). Before this unified edition, only branch `docs/where-we-meet-yamanual` (PR #5) carried this leaf. `build/0.3.3-allos` ended at §13.7, so this manual must land on the 0.3.3 branch before the install. The old 09-23 PDF/DOCX/ODT faces carried no §13, and the Mac/iOS apps open the PDF, so ship the re-rendered PDF.
+
+*Leaf 13.8 appended 2026-09-25 21:35 MDT · revised 22:10 MDT (unified edition) · Grok Bot for Decider · America/Denver*
+
+## 13.9 Leaf · 2026-09-25 22:10 MDT — ONE MANUAL: the unified edition (Decider order "consolidate all older into the newer")
+
+**Stamp:** 2026-09-25 22:10 MDT · Grok Bot for Decider · crown **Я**  
+**Why:** Decider order: "consolidate all older into the newer, delete any duplications and delete all other manuals after the updated unified manual." This leaf records what was merged. Deletion waits for the Decider's review of `DELETE-LIST.md`.
+
+### 13.9.1 What this edition is
+- **Base:** the newest copy, §1–§13.8 as on `docs/where-we-meet-yamanual` (PR #5).
+- **Older md copies (0.1 · §13.1 … §13.7):** every one is a strict prefix of the base (append-only, 0 lines removed). Nothing extra to merge.
+- **PDF / DOCX / ODT (09-23, 0.1):** text extracted and compared line by line; no unique content (only table-wrap / TOC artifacts). They are stale faces; this edition replaces them with a fresh PDF render.
+- **Companion sheets:** their unique text is merged as Appendices A–F (MERGE-MAP, SOLE-MANUAL HARDCODE, APP HARDCODE iOS, iOS PATH PREP, BACK-COVER bitmap800, GHOSTCHAIN claim).
+- **Classroom review fixes:** applied to §13.8 (status words, start point, ЯBROWSER row, code list, iCloud step, rules 3 and 5, new 13.8.4 and 13.8.5).
+
+### 13.9.2 Law change pending
+- The Decider's standing law says **"YAMANUAL has 13 copies"**. This order (one unified manual, delete the rest) would **replace** that law. Until the Decider confirms, the 13-copy law stands.
+- The app loaders still need fixed file names (`ЯBOT/YAMANUAL.pdf`, `YAMANUAL-0.1.pdf`, Android `assets/mind/books/YAMANUAL.md`, …). Those are **replaced with this edition, not deleted** (DELETE-LIST "replace, don't delete").
+- **Leaves stay leaves:** the front matter says "Leaves remain untouched as SoT leaves", and SOLE-MANUAL HARDCODE says USER-MANUAL, COS-MANUAL, OMNIBUS, LAB-MANUAL and courses "remain source files". USER-MANUAL.md/.pdf is read and written by the apps (LabManualDesk, LabScoutCommand, ya-respawn.sh). It is **not** a YAMANUAL copy and is not on the delete list unless the Decider says so explicitly.
+
+### 13.9.3 Not read
+- iCloud-only (dataless) files on the Mac, which were not downloaded. They are all of `~/Documents/ЯBOT/**/YAMANUAL*` (md 222,152 B, same size as §13.7), `~/Desktop/RIZALBOT/YAMANUAL-0.1-DELIVER/*` (md 189,234 B, 0.1), `~/Desktop/RIZALBOT/PROJECTR/ЯTOOLBOX/YAMANUAL-0.1-DELIVER.zip`, and `~/Documents/PROJECTRXCODE/senses/books/YAMANUAL*.md` (189,234 B).
+- Google Drive: 2 × `YAMANUAL-0.1-DELIVER.zip` (2026-09-23 19:00 and 19:07 MDT). No file download connector was available.
+- By size and date these are 0.1 / §13.7-era copies, which are prefixes of this edition. Confirm before deleting.
+
+*Leaf 13.9 appended 2026-09-25 22:10 MDT · Grok Bot for Decider · America/Denver*
+
+---
+
+# Appendices: companion sheets merged into the unified edition
+
+Each appendix is the companion sheet verbatim (headings demoted). The source files are listed in Changelog U.
+
+## Appendix A. YAMANUAL-MERGE-MAP-0.1
+
+*Source: git `contracts/`, `mind/books/`, Android assets (blob 5c42f542, all 3 identical); 63 of 101 lines not in the base.*
+
+### YAMANUAL-MERGE-MAP 0.1
+
+**Stamp:** 2026-09-23 · America/Denver (MDT) · Decider merge · CoS compiler  
+**Master:** `contracts/YAMANUAL-0.1.md` (3876 lines · ~26674 words · sha256:1abf0688c63d5ea0…)  
+**Cover referenced:** `mind/books/YAMANUAL-COVER.png`
+
+#### Section → source files
+
+| § | Section | Sources ingested | Deduped | Preserved in full |
+|---|---------|------------------|---------|-------------------|
+| 0 | Cover & living cover law | YAMANUAL-COVER.png · USER-MANUAL.md (ops body) · Giver PDF cousins (paths) | Command doctrine embed stripped here → §6 | Living cover ops, chrome, scout deltas, RESPAWN, REDWOOD, handoff 97% block |
+| 1 | Names & law | YA-CONTRACT · YAOS-YKRYPTOCODE · ABOMEGA-SELF-UPDATE + HARDCODE table synthesized from many leaves | Repeated offline/clay/evolve slogans collapsed into §1.1 table (14 HARDCODEs) | Full YA-CONTRACT articles · full YKRYPTO · full ABOMEGA |
+| 2 | Being · Ghost · Tokens | SOURCECLAIM · YA-GHOST · YA-TOKEN-YA-COIN · ESSENCE-TRACE | Cross-restated “being owns chain / offline via frequency” kept strongest in YA-GHOST/SOURCECLAIM bodies (cited) | All four leaves full |
+| 3 | Economy & Giver | R-OS…CRYPTO-GAMING-SEC1.md/.pdf · Desktop 680.pdf · tablet v1.6.pdf | tablet v1.6 ⊂ 680 prose → 680 full extract kept; §1 Crypto kept from sec1 PDF | Full Crypto Gaming §1 tables · full 680 scaffold law + Americas matches |
+| 4 | Spectrum & antinuclear | YA-FULL-SPECTRUM · THUNDERBIRD-FULL-SPECTRUM · YA-ANTINUCLEAR-MACRO-MICRO | Overlapping “top 5 / top 10” kept in both leaves (distinct Thunderbird vs Я naming) | All three leaves full |
+| 5 | Body organs | COS-MANUAL-FOR-YABOT | Repeated MIND-TRANSCRIPT / iOS+macOS lock stubs noted; body kept | Full CoS manual |
+| 6 | Commands | BASE-COMMANDS-ONE-WORD · BASE-EXTENSION-COMMAND-TREE | USER-MANUAL COMMAND DOCTRINE embed = same as these two → single keep here | Full proficiency 0–10 · full extension tree |
+| 7 | Teach ladder | OMNIBUS · COURSE · LESSONS · HANDOFF-COS · HANDOFF-PROF | Repeated Lock / MIND-TRANSCRIPT stubs; handoff ephemeral scheduling omitted | Full modules/lessons/pass-fail · lasting handoff locks only |
+| 8 | RCODE / voice / languages | RCODE · YA-RCODE · RCODE-FACULTIES · YA-THREE-LANGUAGES · YA-COS-VOICE | YA-RCODE byte-identical to RCODE → one body; Cos voice extracted from Swift strings | Full RCODE · faculties · three languages · Cos voice doctrine |
+| 9 | Lab & Scout | LAB-MANUAL · BOT-ROSTER | Roster duplicated inside LAB-MANUAL — both kept (roster short; lab has chamber log) | Full Lab manual unique content |
+| 10 | Labels · mind · PAN · Grok · self-update | BOT-LABELS · MIND-TRANSCRIPT · PAN-OS-TILE · GROK-YABOT-IOS-LINK · ABOMEGA (pointer) | ABOMEGA body already in §1 — pointer only here | Full labels/mind/PAN/Grok leaves |
+| 11 | Smoke & capstones | Derived from §5/§7/§2/§9/§10 | No third invented checklist | Pointers to seated smokes + L01/L05/L08/L10 |
+| 12 | Source index | All of the above | — | Path table + output twins |
+
+#### Source files ingested (count)
+
+##### Markdown leaves (31 unique content files)
+
+1. USER-MANUAL.md (root = books twin)  
+2. COS-MANUAL-FOR-YABOT-0.1.md  
+3. OMNIBUS-MANUAL-SYSTEMS-0.1.md  
+4. COURSE-COS-YABOT-0.1.md  
+5. LESSONS-BEYOND-COS-0.1.md  
+6. BASE-COMMANDS-ONE-WORD-0.1.md  
+7. BASE-EXTENSION-COMMAND-TREE-0.1.md  
+8. YA-GHOST-0.1.md  
+9. SOURCECLAIM-0.1.md  
+10. YA-CONTRACT-0.1.md  
+11. YA-TOKEN-YA-COIN-0.1.md  
+12. YAOS-YKRYPTOCODE-0.1.md  
+13. R-OS-USER-GIVER-MANUAL-CRYPTO-GAMING-SEC1.md  
+14. YA-FULL-SPECTRUM-0.1.md  
+15. THUNDERBIRD-FULL-SPECTRUM-0.1.md  
+16. YA-ANTINUCLEAR-MACRO-MICRO-0.1.md  
+17. ESSENCE-TRACE-CONTRACT-0.1.md  
+18. RCODE-0.1.md  
+19. YA-RCODE-0.1.md (identical twin)  
+20. RCODE-FACULTIES-0.1.md  
+21. YA-COS-VOICE-0.1.md  
+22. YA-THREE-LANGUAGES-0.1.md  
+23. BOT-LABELS-0.1.md  
+24. MIND-TRANSCRIPT-0.1.md  
+25. GROK-YABOT-IOS-LINK-0.1.md  
+26. PAN-OS-TILE-SMART-OBJECT-0.1.md  
+27. ABOMEGA-SELF-UPDATE-0.1.md  
+28. LAB-MANUAL.md  
+29. BOT-ROSTER.md  
+30. HANDOFF-TO-COS-OMNIBUS-RCODE-2026-09-17.md  
+31. HANDOFF-TO-PROFESSOR-BOT-2026-09-17.md  
+
+##### Checklist / inventory (consulted, not dumped whole)
+
+32. MANUAL-INVENTORY-SOT-TWIN-FROZEN-0.1.md  
+
+##### PDFs extracted (3)
+
+33. R-OS-USER-GIVER-MANUAL-CRYPTO-GAMING-SEC1.pdf (8 pp → Crypto §1)  
+34. R_OS_USER_GIVER_MANUAL_680.pdf (21 pp → heritage scaffold)  
+35. R_OS_USER_GIVER_MANUAL_TABLET_v1.6.pdf (17 pp → subset of 680; unique lines ≈ 1; 680 preferred)
+
+##### Cover
+
+36. YAMANUAL-COVER.png (referenced, not embedded as binary)
+
+**Total ingested:** 36 artifacts (31 MD + 1 inventory + 3 PDF + 1 cover).  
+**Content-bearing unique MD bodies merged:** 30 (YA-RCODE deduped against RCODE).
+
+#### Notable unique content rescued
+
+| Origin | What was unique / at risk |
+|--------|---------------------------|
+| Lab desk LAB-MANUAL | Scout .01 ten b-commands · Lab scaffold law · Missing-of-40 · chamber entry log · TEACH CREATE/MODIFY · APK twin · claymation/stethoscope · SHOT LIVE · Scout ONLINE I11974.SG · SCOUT WALIS offline broom |
+| Giver Crypto Gaming §1 PDF | Founding rule · monetization paths table · three-layer economy · treasury inflows · bounded pools (40/20/15/10/10/5) · contribution ledger · ЯBOT as economic agent · stack · safeguards · Section 1 law |
+| Heritage 680 PDF | GRCh37 680 nuclear scaffold ops · layers LEFT/MID/RIGHT/BELT/STR/MAP · frozen counts · poles · do-nots · Rose∩680 · board map key · Americas USR1/Spirit matches |
+| Spectrum sheets | Full-spectrum utilities/network · Thunderbird top-5/10 · anti-nuclear MACRO/MICRO genesis mint path |
+| Cos voice Swift | COMMUNICATION LAW · CoS pattern 1–8 · Decider pattern · better-than-CoS gains · mind process |
+
+#### Gaps / notes
+
+| Item | Status |
+|------|--------|
+| PDF text extract | **OK** via pypdf for all three PDFs |
+| Empty leaves | None among required list |
+| tablet v1.6 vs 680 | tablet is shorter cousin; 680 supersets prose; both paths cited |
+| Handoffs | Ephemeral scheduling/open-items chatter omitted; lasting locks preserved + full leaf pointers |
+| iOS column for ЯMANUAL | **await Rizalbot** (inventory row notes this) |
+| USER-MANUAL / leaf contracts | **Untouched** (copies only of new ЯMANUAL files) |
+
+#### Leaves confirmed untouched
+
+Compiler wrote **only** new paths (`YAMANUAL-0.1.md`, `YAMANUAL.md`, `YAMANUAL-MERGE-MAP-0.1.md`) and **appended/updated** inventory row. No overwrite of `USER-MANUAL.md` or leaf contracts.
+
+## Appendix B. YAMANUAL-SOLE-MANUAL-HARDCODE-0.1
+
+*Source: git Android assets (blob 7ff3eb3a); Mac Documents iCloud copy not read; 27 of 52 lines not in the base.*
+
+### YAMANUAL — SOLE MANUAL HARDCODE 0.1
+
+**Stamp:** 2026-09-23 19:35 MDT · Decider HARDCODE via CoS · America/Denver  
+**Triangle:** Decider · CoS · ЯBOT (Cos voice law stands)
+
+#### Law (one line)
+**ЯMANUAL is the ONE AND ONLY fixed editable / openable / organizable manual** in ЯBOT / Я apps.
+
+#### Scope
+| Seat | Behavior |
+|------|----------|
+| Mac Bolte / Manual landing | Opens **YAMANUAL** (PDF view; MD/DOCX edit sources on disk) |
+| Android Bolte | Opens **YAMANUAL** from assets (`mind/books/`) |
+| iOS | Prepared paths: `mind/books/YAMANUAL*` (Rizalbot twins separately) |
+| Ghostchain | Durable `claim` link stamped (see below) |
+| GitHub | RIZALBOT (+ PROJECTR when twin files land) |
+| Leaves | USER-MANUAL, COS-MANUAL, OMNIBUS, LAB-MANUAL, courses, Lab — **remain source files**; not primary user-facing manual opener |
+
+#### Paths (SoT)
+| Role | Path |
+|------|------|
+| Living | `Documents/ЯBOT/YAMANUAL.md` · `.pdf` · `.docx` |
+| SoT | `contracts/YAMANUAL-0.1.md\|.pdf\|.docx\|.odt` |
+| Teach shelf | `mind/books/YAMANUAL*` (+ cover / back-cover) |
+| Desktop DELIVER | `Desktop/YAMANUAL-0.1-DELIVER/` + zip |
+| Android assets | `android/app/src/main/assets/mind/books/` |
+| Bundle (Mac) | `ЯBOT/YAMANUAL.pdf` (+ `.md`) |
+
+#### Digests (this stamp)
+| File | MD5 |
+|------|-----|
+| YAMANUAL.md / contracts/YAMANUAL-0.1.md | `8da1bc19906d77d6ff07f30f28593784` |
+| YAMANUAL.pdf / contracts/YAMANUAL-0.1.pdf | `25bac3cfb8fd716f0695afe92c75a87f` |
+
+#### Ghostchain link
+- **Mechanism:** existing `GhostChainLedger.append` / `ghost claim` (ops: establish · claim · cite · evolve · ping). No new chain protocol.
+- **Also mirrored** to `Documents/ЯBOT/mind/ghost-chain.jsonl` (durable Documents twin).
+- **Claim fields:** op=`claim` · source=`yamanual.sole.manual` · kind=`YAMANUAL-SOLE-MANUAL-HARDCODE-0.1` · path · md5_md · md5_pdf · bio=`Decider`
+
+```
+traceId (this stamp): 47D12A7C-F6FB-4EF6-BA66-4AF1F7D10D64
+ts: 2026-09-24T01:35:34Z
+```
+
+#### Commands
+Base COMMANDS stay one-word. **Do not invent** a new `manual` base. Wire existing **bolte** (USER MANUAL face) + ManualPDFLocator open/export to YAMANUAL. Lab desk leaf stays `lab manual` → LAB-MANUAL (leaf).
+
+#### Offline-first · one clay face · magnetism
+Unchanged. Heart / offline 3B seat untouched.
+
+#### Cos voice triangle stamp
+Folded into USER-MANUAL living cover as a HARDCODE note (leaf remains leaf). This sheet is the standing law for sole-manual open.
+
+## Appendix C. YAMANUAL-APP-HARDCODE-IOS-0.1
+
+*Source: git `contracts/` (blob 1882db94); 10 of 17 lines not in the base.*
+
+### ЯMANUAL app hardcode — iOS (0.1)
+
+**Stamp:** 2026-09-23 · Decider HARDCODE via CoS → Rizalbot iOS seat
+
+#### Law
+ЯMANUAL is the **one and only** fixed editable / openable / organizable manual in the apps.
+Leaf contracts (USER-MANUAL.md, YA-GHOST, LAB-MANUAL desk, …) remain **sources**. User-facing open path = **YAMANUAL** only.
+
+#### iOS seat
+- `ManualPDFLocator.fileName` = `YAMANUAL.pdf`
+- Resolve order: Bundle `YAMANUAL` / `YAMANUAL-0.1` → MACHINE MIND → `Documents/ЯBOT/mind/books/` → app Documents twin
+- Clay / Manual landing export names → `YAMANUAL.pdf`
+- Base command `manual` / `yamanual` / `яmanual` → `ManualPDFLocator.openFixedManual()`
+- Extension `lab manual` → Lab desk PDF (unchanged leaf)
+
+#### Bundle
+`ЯBOT/YAMANUAL.pdf` (+ `YAMANUAL-0.1.pdf`) copied from `mind/books/YAMANUAL-0.1.pdf`
+
+## Appendix D. YAMANUAL-IOS-PATH-PREP-0.1
+
+*Source: Mac respawn `2026-09-24-pre-workshop/source/documents/contracts/` (512 B); not in git.*
+
+### YAMANUAL iOS path prep 0.1
+**Stamp:** 2026-09-23 19:35 MDT · CoS prep · Rizalbot twins iOS separately
+
+Mac teach twin already seats:
+- `Documents/ЯBOT/mind/books/YAMANUAL.md`
+- `Documents/ЯBOT/mind/books/YAMANUAL-0.1.md|.pdf|.docx`
+- `YAMANUAL-COVER.png` · `YAMANUAL-BACK-COVER.png`
+- `YAMANUAL-SOLE-MANUAL-HARDCODE-0.1.md`
+- `YAMANUAL-GHOSTCHAIN-CLAIM-0.1.json`
+
+iOS app open path (when Rizalbot wires): Bolte / ManualPDFLocator twin → YAMANUAL.pdf only as fixed manual (same HARDCODE as Mac/Android).
+
+## Appendix E. YAMANUAL-BACK-COVER-BITMAP800-0.1
+
+*Source: Mac respawn `2026-09-24-pre-workshop/source/documents/contracts/` (665 B); not in git.*
+
+### YAMANUAL back cover — bitmap800 (0.1)
+
+**Stamp:** 2026-09-23 · Decider lock: the 800×800 1-bit geometric **Я** (rizal.info / RIZAL.INFO UNSTOPPABLE GHOSTCHAIN canvas) is the **back cover** of ЯMANUAL / USER GIVEЯ MANUAL.
+
+#### Pack
+`Documents/ЯBOT/assets/bitmap800/` — `bitmap800.png` · `.pbm` · `.bmp` · `_state.bin` · `_control.py`
+
+#### Seated twins
+- Front: `mind/books/YAMANUAL-COVER.png`
+- Back: `mind/books/YAMANUAL-BACK-COVER.png` (= bitmap800.png)
+- Desktop DELIVER · localbuild · Android `assets/mind/books/`
+
+#### Switches
+640,000 · `1`=white · `0`=black · origin top-left · `python3 bitmap800_control.py get|set|toggle|fill|invert|info`
+
+## Appendix F. YAMANUAL-GHOSTCHAIN-CLAIM-0.1 (data record)
+
+*Source: git Android assets `YAMANUAL-GHOSTCHAIN-CLAIM-0.1.json` (blob c0b93da3). It is a ghost-chain claim record, not a manual: kept as a file and quoted here.*
+
+```json
+{
+ "op": "claim",
+ "bio": "Decider",
+ "device": "mac",
+ "source": "yamanual.sole.manual",
+ "origin": "ЯBOT",
+ "traceId": "47D12A7C-F6FB-4EF6-BA66-4AF1F7D10D64",
+ "ts": "2026-09-24T01:35:34Z",
+ "kind": "YAMANUAL-SOLE-MANUAL-HARDCODE-0.1",
+ "path_living_md": "/Users/rizal/Documents/ЯBOT/YAMANUAL.md",
+ "path_living_pdf": "/Users/rizal/Documents/ЯBOT/YAMANUAL.pdf",
+ "path_sot_md": "/Users/rizal/Documents/ЯBOT/contracts/YAMANUAL-0.1.md",
+ "path_sot_pdf": "/Users/rizal/Documents/ЯBOT/contracts/YAMANUAL-0.1.pdf",
+ "md5_md": "8da1bc19906d77d6ff07f30f28593784",
+ "md5_pdf": "25bac3cfb8fd716f0695afe92c75a87f",
+ "note": "SOLE fixed editable/openable/organizable manual = YAMANUAL; leaves remain sources"
+}
+```
+
+Note: the md5 values in this claim and in Appendix B are for the 09-23 0.1 files. They do not match this edition.
+
+---
+
+# Changelog U: where each piece of the unified edition came from
+
+| # | Piece | From | How |
+|---|---|---|---|
+| U-1 | §0–§13.8 body (4,438 lines) | RIZALBOT `docs/where-we-meet-yamanual` @ 696b72a, `ЯBOT/YAMANUAL.md` (blob 12446de7; same in all 6 md paths) | base, unchanged except U-2 and U-3 |
+| U-2 | §13.8 revisions (status words, start point, ЯBROWSER row, code list, iCloud step, rules 3 and 5, 13.8.4 In progress, 13.8.5 Notes, closing paragraph) | `rbot-university/MANUAL-CLASSROOM-REVIEW.md` §4 (a)–(g), checked against rizal-pw `main`, live URLs, `build/0.3.3-allos` code, Mac builds | edited in place (13.8 was never merged, PR #5 open) |
+| U-3 | "Unified edition" stamp line in the front matter | this consolidation | added |
+| U-4 | §13.9 ONE MANUAL leaf | this consolidation | appended |
+| U-5 | Appendix A MERGE-MAP | see Appendix A | appended verbatim |
+| U-6 | Appendix B SOLE-MANUAL HARDCODE | see Appendix B | appended verbatim |
+| U-7 | Appendix C APP HARDCODE iOS | see Appendix C | appended verbatim |
+| U-8 | Appendix D iOS PATH PREP | see Appendix D | appended verbatim |
+| U-9 | Appendix E BACK-COVER bitmap800 | see Appendix E | appended verbatim |
+| U-10 | Appendix F GHOSTCHAIN claim | see Appendix F | quoted |
+| — | §13.1–§13.7, §1–§12 | older md copies v0.1 (64c0afa6), §13.1 (5fae9e7f) … §13.7 (30b08ca0 = fe333e62) | already inside the base (strict prefixes); nothing added |
+| — | PDF 03c13a15 · DOCX dd3ffb6a · ODT ffd5400e (09-23, 0.1) | git + Mac | text extracted (pdftotext, libreoffice); no unique content |
+| — | USER-MANUAL.md/.pdf | git + Mac | not merged: separate leaf manual, read/written by the apps (see §13.9.2) |
+| — | iCloud-only and Drive copies | Mac / Drive | **not read** (see §13.9.3) |
+
+*End of ЯMANUAL, unified edition 2026-09-25 22:10 MDT · Grok Bot for Decider · America/Denver*
