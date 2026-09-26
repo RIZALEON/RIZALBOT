@@ -314,7 +314,7 @@ static func classify(_ raw: String) -> ChatLane {
             Aliases: commands · functions · ? → help
             Contract: contracts/BASE-COMMANDS-ONE-WORD-0.1.md
 
-            BASE (1–45) · word — blurb — N/10
+            BASE (1–52) · word — blurb — N/10
             1  ping — companion heartbeat (bare ≠ ICMP) — 9/10
             2  pong — companion heartbeat reply — 9/10
             3  help — this list + extension hints — 8/10

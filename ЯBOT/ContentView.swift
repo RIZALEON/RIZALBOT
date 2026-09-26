@@ -637,6 +637,23 @@ struct ContentView: View {
             openGameDoor(workshop: true)
             return
         }
+        // yabot://garage → BOT GARAGE WORKSHOP (bots lane) · yabot://manual → ЯMANUAL (QA fix 2026-09-25)
+        if (url.host ?? "").lowercased() == "garage" {
+            showClayLanding = false
+            showWalletLanding = false
+            showLabScout = false
+            showLabChamber = false
+            showGameLanding = false
+            showGrokReview = false
+            garageInitialLane = "bots"
+            showGarageWorkshop = false
+            DispatchQueue.main.async { showGarageWorkshop = true }
+            return
+        }
+        if (url.host ?? "").lowercased() == "manual" {
+            _ = ManualPDFLocator.openFixedManual()
+            return
+        }
 
         // Same-phone Grok / chat / mind / status first (online bonus).
         switch GrokYabotLink.parse(url) {
