@@ -363,7 +363,7 @@ static func classify(_ raw: String) -> ChatLane {
             46  game — Я Game / TeraformЯ door (menu: Play · GAME BUILDERS WORKSHOP) — 6/10
             47  workshop — GAME BUILDERS WORKSHOP (projects · drafts · preview · Decider apply · respawn · ledger) — 6/10
             48  gamewrite — Garage bots (ЯBOT · ЯMAX) draft game code (TS · JS · HTML · CSS · JSON/Schema · GLSL · MD · Swift*/Kotlin*) — 5/10
-            49  classroom — Garage Training: lessons · submit · scores (read-only web, local writes) — 5/10
+            49  classroom — Garage Training: lessons · submit · scores · rizal.pw/classroom (fallback rizaleon.github.io/rizal-pw/classroom) — 5/10
             50  trueblast — 1.0 Я to the sibling device wallet + full pipe report (LIVE · confirmation sheet · dry) — 4/10
             51  bangrang — BANGЯANG: 1.0 Я out to the boomerang wallet and back + probes before/between/after (one sheet) — 4/10
             52  wallet seats — DESKTOP / MOBILE / BOOMERANG pubkeys + ATAs (keys stay in Keychain) · paste pair <pubkey> — 5/10

@@ -2,12 +2,18 @@ package io.github.rizaleon.abomega
 
 import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
+import android.os.Handler
+import android.os.Looper
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
 import org.json.JSONObject
 import java.io.File
+import java.net.HttpURLConnection
+import java.net.URL
 import java.security.MessageDigest
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -25,6 +31,55 @@ object ClassroomStore {
                       val purpose: String, val steps: List<String>, val mustInclude: List<String>)
 
     fun root(ctx: Context): File = File(GameWorkshop.base(ctx), "classroom")
+
+    /** rizal.pw = shared bot classroom / garage workshop. Primary → Pages fallback → raw(main). Offline = seated copy / assets
+     *  (Android has no ~/Documents clone). rizal.pw DNS is moving to GitHub Pages; until then it redirects to an HTML page,
+     *  so a base only counts if its manifest.json parses with schema rbot.classroom.manifest.v1. */
+    const val PRIMARY_URL = "https://rizal.pw/classroom/"
+    const val FALLBACK_URL = "https://rizaleon.github.io/rizal-pw/classroom/"
+    const val RAW_BASE = "https://raw.githubusercontent.com/RIZALEON/rizal-pw/main/classroom/"
+    val ONLINE_BASES = listOf(PRIMARY_URL, FALLBACK_URL, RAW_BASE)
+    const val MANIFEST_SCHEMA = "rbot.classroom.manifest.v1"
+
+    private fun prefs(ctx: Context) = ctx.getSharedPreferences("classroom", Context.MODE_PRIVATE)
+    fun activeBase(ctx: Context): String? = prefs(ctx).getString("activeBase", null)
+    fun webUrl(ctx: Context): String = activeBase(ctx)?.takeIf { it != RAW_BASE } ?: PRIMARY_URL
+
+    private fun httpGet(url: String): ByteArray? = try {
+        val c = (URL(url).openConnection() as HttpURLConnection).apply {
+            connectTimeout = 8000; readTimeout = 8000; instanceFollowRedirects = true; useCaches = false
+        }
+        try { if (c.responseCode == 200) c.inputStream.use { it.readBytes() } else null } finally { c.disconnect() }
+    } catch (e: Exception) { null }
+
+    /** Read-only GET. Call OFF the main thread. First base with a valid manifest wins; lessons seated only if sha256 match. */
+    fun refresh(ctx: Context): String {
+        val tried = mutableListOf<String>()
+        for (base in ONLINE_BASES) {
+            tried += base
+            val data = httpGet(base + "manifest.json") ?: continue
+            val m = runCatching { JSONObject(String(data)) }.getOrNull() ?: continue
+            if (m.optString("schema") != MANIFEST_SCHEMA) continue
+            prefs(ctx).edit().putString("activeBase", base).apply()
+            val r = root(ctx)
+            var n = 0
+            val arr = m.optJSONArray("lessons")
+            for (i in 0 until (arr?.length() ?: 0)) {
+                val e = arr!!.optJSONObject(i) ?: continue
+                val path = e.optString("path"); val want = e.optString("sha256")
+                if (path.isEmpty() || want.isEmpty() || path.contains("..")) continue
+                val b = httpGet(base + path) ?: continue
+                if (sha256(b) == want) { File(r, path).apply { parentFile?.mkdirs() }.writeBytes(b); n++ }
+            }
+            r.mkdirs(); File(r, "manifest.json").writeBytes(data)
+            return "Refresh via $base: $n lesson(s) verified by sha256 and seated."
+        }
+        return "Refresh: no valid manifest at ${tried.joinToString(" · ")} — using seated/bundled lessons."
+    }
+
+    fun openWeb(ctx: Context) {
+        runCatching { ctx.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(webUrl(ctx))).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)) }
+    }
 
     private fun read(ctx: Context, rel: String): ByteArray? {
         val f = File(root(ctx), rel)
@@ -67,6 +122,7 @@ object ClassroomStore {
         val lines = mutableListOf("ЯBOT CLASSROOM · Garage → Training · learner $learner", "root: ${root(ctx).absolutePath}")
         ls.forEach { lines += "  ${it.id} · ${it.title} · ${if (it.readOnly) "read-only" else "needs approval"} · ${if (unlocked(ctx, it, learner)) "unlocked" else "locked"}" }
         if (ls.isEmpty()) lines += "  (no lessons seated)"
+        lines += "web: $PRIMARY_URL (fallback $FALLBACK_URL) · last verified: ${activeBase(ctx) ?: "none"}"
         lines += "Submit writes one new inbox/ file (local only). Scores come from reviewers via git. yabot://classroom"
         return lines.joinToString("\n")
     }
@@ -106,7 +162,11 @@ object ClassroomStore {
     /** Training lane UI: lesson list → steps → answer → Submit (one new inbox file). */
     fun showTraining(ctx: Context, learner: String) {
         val ls = lessons(ctx)
-        if (ls.isEmpty()) { AlertDialog.Builder(ctx).setTitle("Classroom").setMessage("No lessons seated.").setPositiveButton("OK", null).show(); return }
+        if (ls.isEmpty()) {
+            AlertDialog.Builder(ctx).setTitle("Classroom").setMessage("No lessons seated.\nOnline: $PRIMARY_URL")
+                .setNeutralButton("Refresh") { _, _ -> refreshThenShow(ctx, learner) }
+                .setPositiveButton("OK", null).show(); return
+        }
         val labels = ls.map { (if (unlocked(ctx, it, learner)) "🔓 " else "🔒 ") + "${it.id} · ${it.title}" }.toTypedArray()
         AlertDialog.Builder(ctx)
             .setTitle("CLASSROOM · Training · $learner")
@@ -116,8 +176,21 @@ object ClassroomStore {
                     AlertDialog.Builder(ctx).setTitle(l.title).setMessage("Locked — needs a passed score for: ${l.requires.joinToString()}").setPositiveButton("OK", null).show()
                 } else showLesson(ctx, l, learner)
             }
+            .setNeutralButton("Refresh") { _, _ -> refreshThenShow(ctx, learner) }
+            .setPositiveButton("rizal.pw") { _, _ -> openWeb(ctx) }
             .setNegativeButton("Close", null)
             .show()
+    }
+
+    private fun refreshThenShow(ctx: Context, learner: String) {
+        val main = Handler(Looper.getMainLooper())
+        Thread {
+            val msg = refresh(ctx)
+            main.post {
+                AlertDialog.Builder(ctx).setTitle("Classroom").setMessage(msg)
+                    .setPositiveButton("OK") { _, _ -> showTraining(ctx, learner) }.show()
+            }
+        }.start()
     }
 
     private fun showLesson(ctx: Context, l: Lesson, learner: String) {

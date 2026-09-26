@@ -180,7 +180,7 @@ object OfflineCommandRouter {
 |48  gamewrite — bots ЯBOT + ЯMAX draft game code (TS · JS · HTML · CSS · JSON/Schema · GLSL · MD · Swift*/Kotlin*) — 5/10
 |49  manual — ЯMANUAL + GAMEWRITE-FUNDAMENTALS — 7/10
 |50  garage — Garage roster (ЯBOT · ЯMAX) — 6/10
-|51  classroom — Garage Training: lessons · submit (local inbox/ only) — 5/10
+|51  classroom — Garage Training: lessons · submit (local inbox/ only) · rizal.pw/classroom (fallback rizaleon.github.io/rizal-pw/classroom) — 5/10
 |52  tokenblast — read-only Я pipe probe (RPC · Jupiter · Dex · Gecko → VERDICT) — 6/10
 |53  trueblast · bangrang — send legs are Mac/iOS only in 0.3.3 (probe runs here) — 2/10
             |

@@ -3,14 +3,31 @@ import SwiftUI
 import CryptoKit
 
 /// ЯBOT CLASSROOM (0.3.3) — Garage → Training lane (GARAGE-CLASSROOM-LINK-PROPOSAL.md).
-/// Lessons come from the classroom clone (RIZALEON/rizal-pw, classroom/ only) or the bundled seed.
+/// Lessons: offline = classroom clone (RIZALEON/rizal-pw, classroom/ only) or bundled seed; online = rizal.pw/classroom → github.io fallback → raw.
 /// The app NEVER runs lesson steps, never writes scores for its own bot, never pushes to git.
 /// It writes exactly one new file per submit into inbox/ (plus a CLASSROOM-LEDGER.jsonl row), and Decider-tapped
 /// approvals into outbox/. Refresh = read-only HTTPS GET of manifest.json; lessons whose sha256 mismatch are ignored.
 /// Paths: Mac ~/Documents/ЯBOT/classroom/classroom (when Documents granted) else App Support/ЯBOT/classroom ·
 ///        iOS <app Documents>/ЯBOT/classroom
 enum ClassroomStore {
+    /// rizal.pw = shared bot classroom / garage workshop. Primary → Pages fallback → raw (main). Offline = local clone.
+    /// rizal.pw DNS is moving to GitHub Pages; until then it 302s to an HTML page, so every base is validated by
+    /// manifest schema, not just HTTP 200.
+    static let primaryURL = URL(string: "https://rizal.pw/classroom/")!
+    static let fallbackURL = URL(string: "https://rizaleon.github.io/rizal-pw/classroom/")!
     static let rawBase = "https://raw.githubusercontent.com/RIZALEON/rizal-pw/main/classroom/"
+    static let onlineBases: [String] = [primaryURL.absoluteString, fallbackURL.absoluteString, rawBase]
+    static let manifestSchema = "rbot.classroom.manifest.v1"
+    /// Last base that served a valid manifest (for status / Open button).
+    static var activeBase: String? {
+        get { UserDefaults.standard.string(forKey: "ЯBOT.classroom.activeBase") }
+        set { UserDefaults.standard.set(newValue, forKey: "ЯBOT.classroom.activeBase") }
+    }
+    /// Which web page to open for humans: last verified base (non-raw) else primary.
+    static var webURL: URL {
+        if let b = activeBase, b != rawBase, let u = URL(string: b) { return u }
+        return primaryURL
+    }
 
     struct Step: Hashable { let n: Int; let doText: String; let why: String }
 
@@ -105,6 +122,7 @@ enum ClassroomStore {
             out.append("  \(l.id) · \(l.title) · \(l.readOnly ? "read-only" : "needs approval") · \(unlocked(l, learner: learner) ? "unlocked" : "locked")")
         }
         if ls.isEmpty { out.append("  (no lessons seated)") }
+        out.append("web: \(primaryURL.absoluteString) (fallback \(fallbackURL.absoluteString)) · last verified: \(activeBase ?? "none")")
         out.append("Submit writes one new inbox/ file (local only). Scores come from reviewers via git. yabot://classroom")
         return out.joined(separator: "\n")
     }
@@ -162,23 +180,24 @@ enum ClassroomStore {
         else { try? Data(line.utf8).write(to: ledger) }
     }
 
-    /// Read-only GET of manifest.json → seats it (and lessons whose sha256 match) under App Support / iOS Documents.
+    /// Read-only GET of classroom/manifest.json, trying rizal.pw → github.io → raw in order (first valid manifest wins),
+    /// then seats lessons whose sha256 match under App Support / iOS Documents. GET only; never writes remote.
     static func refresh(completion: @escaping (String) -> Void) {
-        guard ModeStore.shared.isOnline, let url = URL(string: rawBase + "manifest.json") else { completion("Refresh needs ONLINE."); return }
+        guard ModeStore.shared.isOnline else { completion("Refresh needs ONLINE — using offline seat (\(root.path))."); return }
         #if os(macOS)
-        if root.path.contains("/Documents/ЯBOT/classroom/classroom") { completion("Mac clone seat — update with: git -C ~/Documents/ЯBOT/classroom pull --ff-only"); return }
+        if root.path.contains("/Documents/ЯBOT/classroom/classroom") { completion("Offline source = Mac clone — update with: git -C ~/Documents/ЯBOT/classroom pull --ff-only"); return }
         #endif
-        URLSession.shared.dataTask(with: url) { data, resp, _ in
-            guard let data, (resp as? HTTPURLResponse)?.statusCode == 200,
-                  let m = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else {
-                completion("Refresh: manifest not published on main yet — using seated lessons."); return
+        fetchManifest(bases: onlineBases, tried: []) { base, data, tried in
+            guard let base, let data, let m = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else {
+                completion("Refresh: no valid manifest at \(tried.joined(separator: " · ")) — using seated lessons."); return
             }
+            activeBase = base
             try? FileManager.default.createDirectory(at: root.appendingPathComponent("lessons"), withIntermediateDirectories: true)
             final class Count { var n = 0; let lock = NSLock() }
             let seated = Count()
             let group = DispatchGroup()
             for e in m["lessons"] as? [[String: Any]] ?? [] {
-                guard let p = e["path"] as? String, let want = e["sha256"] as? String, let lu = URL(string: rawBase + p) else { continue }
+                guard let p = e["path"] as? String, let want = e["sha256"] as? String, let lu = URL(string: base + p) else { continue }
                 group.enter()
                 URLSession.shared.dataTask(with: lu) { d, _, _ in
                     if let d, sha256Hex(d) == want { try? d.write(to: root.appendingPathComponent(p)); seated.lock.lock(); seated.n += 1; seated.lock.unlock() }
@@ -187,7 +206,22 @@ enum ClassroomStore {
             }
             group.notify(queue: .main) {
                 try? data.write(to: root.appendingPathComponent("manifest.json"))
-                completion("Refresh: \(seated.n) lesson(s) verified by sha256 and seated.")
+                completion("Refresh via \(base): \(seated.n) lesson(s) verified by sha256 and seated.")
+            }
+        }
+    }
+
+    /// Tries each base's manifest.json; accepts only JSON whose schema == rbot.classroom.manifest.v1.
+    private static func fetchManifest(bases: [String], tried: [String], done: @escaping (String?, Data?, [String]) -> Void) {
+        guard let base = bases.first, let url = URL(string: base + "manifest.json") else { done(nil, nil, tried); return }
+        var req = URLRequest(url: url); req.timeoutInterval = 8; req.cachePolicy = .reloadIgnoringLocalCacheData
+        URLSession.shared.dataTask(with: req) { data, resp, _ in
+            if let data, (resp as? HTTPURLResponse)?.statusCode == 200,
+               let o = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+               (o["schema"] as? String) == manifestSchema {
+                done(base, data, tried + [base])
+            } else {
+                fetchManifest(bases: Array(bases.dropFirst()), tried: tried + [base], done: done)
             }
         }.resume()
     }
@@ -222,6 +256,10 @@ struct ClassroomLaneView: View {
                     .font(ClayTheme.clayFont(size: 13, weight: .bold))
                     .foregroundStyle(ClayTheme.offWhite)
                 Spacer()
+                Link("rizal.pw", destination: ClassroomStore.webURL)
+                    .font(ClayTheme.clayFont(size: 11, weight: .semibold))
+                    .foregroundStyle(Color.orange.opacity(0.95))
+                    .help("Open the shared classroom · \(ClassroomStore.primaryURL.absoluteString) · fallback \(ClassroomStore.fallbackURL.absoluteString)")
                 Button("Refresh") { ClassroomStore.refresh { m in DispatchQueue.main.async { note = m; lessons = ClassroomStore.lessons() } } }
                     .buttonStyle(.plain)
                     .font(ClayTheme.clayFont(size: 11, weight: .semibold))

@@ -38,3 +38,18 @@ Base: `respawn/0.3.2-localbuild` (ad52856). Source verified identical (sha256) t
 ## Heart (COMPLETE-APP LAW §13.7)
 Mac/iOS bundle `ЯBOT/engine/heart.gguf` (not in git; seated in the localbuild tree). Android: not in the APK; the
 install script seats it with adb push + run-as cp and checks `seated=yes`.
+
+## rizal.pw classroom integration (Decider addition, 2026-09-25 21:10 MDT)
+- rizal.pw = shared bot classroom / garage workshop space. Mac/iOS `ClassroomStore.swift` and Android `ClassroomStore.kt` read `classroom/manifest.json` from, in order:
+  1. https://rizal.pw/classroom/ (primary)
+  2. https://rizaleon.github.io/rizal-pw/classroom/ (fallback)
+  3. https://raw.githubusercontent.com/RIZALEON/rizal-pw/main/classroom/
+- A base counts only if the JSON has schema `rbot.classroom.manifest.v1`. At build time rizal.pw 302s to an unstoppabledomains HTML page (DNS not switched), and a plain HTTP 200 check would accept that page.
+- Lessons are seated only when their sha256 matches. GET only, nothing is written remotely. The last verified base is remembered.
+- Offline source:
+  - Mac: the ~/Documents/ЯBOT/classroom/classroom clone (not created yet; ONE-FOLDER-PLAN stopped at Step 0 because Documents is iCloud-synced), then App Support, then the bundled ClassroomSeed.json.
+  - iOS: app Documents, then the seed.
+  - Android: the seated copy, then assets/classroom.
+- Garage Training lane: a "rizal.pw" link/button opens the web classroom (last verified non-raw base, else primary). Status and help rows show both URLs.
+- rizal.info game/workshop links are unchanged.
+- Verified 2026-09-25: the github.io manifest is byte-identical to assets/classroom/manifest.json, and all 3 lesson sha256s match.
