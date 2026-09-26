@@ -1,5 +1,6 @@
 import Foundation
 import SwiftUI
+import Combine
 #if canImport(SolanaSwift)
 import SolanaSwift
 #endif
