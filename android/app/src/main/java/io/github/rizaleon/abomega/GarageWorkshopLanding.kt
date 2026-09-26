@@ -19,7 +19,7 @@ import android.widget.TextView
 import android.widget.Toast
 
 /**
- * Garage workshop landing — Android twin of Swift GarageWorkshopLandingView (ЯBOT 0.3.1).
+ * Garage workshop landing — Android twin of Swift GarageWorkshopLandingView (ЯBOT 0.3.3).
  * Room image + left sidebar. Housed bots = Garage roster (BotRoster · <ext>/ЯBOT/seat/BOT-LABELS.json v3),
  * with faces (BotFaceYaBot / BotFaceYaMax) and shelf↔list selection. + Create new Bot requires a name
  * (the designated name it speaks with; reserved / numbered / Garage / duplicate names refused).
@@ -109,9 +109,10 @@ class GarageWorkshopLanding(
         val stubs = mapOf(
             R.id.garage_nav_marketplace to "market",
             R.id.garage_nav_stats to "stats",
-            R.id.garage_nav_data to "data",
-            R.id.garage_nav_training to "training"
+            R.id.garage_nav_data to "data"
         )
+        // 0.3.3 · Training lane = CLASSROOM (lessons · submit · scores)
+        v.findViewById<View>(R.id.garage_nav_training)?.setOnClickListener { openTraining() }
         for ((id, key) in stubs) {
             v.findViewById<View>(id)?.setOnClickListener {
                 lane = key
@@ -120,6 +121,15 @@ class GarageWorkshopLanding(
                 refresh()
             }
         }
+    }
+
+    /** Garage → Training: classroom lessons for the selected bot (else the speaking bot, else ЯBOT). */
+    fun openTraining() {
+        lane = "training"
+        refresh()
+        val learner = selectedBot()?.display ?: BotRoster.speaking ?: BotRoster.housed().firstOrNull()?.display ?: "ЯBOT"
+        Log.i("GarageWorkshop", "training lane · classroom · learner=$learner")
+        ClassroomStore.showTraining(context, learner)
     }
 
     private fun selectedBot(): BotRoster.Bot? = BotRoster.housed().firstOrNull { it.id == selectedBotId }
@@ -246,7 +256,7 @@ class GarageWorkshopLanding(
             lane == "market" -> "Stub · marketplace later"
             lane == "stats" -> "Stub · bot stats later"
             lane == "data" -> "Stub · bot data later"
-            lane == "training" -> "Stub · training later"
+            lane == "training" -> "Classroom · lessons · submit writes inbox/ only"
             else -> BotRoster.housed().map { it.display }.let {
                 if (it.isEmpty()) "No housed bots yet · + Create new Bot" else "Я's bots · select " + it.joinToString(" or ")
             }

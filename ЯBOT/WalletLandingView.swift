@@ -15,6 +15,12 @@ struct WalletLandingView: View {
 
     @State private var card: WalletCard = .load()
     @State private var note: String? = nil
+    // 0.3.3 · DEVICE WALLETS + TRUEBLAST / BANGЯANG seat
+    @ObservedObject private var blast = BlastCenter.shared
+    @State private var seatsText: String = ""
+    @State private var pairText: String = ""
+    @State private var keyConfirmRole: String? = nil
+    @State private var busy: Bool = false
 
     var body: some View {
         ZStack {
@@ -102,6 +108,7 @@ struct WalletLandingView: View {
                         if !card.utilities.isEmpty {
                             row("Utilities", card.utilities.joined(separator: " · "))
                         }
+                        deviceWalletsSection
                         Text("Purpose: hardcode explorer-verified twin so clay shows mint/ATA/tx offline.\nIntent: Decider-gated verify; explorers are mirrors only — clay owns source.")
                             .font(ClayTheme.clayFont(size: 12, weight: .medium))
                             .foregroundStyle(ClayTheme.offWhite.opacity(0.8))
@@ -133,7 +140,102 @@ struct WalletLandingView: View {
                     .padding(.bottom, 24)
             }
         }
-        .onAppear { card = .load() }
+        .onAppear { card = .load(); seatsText = YaDeviceWallets.seatsBlock() }
+        .sheet(item: $blast.pending) { q in
+            BlastConfirmSheet(quote: q)
+        }
+        .alert("Create a new key on this device?", isPresented: Binding(get: { keyConfirmRole != nil }, set: { if !$0 { keyConfirmRole = nil } })) {
+            Button("Cancel", role: .cancel) { keyConfirmRole = nil }
+            Button("Create key") {
+                let role: YaDeviceWallets.Role = keyConfirmRole == "boomerang" ? .boomerang : .main
+                keyConfirmRole = nil
+                flash(YaDeviceWallets.createKeyByUserTap(role))
+                seatsText = YaDeviceWallets.seatsBlock()
+            }
+        } message: {
+            Text("The secret key is generated on this device and stored only in its Keychain. It is never written to JSON, logs or git, and never leaves this device. Only the public key is seated.")
+        }
+    }
+
+    /// DEVICE WALLETS · TRUEBLAST · BANGЯANG (0.3.3). Every send goes through BlastConfirmSheet.
+    private var deviceWalletsSection: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("DEVICE WALLETS")
+                .font(ClayTheme.clayFont(size: 10, weight: .bold))
+                .foregroundStyle(Color.orange.opacity(0.85))
+            Text(seatsText)
+                .font(.system(size: 11, design: .monospaced))
+                .foregroundStyle(ClayTheme.offWhite)
+                .textSelection(.enabled)
+            HStack(spacing: 12) {
+                if !YaDeviceWallets.hasKey(.main) {
+                    Button("Seat device key") { keyConfirmRole = "main" }
+                }
+                if !YaDeviceWallets.hasKey(.boomerang) {
+                    Button("Seat boomerang key") { keyConfirmRole = "boomerang" }
+                }
+                if let pk = YaDeviceWallets.local?.pubkey {
+                    Button("Copy my pubkey") { copyText(pk); flash("Public key copied (safe to share)") }
+                }
+            }
+            .font(ClayTheme.clayFont(size: 12, weight: .bold))
+            .foregroundStyle(Color.orange.opacity(0.95))
+            .buttonStyle(.plain)
+            HStack(spacing: 8) {
+                TextField("Paste sibling PUBLIC key", text: $pairText)
+                    .textFieldStyle(.roundedBorder)
+                    .font(.system(size: 11, design: .monospaced))
+                Button("Pair") {
+                    flash(YaDeviceWallets.pastePair(pairText)); pairText = ""
+                    seatsText = YaDeviceWallets.seatsBlock()
+                }
+                .buttonStyle(.plain)
+                .font(ClayTheme.clayFont(size: 12, weight: .bold))
+                .foregroundStyle(Color.orange.opacity(0.95))
+            }
+            HStack(spacing: 14) {
+                Button("TRUEBLAST 1.0 Я") { runVerb("trueblast") }
+                Button("BANGЯANG") { runVerb("bangrang") }
+                Button("Refresh seats") { seatsText = YaDeviceWallets.seatsBlock() }
+            }
+            .font(ClayTheme.clayFont(size: 12, weight: .bold))
+            .foregroundStyle(Color.orange.opacity(0.95))
+            .buttonStyle(.plain)
+            .disabled(busy || blast.running || !isOnline)
+            if !isOnline {
+                Text("OFFLINE — sends are refused; flip ONLINE to quote a TRUEBLAST / BANGЯANG.")
+                    .font(.system(size: 10)).foregroundStyle(ClayTheme.offWhite.opacity(0.6))
+            }
+            if !blast.log.isEmpty {
+                Text(blast.log)
+                    .font(.system(size: 10, design: .monospaced))
+                    .foregroundStyle(ClayTheme.offWhite.opacity(0.9))
+                    .textSelection(.enabled)
+            }
+        }
+        .padding(.vertical, 6)
+    }
+
+    /// Quotes off-main (read-only RPC); a good quote opens the confirmation sheet. Nothing signs here.
+    private func runVerb(_ verb: String) {
+        busy = true
+        DispatchQueue.global(qos: .userInitiated).async {
+            let text = verb == "bangrang" ? BangRang.handle(verb) : TrueBlast.handle(verb)
+            DispatchQueue.main.async {
+                busy = false
+                if blast.pending == nil { blast.log = text }
+                seatsText = YaDeviceWallets.seatsBlock()
+            }
+        }
+    }
+
+    private func copyText(_ s: String) {
+        #if canImport(AppKit)
+        NSPasteboard.general.clearContents()
+        NSPasteboard.general.setString(s, forType: .string)
+        #elseif canImport(UIKit)
+        UIPasteboard.general.string = s
+        #endif
     }
 
     private func row(_ label: String, _ value: String) -> some View {

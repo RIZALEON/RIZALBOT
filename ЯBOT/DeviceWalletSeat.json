@@ -1,0 +1,12 @@
+{
+  "schema": "ya.device-wallet-seat.v1",
+  "mint": "BB9uA5BuacDnWyDf5Npc9nMb9yFbyThsNrQPBYJ5Q1Lv",
+  "token_program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+  "decimals": 9,
+  "law": "Pubkeys + ATAs only. Private keys live in each device's Keychain and never leave it. Never put a secret in this file.",
+  "seats": {
+    "desktop": { "label": "DESKTOP WALLET", "device": "desktop", "pubkey": "", "ata": "" },
+    "mobile": { "label": "MOBILE WALLET", "device": "mobile", "pubkey": "", "ata": "" },
+    "boomerang": { "label": "BOOMERANG WALLET", "device": "local", "pubkey": "", "ata": "" }
+  }
+}

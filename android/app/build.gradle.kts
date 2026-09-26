@@ -3,6 +3,11 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
+// llama.cpp checkout for the native Heart bridge. Mac default unchanged; CI passes -PyabotLlamaDir or YABOT_LLAMA_DIR.
+val yabotLlamaDir: String = (project.findProperty("yabotLlamaDir") as String?)
+    ?: System.getenv("YABOT_LLAMA_DIR")
+    ?: "/Users/rizal/Library/Developer/ya-deps/llama.cpp"
+
 android {
     namespace = "io.github.rizaleon.abomega"
     compileSdk = 35
@@ -12,8 +17,8 @@ android {
         applicationId = "io.github.rizaleon.abomega"
         minSdk = 26
         targetSdk = 35
-        versionCode = 3
-        versionName = "0.3.1"
+        versionCode = 5
+        versionName = "0.3.3"
         ndk {
             abiFilters += listOf("arm64-v8a")
         }
@@ -30,7 +35,7 @@ android {
                     "-DGGML_NATIVE=OFF",
                     "-DGGML_BLAS=OFF",
                     "-DGGML_OPENMP=OFF",
-                    "-DYABOT_LLAMA_DIR=/Users/rizal/Library/Developer/ya-deps/llama.cpp"
+                    "-DYABOT_LLAMA_DIR=$yabotLlamaDir"
                 )
             }
         }

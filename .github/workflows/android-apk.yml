@@ -1,9 +1,15 @@
 name: ABOMEGA Android APK
 on:
   push:
-    branches: [abomega-0.1, main]
+    branches: [abomega-0.1, main, 'build/**', 'respawn/**']
+    paths: ['android/**', '.github/workflows/android-apk.yml']
+  pull_request:
     paths: ['android/**', '.github/workflows/android-apk.yml']
   workflow_dispatch:
+
+env:
+  # Same llama.cpp commit as the Mac seat (~/Library/Developer/ya-deps/llama.cpp) so CI matches local builds.
+  LLAMA_REF: 6e60f35608ec6918b44a9839c0c433687165f086
 
 jobs:
   apk:
@@ -17,18 +23,24 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
         with:
-          packages: 'platform-tools platforms;android-35 build-tools;35.0.0'
+          packages: 'platform-tools platforms;android-35 build-tools;35.0.0 ndk;27.2.12479018 cmake;3.22.1'
+      - name: Fetch llama.cpp (native Heart bridge source)
+        run: |
+          git init "$RUNNER_TEMP/llama.cpp"
+          git -C "$RUNNER_TEMP/llama.cpp" remote add origin https://github.com/ggml-org/llama.cpp.git
+          git -C "$RUNNER_TEMP/llama.cpp" fetch --depth 1 origin "$LLAMA_REF"
+          git -C "$RUNNER_TEMP/llama.cpp" checkout FETCH_HEAD
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.9'
       - name: Assemble debug APK
         working-directory: android
-        run: gradle assembleDebug --no-daemon
+        run: gradle assembleDebug --no-daemon -PyabotLlamaDir="$RUNNER_TEMP/llama.cpp"
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: abomega-0.1-android-debug
+          name: yabot-android-debug-${{ github.ref_name == 'abomega-0.1' && 'abomega-0.1' || github.sha }}
           path: android/app/build/outputs/apk/debug/*.apk
       - name: Attach APK to release
         if: github.ref == 'refs/heads/abomega-0.1'

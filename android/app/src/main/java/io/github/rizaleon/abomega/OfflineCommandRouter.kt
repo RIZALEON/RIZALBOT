@@ -17,7 +17,8 @@ object OfflineCommandRouter {
     private const val DEFAULT_PING = 3
     private const val PROC_TIMEOUT_SEC = 12L
 
-    const val VERSION = "0.3.1"
+    const val VERSION = "0.3.3"
+    const val VERSION_CODE = 5
 
     data class Route(
         val handled: Boolean,
@@ -31,7 +32,7 @@ object OfflineCommandRouter {
 
     enum class BarRoute { LAB, WALLET, MIND, HOME, BOLTE, SEARCH, ONLINE }
 
-    enum class Door { GAME, WORKSHOP, MANUAL, GARAGE }
+    enum class Door { GAME, WORKSHOP, MANUAL, GARAGE, CLASSROOM }
 
     private val gameWritePrefixes = listOf(
         "gamewrite ", "gamewrite:", "game write ", "game write:", "write game code", "draft game code", "write game ", "draft game "
@@ -74,6 +75,9 @@ object OfflineCommandRouter {
                 return Route(true, "Decider only: Approve & Apply, Reject and Respawn are taps inside the GAME BUILDERS WORKSHOP (not chat words), so no bot, inbox line or link can apply game code. Opening the Workshop…", door = Door.WORKSHOP)
             lower == "game" || lower == "teraform" || lower == "teraformя" || lower == "я game" || lower == "yagame" || lower == "play" ->
                 return Route(true, "Я Game door · Play: device copy ${GameWorkshop.base(ctx).absolutePath}/game/index.html else bundled assets/game/index.html · GAME BUILDERS WORKSHOP: yabot://game/workshop (say: workshop)\nNonNuclear: door only — no spend / auto-rewards / mint.\nCrown Я · mint ref $MINT", door = Door.GAME)
+            // 0.3.3 · CLASSROOM → Garage Training lane
+            lower == "classroom" || lower == "lessons" || lower == "training" || lower == "classroom status" || lower.startsWith("lesson ") ->
+                return Route(true, ClassroomStore.status(ctx, BotRoster.speaking ?: BotRoster.housed().firstOrNull()?.display ?: "ЯBOT") + "\nOpening Garage → Training…", door = Door.CLASSROOM)
             lower == "garage" ->
                 return Route(true, "Garage · housed bots: ${BotRoster.housed().joinToString(" · ") { it.display }} · + Create new Bot (name required) · Speak / Я speaks", door = Door.GARAGE)
             lower == "respawn" || lower == "command: respawn" || lower == "command respawn" || lower == "respawn points" || lower == "respawn list" ->
@@ -87,7 +91,7 @@ object OfflineCommandRouter {
             lower.startsWith("bot mint") || lower.startsWith("bot create") || lower.startsWith("bot new") ->
                 return Route(true, BotRoster.mint(text.trim().split(Regex("\\s+"), limit = 3).getOrNull(2)))
             lower == "version" || lower == "about" ->
-                return Route(true, "ЯBOT Android $VERSION (versionCode 3) · parity with Mac/iPhone 0.3.x · mint $MINT")
+                return Route(true, "ЯBOT Android $VERSION (versionCode $VERSION_CODE) · ALL-OS SYNC with Mac/iPhone $VERSION · mint $MINT")
             lower == "mint" ->
                 return Route(true, "Mint (WalletCard): $MINT · read-only reference · the app never signs")
         }
@@ -176,6 +180,9 @@ object OfflineCommandRouter {
 |48  gamewrite — bots ЯBOT + ЯMAX draft game code (TS · JS · HTML · CSS · JSON/Schema · GLSL · MD · Swift*/Kotlin*) — 5/10
 |49  manual — ЯMANUAL + GAMEWRITE-FUNDAMENTALS — 7/10
 |50  garage — Garage roster (ЯBOT · ЯMAX) — 6/10
+|51  classroom — Garage Training: lessons · submit (local inbox/ only) — 5/10
+|52  tokenblast — read-only Я pipe probe (RPC · Jupiter · Dex · Gecko → VERDICT) — 6/10
+|53  trueblast · bangrang — send legs are Mac/iOS only in 0.3.3 (probe runs here) — 2/10
             |
             |EXTENSIONS seated
             |· pingpong · PING -C N host · NSLOOKUP · host (bare ping stays heartbeat)

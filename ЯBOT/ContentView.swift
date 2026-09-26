@@ -23,6 +23,7 @@ struct ContentView: View {
     @State private var showLabChamber: Bool = false
     @State private var showLabScout: Bool = false
     @State private var showGarageWorkshop: Bool = false
+    @State private var garageInitialLane: String = "bots"
     @State private var showGameLanding: Bool = false
     /// Game menu section (0.3.0): false = Play · true = GAME BUILDERS WORKSHOP.
     @State private var gameWorkshopOpen: Bool = false
@@ -90,7 +91,7 @@ struct ContentView: View {
             }
 
             if showGarageWorkshop {
-                GarageWorkshopLandingView(isPresented: $showGarageWorkshop)
+                GarageWorkshopLandingView(isPresented: $showGarageWorkshop, initialLane: garageInitialLane)
                     .transition(.opacity)
                     .zIndex(60)
             }
@@ -155,6 +156,19 @@ struct ContentView: View {
         }
         .onReceive(NotificationCenter.default.publisher(for: Notification.Name("ЯBOT.OpenGameWorkshop"))) { _ in
             openGameDoor(workshop: true)
+        }
+        // 0.3.3 · TRUEBLAST / BANGЯANG quote → Wallet landing hosts the confirmation sheet
+        .onReceive(NotificationCenter.default.publisher(for: Notification.Name("ЯBOT.OpenWallet"))) { _ in
+            showClayLanding = false
+            showLabScout = false
+            showLabChamber = false
+            showGarageWorkshop = false
+            showGameLanding = false
+            showWalletLanding = true
+        }
+        // 0.3.3 · CLASSROOM → Garage → Training lane
+        .onReceive(NotificationCenter.default.publisher(for: Notification.Name("ЯBOT.OpenClassroom"))) { _ in
+            openClassroom()
         }
         .onOpenURL { url in
             handleOpenURL(url)
@@ -522,6 +536,7 @@ struct ContentView: View {
                     showLabScout = false
                     showLabChamber = false
                     showGameLanding = false
+                    garageInitialLane = "bots"
                     showGarageWorkshop = true
                 }
             },
@@ -596,9 +611,27 @@ struct ContentView: View {
         showGameLanding = true
     }
 
+    /// Garage → Training (classroom) — yabot://classroom · chat: classroom / lessons / training
+    private func openClassroom() {
+        showClayLanding = false
+        showWalletLanding = false
+        showLabScout = false
+        showLabChamber = false
+        showGameLanding = false
+        showGrokReview = false
+        garageInitialLane = "training"
+        showGarageWorkshop = false
+        DispatchQueue.main.async { showGarageWorkshop = true }
+    }
+
     private func handleOpenURL(_ url: URL) {
         // Accept yabot:// (primary) and yaaim:// (alias). Never crash on bad packets.
         guard GrokYabotLink.acceptsScheme(url.scheme) else { return }
+        // yabot://classroom · yabot://classroom/lesson/<id> → Garage Training lane
+        if (url.host ?? "").lowercased() == "classroom" {
+            openClassroom()
+            return
+        }
         // yabot://workshop alias → GAME BUILDERS WORKSHOP
         if (url.host ?? "").lowercased() == "workshop" {
             openGameDoor(workshop: true)
