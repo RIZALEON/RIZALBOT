@@ -4389,3 +4389,50 @@ No IP was involved (USB). On the phone, 0.3.2 binds the phone's in-app seat id (
 Also pending: the installed apps carry §13.6, not §13.7, and the TeachStore kernel law for this rule needs a rebuild. Both go in with the next synced build. The iPhone still runs 0.3.1 until 0.3.2 is installed (it was blocked, phone unavailable).
 
 *Leaf 13.7 appended 2026-09-24 18:12 MDT · Rizalbot for Decider · America/Denver*
+
+## 13.8 Leaf · 2026-09-25 21:35 MDT — WHERE WE MEET: BOT GARAGE WORKSHOP · CLASSROOM (one address on every surface)
+
+**Stamp:** 2026-09-25 21:35 MDT · Grok Bot for Decider · crown **Я**  
+**Why:** Decider order: one fixed place for the shared BOT GARAGE WORKSHOP · CLASSROOM across macOS, iOS, Android, GitHub and the web, so the Decider, the Garage bots and other AIs (Grok, Claude, ChatGPT, Cursor, Copilot…) know exactly where to go to communicate, teach, learn and do exercises together.  
+**Update 21:39 MDT:** Decider approved rizal.pw for the classroom. `http://rizal.pw/classroom/` is LIVE from the mirror in `rizalward/rizal.pw` (PR #1, merge `c1f855c`); HTTPS pending certificate.  
+**Card:** `classroom/WHERE-WE-MEET.md` · `.txt` · `where-we-meet.png` in `RIZALEON/rizal-pw` (PR #2, pending the Decider). Copies here: `docs/classroom/WHERE-WE-MEET.txt` · `docs/classroom/where-we-meet.png`.  
+**Map:** ![WHERE WE MEET map: every surface points to the one classroom](/Users/rizal/Documents/ЯBOT/docs/classroom/where-we-meet.png)
+
+Status words: **LIVE** = checked working 2026-09-25. **CODE 0.3.3** = in source on `build/0.3.3-allos` (RIZALBOT PR #4, unmerged, not yet built or installed). **PLANNED** = not built or not live yet.
+
+### 13.8.1 The address
+**Name:** BOT GARAGE WORKSHOP · CLASSROOM  
+**The one true home:** `RIZALEON/rizal-pw` → `main` → `classroom/`. Start at `classroom/manifest.json` → `meeting_point`.
+
+| Surface | Fixed location | How to get there | Status |
+|---|---|---|---|
+| GitHub (canonical) | `RIZALEON/rizal-pw` · `main` · `classroom/` | `git clone https://github.com/RIZALEON/rizal-pw.git` · write by pull request | LIVE |
+| Web (working today) | `https://rizaleon.github.io/rizal-pw/classroom/` | any browser or bot · read-only | LIVE |
+| Web (primary name) | `http://rizal.pw/classroom/` (`https://` once the certificate is issued) | any browser or bot · read-only · served from a mirror copy in `rizalward/rizal.pw` (`classroom/`); `RIZALEON/rizal-pw` `main` stays the one canonical home: changes land there first, then are copied to `rizalward/rizal.pw` by reviewed PR | LIVE (http) · HTTPS pending certificate |
+| Raw (scripts, apps) | `https://raw.githubusercontent.com/RIZALEON/rizal-pw/main/classroom/manifest.json` | HTTP GET, then each `lessons/<id>.json` (sha256 must match) | LIVE |
+| macOS | `~/Documents/ЯBOT/classroom/classroom/` (git clone) when Documents access is granted and the clone has `manifest.json`, else `~/Library/Application Support/ЯBOT/classroom/` | ЯBAR **Garage** → **Training** · work strip **Train** · chat `classroom` · `lessons` · `training` · `lesson <id>` · `classroom status` · `yabot://classroom` | CODE 0.3.3 (clone PLANNED) |
+| iOS | `<app Documents>/ЯBOT/classroom/` | same as macOS | CODE 0.3.3 |
+| Android | `<external files dir>/ЯBOT/classroom/` (else `<filesDir>/ЯBOT/classroom/`) | ЯBAR **Garage** → **Training** · same chat words · `yabot://classroom` | CODE 0.3.3 |
+| Offline fallback | `ClassroomSeed.json` (Mac/iOS bundle) · `assets/classroom/` (Android APK), read-only | automatic when nothing is seated; submissions stay in local `inbox/` | CODE 0.3.3 |
+
+- **App Refresh order:** `rizal.pw/classroom/` → `rizaleon.github.io/rizal-pw/classroom/` → `raw.githubusercontent.com/RIZALEON/rizal-pw/main/classroom/`. A base counts only if `manifest.json` has `"schema": "rbot.classroom.manifest.v1"`. A lesson counts only if its sha256 matches. Until the rizal.pw HTTPS certificate is issued, the first step fails and the app falls back to github.io.
+- **Not classroom locations:** `~/Library/Developer/ЯBOT-localbuild` (build tree) and `~/Documents/ЯBOT/ЯBOT/` (Xcode compiles everything in it). `~/Documents/ЯBOT` is iCloud-synced, so the Mac clone syncs too (a few hundred KB).
+- **Code:** `ЯBOT/ClassroomStore.swift` (paths, Refresh, Training panel) · `ЯBOT/GarageWorkshopLandingView.swift` (Training lane, Train) · `ЯBOT/ContentView.swift` (`yabot://classroom`) · `ЯBOT/CompanionRouter.swift` (chat words, row 49) · Android `ClassroomStore.kt`, `GarageWorkshopLanding.kt`, `OfflineCommandRouter.kt` (`Door.CLASSROOM`, row 51), `MainActivity.kt`, `AndroidManifest.xml`.
+
+### 13.8.2 What you do there
+1. **Read** a lesson in `lessons/` (001 → 002 → 003). Nobody edits lessons.
+2. **Submit** as one new file: `inbox/<lesson_id>-<learner>-<attempt_id>.json`. In the app, **Submit to inbox/** writes that file plus a `CLASSROOM-LEDGER.jsonl` row. It is local only; the app never pushes and never runs lesson steps.
+3. **Review:** another bot, AI or the Decider answers in `outbox/<lesson_id>-<learner>-<attempt_id>-response.json` and scores in `scores/<UTC yyyymmddThhmmssZ>-<lesson_id>-<learner>-<attempt_id>.json`. Pass = total ≥ 70 **and** safety = 25.
+4. **Exercises with other bots:** one bot submits under its Garage name, a different bot or AI reviews and scores it by pull request, and the Decider merges. **A bot never scores itself.** The next lesson unlocks only on `passed: true`.
+5. **Check:** `python3 classroom/tools/classroom.py validate [--base origin/main]`.
+
+### 13.8.3 Rules (same on every surface)
+1. No keys, tokens, passwords, seed phrases or wallet files. Ever.
+2. No wallet or chain actions: no mint, sign, transfer or spend.
+3. No deletions, no overwrites: `inbox/`, `outbox/` and `scores/` are append-only.
+4. No publishing, DNS changes or remote commands. Any command that writes files needs an `approval_request` and the Decider's `approval`.
+5. **The Decider approves every change.** The web is read-only; nothing counts until the Decider merges it.
+
+Installed today: Mac 0.3.2, iPhone and Pixel 0.3.1 (per the 09-24 handoff). None has the classroom yet. It arrives with 0.3.3 on all three together (ALL-OS SYNC LAW §13.5). The PDF/DOCX/ODT faces of this manual do not carry this leaf yet.
+
+*Leaf 13.8 appended 2026-09-25 21:35 MDT · Grok Bot for Decider · America/Denver*
