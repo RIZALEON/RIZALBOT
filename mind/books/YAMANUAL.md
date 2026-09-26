@@ -4394,6 +4394,7 @@ Also pending: the installed apps carry §13.6, not §13.7, and the TeachStore ke
 
 **Stamp:** 2026-09-25 21:35 MDT · Grok Bot for Decider · crown **Я**  
 **Why:** Decider order: one fixed place for the shared BOT GARAGE WORKSHOP · CLASSROOM across macOS, iOS, Android, GitHub and the web, so the Decider, the Garage bots and other AIs (Grok, Claude, ChatGPT, Cursor, Copilot…) know exactly where to go to communicate, teach, learn and do exercises together.  
+**Update 21:39 MDT:** Decider approved rizal.pw for the classroom. `http://rizal.pw/classroom/` is LIVE from the mirror in `rizalward/rizal.pw` (PR #1, merge `c1f855c`); HTTPS pending certificate.  
 **Card:** `classroom/WHERE-WE-MEET.md` · `.txt` · `where-we-meet.png` in `RIZALEON/rizal-pw` (PR #2, pending the Decider). Copies here: `docs/classroom/WHERE-WE-MEET.txt` · `docs/classroom/where-we-meet.png`.  
 **Map:** ![WHERE WE MEET map: every surface points to the one classroom](/Users/rizal/Documents/ЯBOT/docs/classroom/where-we-meet.png)
 
@@ -4407,14 +4408,14 @@ Status words: **LIVE** = checked working 2026-09-25. **CODE 0.3.3** = in source 
 |---|---|---|---|
 | GitHub (canonical) | `RIZALEON/rizal-pw` · `main` · `classroom/` | `git clone https://github.com/RIZALEON/rizal-pw.git` · write by pull request | LIVE |
 | Web (working today) | `https://rizaleon.github.io/rizal-pw/classroom/` | any browser or bot · read-only | LIVE |
-| Web (primary name) | `https://rizal.pw/classroom/` | same page once rizal.pw serves this repo | PLANNED. rizal.pw resolves to GitHub Pages but is bound to `rizalward/rizal.pw` (no `classroom/`); HTTPS not issued; 404 today |
+| Web (primary name) | `http://rizal.pw/classroom/` (`https://` once the certificate is issued) | any browser or bot · read-only · served from a mirror copy in `rizalward/rizal.pw` (`classroom/`); `RIZALEON/rizal-pw` `main` stays the one canonical home: changes land there first, then are copied to `rizalward/rizal.pw` by reviewed PR | LIVE (http) · HTTPS pending certificate |
 | Raw (scripts, apps) | `https://raw.githubusercontent.com/RIZALEON/rizal-pw/main/classroom/manifest.json` | HTTP GET, then each `lessons/<id>.json` (sha256 must match) | LIVE |
 | macOS | `~/Documents/ЯBOT/classroom/classroom/` (git clone) when Documents access is granted and the clone has `manifest.json`, else `~/Library/Application Support/ЯBOT/classroom/` | ЯBAR **Garage** → **Training** · work strip **Train** · chat `classroom` · `lessons` · `training` · `lesson <id>` · `classroom status` · `yabot://classroom` | CODE 0.3.3 (clone PLANNED) |
 | iOS | `<app Documents>/ЯBOT/classroom/` | same as macOS | CODE 0.3.3 |
 | Android | `<external files dir>/ЯBOT/classroom/` (else `<filesDir>/ЯBOT/classroom/`) | ЯBAR **Garage** → **Training** · same chat words · `yabot://classroom` | CODE 0.3.3 |
 | Offline fallback | `ClassroomSeed.json` (Mac/iOS bundle) · `assets/classroom/` (Android APK), read-only | automatic when nothing is seated; submissions stay in local `inbox/` | CODE 0.3.3 |
 
-- **App Refresh order:** `rizal.pw/classroom/` → `rizaleon.github.io/rizal-pw/classroom/` → `raw.githubusercontent.com/RIZALEON/rizal-pw/main/classroom/`. A base counts only if `manifest.json` has `"schema": "rbot.classroom.manifest.v1"`. A lesson counts only if its sha256 matches.
+- **App Refresh order:** `rizal.pw/classroom/` → `rizaleon.github.io/rizal-pw/classroom/` → `raw.githubusercontent.com/RIZALEON/rizal-pw/main/classroom/`. A base counts only if `manifest.json` has `"schema": "rbot.classroom.manifest.v1"`. A lesson counts only if its sha256 matches. Until the rizal.pw HTTPS certificate is issued, the first step fails and the app falls back to github.io.
 - **Not classroom locations:** `~/Library/Developer/ЯBOT-localbuild` (build tree) and `~/Documents/ЯBOT/ЯBOT/` (Xcode compiles everything in it). `~/Documents/ЯBOT` is iCloud-synced, so the Mac clone syncs too (a few hundred KB).
 - **Code:** `ЯBOT/ClassroomStore.swift` (paths, Refresh, Training panel) · `ЯBOT/GarageWorkshopLandingView.swift` (Training lane, Train) · `ЯBOT/ContentView.swift` (`yabot://classroom`) · `ЯBOT/CompanionRouter.swift` (chat words, row 49) · Android `ClassroomStore.kt`, `GarageWorkshopLanding.kt`, `OfflineCommandRouter.kt` (`Door.CLASSROOM`, row 51), `MainActivity.kt`, `AndroidManifest.xml`.
 
